@@ -1,0 +1,863 @@
+[
+ {
+  "name": "BridgeWest (BridgeWest Legal Network)",
+  "website": "https://bridgewest.eu",
+  "hq": "Unclear: LinkedIn company page lists Nicosia, Cyprus (founded 2008); main contact page lists a Malta address in San Gwann. Not registry-verified.",
+  "exists": {
+   "value": "yes - site indexed with many jurisdiction pages; recency only partly verifiable (some country guide pages indexed ~190-270 days old, some contact pages 3,000+ days old). No 2025-2026 dated news/press found.",
+   "confidence": "Medium",
+   "sources": [
+    "https://bridgewest.eu/",
+    "https://bridgewest.eu/about-us/",
+    "https://bridgewest.eu/company-formation-kuwait/",
+    "https://www.linkedin.com/company/bridgewest-limited"
+   ]
+  },
+  "specialization": "International company formation, accounting/financial, immigration and legal services delivered through independent local affiliates (law firms, consultants, accountants); also shelf companies, EU VAT registration, offshore and licensing (crypto/gaming).",
+  "multi_country": {
+   "value": "yes",
+   "evidence": "Own claim: network 'activating in over 70 countries' (LinkedIn: 'over 65 countries'); country pages/divisions for Ireland, Singapore, Germany, Denmark, Portugal, Luxembourg (via Luxstart S.A.), Romania, Georgia, Bosnia, etc.",
+   "confidence": "Medium",
+   "sources": [
+    "https://bridgewest.eu/about-us/",
+    "https://bridgewest.eu/about-us-ireland/",
+    "https://bridgewest.eu/about-us-luxembourg/",
+    "https://www.linkedin.com/company/bridgewest-limited"
+   ]
+  },
+  "moldova": {
+   "value": "offered",
+   "delivery": "unclear",
+   "evidence": "Dedicated page: 'team of company registration agents in Moldova' for local/foreign investors, ready-made Moldovan companies and VAT registration. Sitemap lists an 'About Us Moldova' page whose content was not visible; identity of the Moldovan affiliate not found (ASSUMPTION: delivered by an independent Moldovan affiliate, consistent with network model).",
+   "confidence": "Medium",
+   "sources": [
+    "https://bridgewest.eu/company-formation-moldova/",
+    "https://bridgewest.eu/website-sitemap/"
+   ]
+  },
+  "law_firm_cooperation": {
+   "value": "yes",
+   "evidence": "Business model built on independent affiliates incl. law firms; 'Partner Law Firms' page names local firms (e.g. Rolegal and E&C in Bucharest 'part of our legal network'); homepage 'Join Our Network' section (terms not visible). Cyprus page profiles a lawyer (Cyprus Bar member since 1980).",
+   "confidence": "Medium",
+   "sources": [
+    "https://bridgewest.eu/",
+    "https://www.bridgewest.eu/partner-law-firms",
+    "https://bridgewest.eu/about-us/"
+   ]
+  },
+  "contacts": {
+   "email": "office@bridgewest.eu",
+   "phone": "(+35) 699 699 405 on main contact page (ASSUMPTION: Malta mobile +356 9969 9405, prefix printed incompletely); +44 203 287 0408 appears on Bahamas page",
+   "contact_page": "https://bridgewest.eu/contact/",
+   "current": "unclear",
+   "confidence": "Medium",
+   "sources": [
+    "https://bridgewest.eu/contact/",
+    "https://www.bridgewest.eu/contact-bahamas",
+    "https://www.bridgewest.eu/contact-belize"
+   ]
+  },
+  "one_off_signals": "Moderate: heavy formation/shelf-company/offshore marketing, 'ready-made' companies, tax-minimisation structures; many thin SEO country pages. Some country pages mention accounting/virtual office, so not purely one-off.",
+  "long_term_services": {
+   "value": "partial",
+   "evidence": "Accounting, bookkeeping, audit, tax consulting, virtual office (e.g. Luxembourg, Armenia pages); immigration; legal services via affiliates. No Moldova-specific ongoing services found.",
+   "sources": [
+    "https://bridgewest.eu/about-us-luxembourg/",
+    "https://bridgewest.eu/company-registered-office-armenia/",
+    "https://bridgewest.eu/about-us/"
+   ]
+  },
+  "decision_makers": [
+   {
+    "name": "Vlad Cuc",
+    "title": "Co-founder and General Director, BridgeWest (per LinkedIn headline)",
+    "source": "https://www.linkedin.com/in/vlad-cuc-21152610/",
+    "confidence": "Low"
+   }
+  ],
+  "scores": {
+   "profile_fit": {
+    "score": 17,
+    "why": "Multi-country formation + legal/accounting network delivered by independent local firms - close to Legitimus's target profile; weakened by offshore/shelf focus and thin content."
+   },
+   "recurring_client_potential": {
+    "score": 17,
+    "why": "Volume of Moldova referrals unknown; ongoing services exist in some countries but Moldova offer is formation-centric. ASSUMPTION: modest but steady flow of foreign-investor files."
+   },
+   "local_legal_partner_cooperation": {
+    "score": 19,
+    "why": "Entire delivery model relies on independent local law firms/affiliates; partner law firms publicly named; 'Join Our Network' section."
+   },
+   "moldova_commercial_interest": {
+    "score": 11,
+    "why": "Already sells Moldova (formation, shelf companies, VAT) - demonstrates demand; but slot may be filled by an existing affiliate, so Legitimus would need to replace/complement it."
+   },
+   "decision_maker_accessibility": {
+    "score": 11,
+    "why": "Small network; co-founder identifiable via LinkedIn; generic office@ email. Contact-page freshness unclear."
+   }
+  },
+  "exclude": {
+   "value": false,
+   "reason": "Not excluded: real network model with local law firms and existing Moldova demand. Caveat: verify site activity and current Moldova affiliate."
+  },
+  "audit": [
+   {
+    "claim": "HQ Cyprus (Nicosia)",
+    "status": "needs_check",
+    "note": "LinkedIn company page says Nicosia/Cyprus, but main contact page shows Malta (San Gwann) address. Conflict unresolved.",
+    "source": "https://www.linkedin.com/company/bridgewest-limited ; https://bridgewest.eu/contact/"
+   },
+   {
+    "claim": "Over 70 jurisdictions",
+    "status": "confirmed",
+    "note": "Own claim on About page (LinkedIn says 65+). Self-declared only.",
+    "source": "https://bridgewest.eu/about-us/"
+   },
+   {
+    "claim": "Moldova offered (SME registration, ready-made companies, VAT)",
+    "status": "confirmed",
+    "note": "Snippet of own Moldova page confirms; delivering entity not identified.",
+    "source": "https://bridgewest.eu/company-formation-moldova/"
+   },
+   {
+    "claim": "Affiliate network of independent law firms/consultants/accountants; 'Join Our Network' section",
+    "status": "confirmed",
+    "note": "Confirmed; additionally a 'Partner Law Firms' page exists. Application terms not visible.",
+    "source": "https://bridgewest.eu/ ; https://www.bridgewest.eu/partner-law-firms"
+   },
+   {
+    "claim": "Affiliates OpenCompanySingapore.com, ThaiCompanyFormation.com, LawyersIreland.eu",
+    "status": "unconfirmed",
+    "note": "Found Irelandcompanyformation.com, CompanyFormationGermany.com, CompanyFormationDenmark.com as divisions; the specific domains named by agent 01 not seen in snippets.",
+    "source": "https://bridgewest.eu/about-us-ireland/ ; https://bridgewest.eu/about-us-germany/"
+   },
+   {
+    "claim": "Email office@bridgewest.eu",
+    "status": "confirmed",
+    "note": "Shown as office(at)bridgewest.eu on contact page.",
+    "source": "https://bridgewest.eu/contact/"
+   },
+   {
+    "claim": "Phone +44 203 287 0408 as main number",
+    "status": "needs_check",
+    "note": "Main contact page shows (+35) 699 699 405 (likely Malta); +44 number appears on Bahamas page. Some country contact pages very old.",
+    "source": "https://bridgewest.eu/contact/ ; https://www.bridgewest.eu/contact-bahamas"
+   },
+   {
+    "claim": "Address not verified",
+    "status": "erroneous",
+    "note": "An address (San Gwann, Malta) is shown on the main contact page.",
+    "source": "https://bridgewest.eu/contact/"
+   },
+   {
+    "claim": "'Smaller firm, easier to reach decision makers'",
+    "status": "unconfirmed",
+    "note": "Plausible; co-founder found only via LinkedIn headline (Vlad Cuc). ASSUMPTION.",
+    "source": "https://www.linkedin.com/in/vlad-cuc-21152610/"
+   },
+   {
+    "claim": "Operating recency not verified",
+    "status": "needs_check",
+    "note": "No dated 2025-2026 news/posts found; pages indexed 190-270 days ago indicate some maintenance.",
+    "source": "https://bridgewest.eu/company-formation-kuwait/"
+   }
+  ],
+  "dossier": {
+   "main_services": "Company formation (70+ countries), shelf companies, EU VAT registration, accounting/tax, immigration, legal services via affiliates",
+   "geography": "Global network; HQ Cyprus or Malta (unclear)",
+   "moldova_status": "Offered via 'registration agents in Moldova' (affiliate identity not found)",
+   "local_partner_need": "High - model depends on a local affiliate for each country",
+   "long_term_legal_potential": "Medium: post-formation corporate changes, accounting liaison, VAT, residence permits for foreign founders",
+   "why_legitimus_interesting": "Licensed Moldovan law office that can deliver formation, legal opinions, corporate maintenance and AML-compliant KYC for the network's Moldova clients",
+   "what_to_offer": "Moldova affiliate/local counsel role: SRL formation, corporate changes, legal address coordination, VAT/tax registration via accountant partners, residence permits",
+   "preferred_format": "network membership (affiliate) / two-way referral",
+   "objections": [
+    "Existing Moldova affiliate may already be in place",
+    "Price pressure typical of formation networks",
+    "Shelf-company and offshore positioning may raise AML/reputational concerns",
+    "Unclear HQ/legal entity"
+   ],
+   "first_step": "Apply via the 'Join Our Network' section / office@bridgewest.eu asking whether the Moldova affiliate slot is open; LinkedIn intro to Vlad Cuc"
+  },
+  "check_date": "2026-10-08",
+  "total_score": 75
+ },
+ {
+  "name": "Healy Consultants Group (part of Hawksford)",
+  "website": "https://www.healyconsultants.com",
+  "hq": "Singapore (16 Raffles Quay, #32-03 Hong Leong Building); Dubai office; parent Hawksford (Jersey) since Sept 2023",
+  "exists": {
+   "value": "yes - live; contact page uses healy@hawksford.com; pages titled 2026 (though search metadata shows Moldova pages ~797 days old)",
+   "confidence": "Medium",
+   "sources": [
+    "https://www.healyconsultants.com/contact-us/",
+    "https://www.hawksford.com/insights-and-guides/hawksford-acquires-healy-consultants"
+   ]
+  },
+  "specialization": "Global business set-up: company registration, corporate bank account opening, immigration, accounting and tax filing, licensing - for SMEs/multinationals expanding abroad.",
+  "multi_country": {
+   "value": "yes",
+   "evidence": "Claims set-up in 200+ countries since 2003 and professional relationships with banks, governments, lawyers and accountants in 180+ locations.",
+   "confidence": "Medium",
+   "sources": [
+    "https://www.healyconsultants.com/about-us/",
+    "https://www.healyconsultants.com/"
+   ]
+  },
+  "moldova": {
+   "value": "offered",
+   "delivery": "unclear",
+   "evidence": "Dedicated Moldova pages: LLC with 1 director/1 shareholder, US$300 min capital, ~2 weeks, filings with State Registration Chamber via power of attorney; fee page cites avg first-year engagement US$10,145 and annual US$1,475-3,775 (internal inconsistency). No own Moldovan office found. ASSUMPTION: execution via local Moldovan lawyers/agents.",
+   "confidence": "Medium",
+   "sources": [
+    "https://www.healyconsultants.com/moldova-company-registration/",
+    "https://www.healyconsultants.com/moldova-company-registration/incorporation-steps/",
+    "https://www.healyconsultants.com/moldova-company-registration/fees-timelines/",
+    "https://www.healyconsultants.com/moldova-company-registration/setup-llc/"
+   ]
+  },
+  "law_firm_cooperation": {
+   "value": "yes",
+   "evidence": "Site states relationships with lawyers and accountants in 180+ locations; testimonials from local law firms working with Healy (Lebanese law firm since 2014; Baoleki Attorneys, Botswana, since 2018); Malaysia case mentions 'our solicitor in Kuala Lumpur'. No formal partner programme page found.",
+   "confidence": "Medium",
+   "sources": [
+    "https://www.healyconsultants.com/clients/testimonials/",
+    "https://www.healyconsultants.com/about-us/"
+   ]
+  },
+  "contacts": {
+   "email": "healy@hawksford.com",
+   "phone": "+65 6031 0332 (SG); +971 4266 4470 (Dubai); WhatsApp +65 9123 7743",
+   "contact_page": "https://www.healyconsultants.com/contact-us/",
+   "current": "yes",
+   "confidence": "Medium",
+   "sources": [
+    "https://www.healyconsultants.com/contact-us/"
+   ]
+  },
+  "one_off_signals": "Low-moderate: strong formation focus with fixed engagement fees, but fees bundle bank account, registered office, accounting and tax; annual renewal fees published.",
+  "long_term_services": {
+   "value": "yes",
+   "evidence": "Annual accounting, tax filing, audit coordination, registered office, immigration; Moldova page cites annual audited financial statements and annual running costs.",
+   "sources": [
+    "https://www.healyconsultants.com/moldova-company-registration/",
+    "https://www.hawksford.com/insights-and-guides/hawksford-acquires-healy-consultants"
+   ]
+  },
+  "decision_makers": [
+   {
+    "name": "Aidan Healy",
+    "title": "Founder / Managing Director (self-profile states semi-retired since 2018, relies on CEOs)",
+    "source": "https://www.healyconsultants.com/about-us/key-personnel/aidan-healy-profile/",
+    "confidence": "Medium"
+   },
+   {
+    "name": "Michel van Leeuwen",
+    "title": "Group Chief Executive, Hawksford (as of Sept 2023 announcement)",
+    "source": "https://www.hawksford.com/insights-and-guides/hawksford-acquires-healy-consultants",
+    "confidence": "Medium"
+   }
+  ],
+  "scores": {
+   "profile_fit": {
+    "score": 17,
+    "why": "Global multi-country set-up house with ongoing compliance services and an active Moldova product."
+   },
+   "recurring_client_potential": {
+    "score": 21,
+    "why": "Publishes Moldova annual running costs (accounting/tax/audit), implying recurring local work per client. Volume unknown."
+   },
+   "local_legal_partner_cooperation": {
+    "score": 16,
+    "why": "Explicitly works with local lawyers in 180+ locations, evidenced by law-firm testimonials; no formal partner programme."
+   },
+   "moldova_commercial_interest": {
+    "score": 12,
+    "why": "Actively markets Moldova with detailed pages; existing local provider likely, and page freshness uncertain."
+   },
+   "decision_maker_accessibility": {
+    "score": 8,
+    "why": "Founder semi-retired; now inside Hawksford group, current Healy operational leadership not found; only generic email."
+   }
+  },
+  "exclude": {
+   "value": false,
+   "reason": "Not excluded: real ongoing corporate services, works with local law firms, sells Moldova."
+  },
+  "audit": [
+   {
+    "claim": "Part of Hawksford",
+    "status": "confirmed",
+    "note": "Acquisition announced 12 Sept 2023; team kept in roles.",
+    "source": "https://www.hawksford.com/insights-and-guides/hawksford-acquires-healy-consultants"
+   },
+   {
+    "claim": "Almost 200 countries",
+    "status": "confirmed",
+    "note": "Site says 200+ countries assisted since 2003 / 180+ locations relationships. Self-declared.",
+    "source": "https://www.healyconsultants.com/about-us/"
+   },
+   {
+    "claim": "Moldova 10-step process, 12% CIT, ~2 weeks, 1 shareholder/1 director",
+    "status": "confirmed",
+    "note": "Confirmed in snippets; total timeline incl. bank stated as 11 weeks.",
+    "source": "https://www.healyconsultants.com/moldova-company-registration/incorporation-steps/"
+   },
+   {
+    "claim": "Setup cost EUR 7,950",
+    "status": "needs_check",
+    "note": "Current snippets show average first-year fee US$10,145 and annual US$1,475/3,775; EUR 7,950 not seen.",
+    "source": "https://www.healyconsultants.com/moldova-company-registration/fees-timelines/"
+   },
+   {
+    "claim": "2025 case study: Maltese client registering recruitment agency in Moldova",
+    "status": "unconfirmed",
+    "note": "Targeted search returned no such case study; 'Client case studies' section exists but text not visible.",
+    "source": "https://www.healyconsultants.com/moldova-company-registration/"
+   },
+   {
+    "claim": "'10 steps to incorporate in Moldova in 2026' implies 2026 activity",
+    "status": "needs_check",
+    "note": "Titles say 2026 but search metadata shows pages ~797 days old (year likely auto-updated).",
+    "source": "https://www.healyconsultants.com/moldova-company-registration/incorporation-steps/"
+   },
+   {
+    "claim": "No public partner program",
+    "status": "confirmed",
+    "note": "None found; but evidence of informal cooperation with local law firms (testimonials) - agent 01 underrated partner openness.",
+    "source": "https://www.healyconsultants.com/clients/testimonials/"
+   },
+   {
+    "claim": "Email healy@hawksford.com; phones +65 6031 0332 / +971 4266 4470; address 16 Raffles Quay",
+    "status": "confirmed",
+    "note": "Current per contact page.",
+    "source": "https://www.healyconsultants.com/contact-us/"
+   },
+   {
+    "claim": "email@healyconsultants.com likely outdated",
+    "status": "outdated",
+    "note": "Old blog contact page also lists old Valley Point address and +65 6735 0120 (~4,300 days old).",
+    "source": "https://blog.healyconsultants.com/contact-us/"
+   },
+   {
+    "claim": "Dubai office renamed Hawksford (privatebankerinternational.com)",
+    "status": "unconfirmed",
+    "note": "Hawksford gained Dubai presence via Healy subsidiary (confirmed); renaming not re-verified.",
+    "source": "https://www.hawksford.com/insights-and-guides/hawksford-acquires-healy-consultants"
+   }
+  ],
+  "dossier": {
+   "main_services": "Company registration, bank account opening, immigration, accounting, tax, licensing, registered office",
+   "geography": "Global (200+ countries claimed); offices Singapore, Dubai; Hawksford group (Jersey, Mauritius, Ireland, Netherlands, etc.)",
+   "moldova_status": "Offered remotely via POA; local executing partner not identified",
+   "local_partner_need": "High - no own Moldovan presence found; filings, notarisation, bank intro and annual compliance need local professionals",
+   "long_term_legal_potential": "Medium-high: annual compliance, corporate changes, employment/immigration for clients' Moldovan SRLs",
+   "why_legitimus_interesting": "Reliable licensed Moldovan counsel able to execute POA-based incorporations, bank introductions and annual corporate maintenance with English-speaking reporting",
+   "what_to_offer": "Local counsel / white-label execution for Moldova SRL formation, corporate changes, legal opinions, coordination with accountants and banks",
+   "preferred_format": "white-label subcontracting / local counsel",
+   "objections": [
+    "Probably already has a Moldovan provider",
+    "Fixed-fee model squeezes subcontractor margins",
+    "Vendor onboarding/KYC requirements of Hawksford group",
+    "Group-level procurement decisions"
+   ],
+   "first_step": "Email healy@hawksford.com (Moldova desk) offering local execution capacity; parallel LinkedIn outreach to Hawksford partnerships/Healy operations leads"
+  },
+  "check_date": "2026-10-08",
+  "total_score": 74
+ },
+ {
+  "name": "Vistra (incl. Tricor; acquired Biz Latin Hub)",
+  "website": "https://www.vistra.com",
+  "hq": "Hong Kong (19/F, Lee Garden One, 33 Hysan Avenue, Causeway Bay)",
+  "exists": {
+   "value": "yes - very active: CEO appointment (Kim Jenkins, July 2025), Chief AI & Digital Officer (Apr 2026), EVP Americas (June 2026), G-P (Mar 2026) and Oyster (Apr 2026) partnerships, Vistra Latam launch (June 2026)",
+   "confidence": "High",
+   "sources": [
+    "https://www.vistra.com/insights/vistra-appoints-kim-jenkins-group-chief-executive-officer",
+    "https://www.vistra.com/insights/vistra-launches-partnership-g-p-bridge-eor-and-entity-based-expansion-and-simplify",
+    "https://cfotech.news/story/vistra-launches-latam-unit-after-biz-latin-hub-deal"
+   ]
+  },
+  "specialization": "Global corporate services (entity management, company secretarial, accounting, payroll, international expansion), fund administration and private client services.",
+  "multi_country": {
+   "value": "yes",
+   "evidence": "50+ markets, 9,000+ colleagues; claims coverage of 170+ countries via Vistra Global Solutions; CEE offices incl. Poland and Romania (Bucharest, Vistra Professional Services SRL).",
+   "confidence": "High",
+   "sources": [
+    "https://careers.vistra.com/",
+    "https://www.vistra.com/vgs",
+    "https://www.vistra.com/locations/emea/romania",
+    "https://www.vistra.com/locations/emea/poland"
+   ]
+  },
+  "moldova": {
+   "value": "not found",
+   "delivery": "n/a",
+   "evidence": "Only Moldova mention on vistra.com is in an apostille-country list. No Moldova office/service page found. (Name coincidence: Kristopher Moldovan is CFO of Vistra Corp - unrelated US energy company.)",
+   "confidence": "Medium",
+   "sources": [
+    "https://www.vistra.com/speciality-services/legalisation/apostille-faqs"
+   ]
+  },
+  "law_firm_cooperation": {
+   "value": "unclear",
+   "evidence": "Vistra states it is not a law firm and has no notaries/solicitors on staff; claims 170+ country coverage (ASSUMPTION: non-office countries served via third-party providers, possibly law firms). Public partnerships found are EOR (G-P, Oyster), not law firms. Pre-acquisition affiliate arrangement with Biz Latin Hub.",
+   "confidence": "Low",
+   "sources": [
+    "https://www.vistra.com/speciality-services/legalisation/apostille-faqs",
+    "https://www.vistra.com/vgs",
+    "https://www.vistra.com/insights/vistra-and-oyster-partner-expand-global-workforce-solutions"
+   ]
+  },
+  "contacts": {
+   "email": "not found",
+   "phone": "+852 2521 3661 (HQ); Romania +40 21 311 8815",
+   "contact_page": "https://www.vistra.com/contact-form",
+   "current": "yes",
+   "confidence": "High",
+   "sources": [
+    "https://www.vistra.com/about/head-office",
+    "https://www.vistra.com/locations/emea/romania"
+   ]
+  },
+  "one_off_signals": "None significant - enterprise recurring-services model.",
+  "long_term_services": {
+   "value": "yes",
+   "evidence": "Entity management, company secretarial, accounting/compliance, payroll/HR, nominee directors (e.g., Romania).",
+   "sources": [
+    "https://www.vistra.com/locations/emea/romania",
+    "https://www.vistra.com/corporate/entity-management-solution"
+   ]
+  },
+  "decision_makers": [
+   {
+    "name": "Kim Jenkins",
+    "title": "Group Chief Executive Officer (from July 2025)",
+    "source": "https://www.vistra.com/insights/vistra-appoints-kim-jenkins-group-chief-executive-officer",
+    "confidence": "High"
+   },
+   {
+    "name": "Steven van Tuijl",
+    "title": "Regional Managing Director, Continental Europe (appointed June 2021 - may be outdated)",
+    "source": "https://vistra.com/insights/vistra-appoints-steven-van-tuijl-regional-managing-director-continental-europe",
+    "confidence": "Medium"
+   }
+  ],
+  "scores": {
+   "profile_fit": {
+    "score": 13,
+    "why": "Top-tier recurring corporate services provider, but enterprise scale and own-office model limit fit with a small Moldovan law office."
+   },
+   "recurring_client_potential": {
+    "score": 24,
+    "why": "If engaged, clients would need ongoing entity management in Moldova (secretarial, compliance, payroll). ASSUMPTION: low Moldova volume; potential only if Vistra needs a Moldova provider."
+   },
+   "local_legal_partner_cooperation": {
+    "score": 8,
+    "why": "No public evidence of law-firm partner network; 170+ country claim suggests third-party providers but unverified."
+   },
+   "moldova_commercial_interest": {
+    "score": 9,
+    "why": "Moldova gap next to Romania office; client demand for Moldova not evidenced."
+   },
+   "decision_maker_accessibility": {
+    "score": 5,
+    "why": "Large group; only C-level/regional names found, relevant procurement/partnerships contact not found."
+   }
+  },
+  "exclude": {
+   "value": false,
+   "reason": "Not excluded: real recurring corporate services and Moldova gap next to its Romania office; but low probability, long sales cycle."
+  },
+  "audit": [
+   {
+    "claim": "HQ Hong Kong, address Lee Garden One, phone +852 2521 3661",
+    "status": "confirmed",
+    "note": "Head office page.",
+    "source": "https://www.vistra.com/about/head-office"
+   },
+   {
+    "claim": "50+ markets / 45+ jurisdictions / 85+ offices",
+    "status": "confirmed",
+    "note": "50+ markets on careers site; additional 170+ countries coverage claim on VGS page.",
+    "source": "https://careers.vistra.com/ ; https://www.vistra.com/vgs"
+   },
+   {
+    "claim": "Romania listed but unconfirmed",
+    "status": "erroneous",
+    "note": "Romania office confirmed: Bucharest, Vistra Professional Services SRL, Unirii View building.",
+    "source": "https://www.vistra.com/locations/emea/romania"
+   },
+   {
+    "claim": "Moldova not offered",
+    "status": "confirmed",
+    "note": "Restated as 'not found' (absence of evidence).",
+    "source": "https://www.vistra.com/speciality-services/legalisation/apostille-faqs"
+   },
+   {
+    "claim": "Acquired Biz Latin Hub Dec 2025; Vistra Latam launched June 2026",
+    "status": "confirmed",
+    "note": "Reported 24-25 June 2026.",
+    "source": "https://cfotech.news/story/vistra-launches-latam-unit-after-biz-latin-hub-deal"
+   },
+   {
+    "claim": "Tricor merged in",
+    "status": "needs_check",
+    "note": "Not re-verified in this pass.",
+    "source": "https://www.vistra.com/tricor-now-part-vistra"
+   },
+   {
+    "claim": "No public partner program",
+    "status": "confirmed",
+    "note": "None found for law firms; public partnerships are with EOR providers G-P (Mar 2026) and Oyster (Apr 2026).",
+    "source": "https://www.vistra.com/insights/vistra-launches-partnership-g-p-bridge-eor-and-entity-based-expansion-and-simplify"
+   },
+   {
+    "claim": "Email not verified",
+    "status": "confirmed",
+    "note": "Still not found; use contact form.",
+    "source": "https://www.vistra.com/contact-form"
+   }
+  ],
+  "dossier": {
+   "main_services": "Entity management, company secretarial, accounting, payroll/HR, international expansion, fund admin, private client",
+   "geography": "Global, 50+ markets; CEE: Poland, Romania",
+   "moldova_status": "Not found",
+   "local_partner_need": "Medium - would need a local provider for any client entity in Moldova (ASSUMPTION)",
+   "long_term_legal_potential": "High per entity (recurring governance/compliance), low volume",
+   "why_legitimus_interesting": "Could cover Moldova for Vistra Romania/Continental Europe clients as a vetted local legal provider",
+   "what_to_offer": "Local counsel for Moldovan entity set-up, corporate secretarial legal support, legal opinions, regulatory filings",
+   "preferred_format": "local counsel / white-label subcontracting",
+   "objections": [
+    "Enterprise vendor due diligence and insurance requirements",
+    "Low Moldova demand",
+    "Prefers own offices or large partners",
+    "Hard to reach the right buyer"
+   ],
+   "first_step": "Approach Vistra Romania (Bucharest) team via contact form/phone proposing Moldova coverage for their clients"
+  },
+  "check_date": "2026-10-08",
+  "total_score": 59
+ },
+ {
+  "name": "Shuraa Business Setup",
+  "website": "https://www.shuraa.com",
+  "hq": "Dubai, UAE (5th Floor, Aspin Commercial Tower, Sheikh Zayed Road)",
+  "exists": {
+   "value": "yes - live with 2026-dated pages (e.g., VARA licence guide 2026, 'Best business setup consultants in Dubai (2026)')",
+   "confidence": "Medium",
+   "sources": [
+    "https://www.shuraa.com/",
+    "https://www.shuraa.com/vara-license-in-dubai-uae/"
+   ]
+  },
+  "specialization": "UAE business setup (mainland, free zones, offshore), PRO/visa services, tax & accounting (Shuraa Tax & Accounting Services L.L.C.).",
+  "multi_country": {
+   "value": "no (formation found only in UAE)",
+   "evidence": "All formation pages UAE-only; offices in London, Amsterdam, Delhi/Mumbai serve client acquisition for UAE setup. Not found: non-UAE formation.",
+   "confidence": "Medium",
+   "sources": [
+    "https://www.shuraa.com/company-formation-in-dubai-uae/",
+    "https://www.shuraa.co.uk/"
+   ]
+  },
+  "moldova": {
+   "value": "not found",
+   "delivery": "n/a",
+   "evidence": "No Moldova formation page found; only visa-free list mention.",
+   "confidence": "Medium",
+   "sources": [
+    "https://www.shuraa.com/visa-free-countries-for-uae-residents/"
+   ]
+  },
+  "law_firm_cooperation": {
+   "value": "not found",
+   "evidence": "Only a consumer-style referral scheme (Refer & Earn, up to AED 3,000 per completed setup); referrers may not represent Shuraa. No law-firm alliance found.",
+   "confidence": "Medium",
+   "sources": [
+    "https://referral.shuraa.com/",
+    "https://referral.shuraa.com/terms-and-conditions"
+   ]
+  },
+  "contacts": {
+   "email": "info@shuraa.com; UK: info.london@shuraa.co.uk / info@shuraa.co.uk (inconsistent)",
+   "phone": "+971 4 408 1900; 800-SHURAA; UK +44 7538 205604",
+   "contact_page": "https://www.shuraa.com/contact-us/",
+   "current": "unclear",
+   "confidence": "Medium",
+   "sources": [
+    "https://www.shuraa.com/contact-us/",
+    "https://www.shuraa.co.uk/contact-us/"
+   ]
+  },
+  "one_off_signals": "Moderate: setup-package marketing, but has license renewals, PRO and tax/accounting recurring services in UAE.",
+  "long_term_services": {
+   "value": "yes (UAE only)",
+   "evidence": "VAT/corporate tax registration and filing, accounting, PRO, licence renewals.",
+   "sources": [
+    "https://www.shuraa.com/tax-accounting/",
+    "https://www.shuraa.com/business-services-dubai-uae/"
+   ]
+  },
+  "decision_makers": [
+   {
+    "name": "Saeed Khalifa Mohammed Al Fuqaei",
+    "title": "Founder and Chairman, Shuraa Group",
+    "source": "https://gulfnews.com/business/corporate-news/uaes-shuraa-group-broadens-its-horizons-to-create-stronger-ties-1.1660723440180",
+    "confidence": "Medium"
+   },
+   {
+    "name": "Shahid Rather",
+    "title": "Managing Partner, Shuraa Group (press; another caption names 'Shahid Shakeel' - needs check)",
+    "source": "https://khaleejtimes.com/kt-engage/kickstart-your-new-beginnings",
+    "confidence": "Low"
+   }
+  ],
+  "scores": {
+   "profile_fit": {
+    "score": 5,
+    "why": "UAE-inbound formation house; not a multi-country formation provider."
+   },
+   "recurring_client_potential": {
+    "score": 8,
+    "why": "Recurring services are UAE-only; Moldova-bound client flow unlikely."
+   },
+   "local_legal_partner_cooperation": {
+    "score": 4,
+    "why": "No law-firm partner model; only a paid customer referral scheme."
+   },
+   "moldova_commercial_interest": {
+    "score": 4,
+    "why": "No Moldova offering; only possible reverse flow (Moldovan clients to UAE)."
+   },
+   "decision_maker_accessibility": {
+    "score": 9,
+    "why": "Founder and managing partner named in press; many public channels."
+   }
+  },
+  "exclude": {
+   "value": true,
+   "reason": "No clear mutual model: UAE-only formation, no need for Moldovan counsel; only one-way referral into UAE."
+  },
+  "audit": [
+   {
+    "claim": "Formation only in UAE",
+    "status": "confirmed",
+    "note": "No non-UAE formation found.",
+    "source": "https://www.shuraa.com/company-formation-in-dubai-uae/"
+   },
+   {
+    "claim": "Offices UK, Netherlands, India",
+    "status": "confirmed",
+    "note": "London address inconsistent: 9 Fisher's Lane Chiswick vs 71-75 / 85 Uxbridge Road.",
+    "source": "https://www.shuraa.co.uk/contact-us/ ; https://www.shuraa.com/contact-us/"
+   },
+   {
+    "claim": "UK address 85 Uxbridge Road, Ealing",
+    "status": "outdated",
+    "note": "Shuraa UK contact page now shows 9 Fisher's Lane, Chiswick, London W4 1RX.",
+    "source": "https://www.shuraa.co.uk/contact-us/"
+   },
+   {
+    "claim": "Refer & Earn up to AED 3,000, paid after completed setup; referrers may not represent Shuraa",
+    "status": "confirmed",
+    "note": "T&C confirm; also excludes existing clients, discretionary.",
+    "source": "https://referral.shuraa.com/terms-and-conditions"
+   },
+   {
+    "claim": "Moldova not offered",
+    "status": "confirmed",
+    "note": "Restated as 'not found'.",
+    "source": "https://www.shuraa.com/visa-free-countries-for-uae-residents/"
+   },
+   {
+    "claim": "Main contact details (+971 4 408 1900, info@shuraa.com, Aspin Tower)",
+    "status": "confirmed",
+    "note": "Per contact page snippet.",
+    "source": "https://www.shuraa.com/contact-us/"
+   }
+  ],
+  "dossier": {
+   "main_services": "UAE mainland/free zone/offshore setup, PRO, visas, tax & accounting",
+   "geography": "UAE; sales offices UK, NL, India",
+   "moldova_status": "Not found",
+   "local_partner_need": "Low",
+   "long_term_legal_potential": "Low",
+   "why_legitimus_interesting": "Only as reverse-referral destination for Moldovan clients seeking UAE structures",
+   "what_to_offer": "Two-way referral: Moldovan legal support for UAE clients' Moldova matters",
+   "preferred_format": "two-way referral",
+   "objections": [
+    "No Moldova demand",
+    "Referral scheme is one-directional and commission-based",
+    "Large B2C sales operation"
+   ],
+   "first_step": "None recommended (excluded); optionally note for reverse referrals"
+  },
+  "check_date": "2026-10-08",
+  "total_score": 30
+ },
+ {
+  "name": "InCorp Global (rebranding to Ascentium)",
+  "website": "https://www.incorp.asia",
+  "hq": "Singapore (36 Robinson Road, #20-01 City House); part of Ascentium group (Singapore)",
+  "exists": {
+   "value": "yes - active; country entities rebranding to Ascentium through 2026 (Philippines Jul 2026, India Sep 2026, Singapore Oct 2026)",
+   "confidence": "High",
+   "sources": [
+    "https://www.uniindia.com/prnewswire/incorp-india-completes-rebrand-to-ascentium-aligning-domestic-growth-with-global-strategy-302891233/195346",
+    "https://macaubusiness.com/incorp-philippines-rebrands-to-ascentium-philippines-reinforcing-commitment-to-a-growing-market/",
+    "https://www.thailand-business-news.com/?p=332216"
+   ]
+  },
+  "specialization": "APAC corporate services: incorporation, corporate secretarial, accounting/tax, payroll, immigration.",
+  "multi_country": {
+   "value": "yes (APAC)",
+   "evidence": "9 APAC markets. Parent Ascentium: 3,000+ professionals, 27 markets, incl. Harneys Fiduciary (BVI, Cayman, Cyprus, HK, Singapore, UK), Virtuzone (UAE), Dezan Shira, MGI Dobbyn Carafa.",
+   "confidence": "Medium",
+   "sources": [
+    "https://www.incorp.asia/about/",
+    "https://www.cekindo.com/blog/incorp-is-becoming-ascentium",
+    "https://kyodonewsprwire.jp/release/202504097131"
+   ]
+  },
+  "moldova": {
+   "value": "not found",
+   "delivery": "n/a",
+   "evidence": "No Moldova pages on incorp.asia; 'Ascentium Moldova' search returned nothing relevant.",
+   "confidence": "Medium",
+   "sources": [
+    "https://www.incorp.asia/about/"
+   ]
+  },
+  "law_firm_cooperation": {
+   "value": "unclear",
+   "evidence": "Partners page lists chambers and networks (Dutch Chambers, Ebury, PrimeGlobal 100+ countries); no law-firm alliance evidence.",
+   "confidence": "Low",
+   "sources": [
+    "https://www.incorp.asia/about/our-partners/"
+   ]
+  },
+  "contacts": {
+   "email": "not found",
+   "phone": "+65 8699 8821 (WhatsApp)",
+   "contact_page": "https://www.incorp.asia/contact-us/",
+   "current": "unclear",
+   "confidence": "Medium",
+   "sources": [
+    "https://www.incorp.asia/contact-us/"
+   ]
+  },
+  "one_off_signals": "Low - recurring secretarial/accounting model.",
+  "long_term_services": {
+   "value": "yes",
+   "evidence": "Corporate secretarial, accounting, tax, payroll, immigration.",
+   "sources": [
+    "https://www.incorp.asia/"
+   ]
+  },
+  "decision_makers": [
+   {
+    "name": "Wendy Wang",
+    "title": "Group CEO, InCorp Global (leadership page, snapshot ~14 months old)",
+    "source": "https://www.incorp.asia/about/our-leadership/",
+    "confidence": "Medium"
+   },
+   {
+    "name": "Lennard Yong",
+    "title": "Group CEO, Ascentium (April 2025 release); Chairman of InCorp Global (2024)",
+    "source": "https://kyodonewsprwire.jp/release/202504097131",
+    "confidence": "Medium"
+   }
+  ],
+  "scores": {
+   "profile_fit": {
+    "score": 8,
+    "why": "Recurring corporate services provider but APAC-only; not a multi-country formation seller into Europe."
+   },
+   "recurring_client_potential": {
+    "score": 10,
+    "why": "Recurring model, but Moldova-bound flow from APAC clients would be rare (ASSUMPTION)."
+   },
+   "local_legal_partner_cooperation": {
+    "score": 6,
+    "why": "Partners are chambers/accounting networks; no law-firm cooperation evidence."
+   },
+   "moldova_commercial_interest": {
+    "score": 4,
+    "why": "No Moldova presence or demand signal."
+   },
+   "decision_maker_accessibility": {
+    "score": 7,
+    "why": "Group and country CEOs named, but large group mid-rebrand; no partnerships contact."
+   }
+  },
+  "exclude": {
+   "value": true,
+   "reason": "No clear mutual model: APAC-only footprint, no Moldova/Europe demand evidence. Revisit at Ascentium group level (Cyprus/UK fiduciary) if needed."
+  },
+  "audit": [
+   {
+    "claim": "Rebranding to Ascentium",
+    "status": "confirmed",
+    "note": "Country-by-country rebrand in 2026; InCorp Global part of Ascentium since 2024.",
+    "source": "https://www.cekindo.com/blog/incorp-is-becoming-ascentium"
+   },
+   {
+    "claim": "9 APAC markets",
+    "status": "confirmed",
+    "note": "Per About page; parent group covers 27 markets incl. Cyprus and UK (via Harneys Fiduciary) - agent 01 omitted group-level European presence.",
+    "source": "https://www.incorp.asia/about/ ; https://kyodonewsprwire.jp/release/202504097131"
+   },
+   {
+    "claim": "Pure APAC footprint, no Europe/CIS coverage",
+    "status": "needs_check",
+    "note": "True for InCorp brand; Ascentium group has Cyprus (Limassol) and UK presence.",
+    "source": "https://kyodonewsprwire.jp/release/202504097131"
+   },
+   {
+    "claim": "Moldova not offered",
+    "status": "confirmed",
+    "note": "Not found.",
+    "source": "https://www.incorp.asia/about/"
+   },
+   {
+    "claim": "No public partner program; incorp.com is a different US firm",
+    "status": "confirmed",
+    "note": "Partners page exists (chambers/networks), not a referral program.",
+    "source": "https://www.incorp.asia/about/our-partners/"
+   },
+   {
+    "claim": "Address 36 Robinson Road; WhatsApp +65 8699 8821",
+    "status": "needs_check",
+    "note": "Not re-verified; Singapore entity rebranded to Ascentium Singapore 1 Oct 2026 so contacts may change.",
+    "source": "https://www.incorp.asia/contact-us/"
+   },
+   {
+    "claim": "1,500+ staff, 20,000+ clients",
+    "status": "outdated",
+    "note": "Ascentium group now cites 3,000+ people across 27 markets.",
+    "source": "https://www.cekindo.com/blog/incorp-is-becoming-ascentium"
+   }
+  ],
+  "dossier": {
+   "main_services": "Incorporation, corporate secretarial, accounting/tax, payroll, immigration",
+   "geography": "APAC (9 markets); parent Ascentium 27 markets",
+   "moldova_status": "Not found",
+   "local_partner_need": "Low",
+   "long_term_legal_potential": "Low",
+   "why_legitimus_interesting": "Occasional outbound Asian clients to Moldova/EU-candidate markets",
+   "what_to_offer": "Ad hoc referral for Moldova matters",
+   "preferred_format": "referral",
+   "objections": [
+    "No Europe/Moldova demand",
+    "Group in rebrand transition",
+    "Large group procurement"
+   ],
+   "first_step": "None recommended (excluded)"
+  },
+  "check_date": "2026-10-08",
+  "total_score": 35
+ }
+]
