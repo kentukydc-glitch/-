@@ -1,4 +1,4 @@
-"""Weekly Moldova legal vacancies digest; Python 3.11+, no dependencies."""
+"""Weekly Moldova legal vacancies digest; Python 3.11+, Playwright for JavaScript sources."""
 import argparse
 import csv
 import hashlib
@@ -23,12 +23,12 @@ from zoneinfo import ZoneInfo
 SOURCES = {
     'Lucru.md': 'https://www.lucru.md/ro/jobs-moldova',
     'Delucru.md': 'https://www.delucru.md/jobs/law',
-    'Jobber.md': 'https://jobber.md/en/jobs/',
-    '999.md': 'https://999.md/ro/work',
+    'Jobber.md': 'https://jobber.md/en/jobs/?query=jurist',
+    '999.md': 'https://999.md/ro/list/work/jurisprudence?tab=vacancy&o_16_1=983',
     'Muncitorul.md': 'https://muncitorul.md/ro/posturi_vacante',
-    'TopAngajatori.md': 'https://www.topangajatori.md/juridic',
+    'TopAngajatori.md': 'https://www.delucru.md/jobs/jobs-top',
 }
-KEYWORDS = re.compile(r'юрист|юрисконсульт|адвокат|\bjurist\w*|\bjurisconsult\w*|juridic|\bavocat\w*|legal\s+counsel', re.I)
+KEYWORDS = re.compile(r'юрист|юрисконсульт|адвокат|\bjurist\w*|\bjurisconsult\w*|juridic|\bavocat\w*|\blawyer\b|legal\s+(?:counsel|expert|advisor|officer|specialist)', re.I)
 DISCOVERY = re.compile(KEYWORDS.pattern + r'|juridic|\blaw\b', re.I)
 AGENT = 'LegalVacancyDigest/1.0'
 
@@ -187,8 +187,12 @@ def normalize(job, source, page_url):
     url = urljoin(page_url, job.get('url') or page_url)
     parts = urlsplit(url)
     url = urlunsplit((parts.scheme, parts.netloc, parts.path, parts.query, ''))
+    description = plain(job.get('qualifications') or job.get('skills') or job.get('description'))
+    required = re.search(r'cerin[țţt]e|требования|requirements|qualifications', description, re.I)
+    if required:
+        description = description[required.start():]
     return dict(source=source, employer=plain(org.get('name')) if isinstance(org, dict) else plain(org), title=title,
-                requirements=textwrap.shorten(plain(job.get('qualifications') or job.get('skills') or job.get('description')), width=350, placeholder='…'),
+                requirements=textwrap.shorten(description, width=350, placeholder='…'),
                 city=city, date=plain(job.get('datePosted')), expires=plain(job.get('validThrough')), url=url)
 
 
@@ -204,7 +208,7 @@ class Fetcher:
                 raise RuntimeError('Redirect to a different site')
             return response.read(4_000_000).decode('utf-8', errors='replace')
 
-    def get(self, url):
+    def check_robots(self, url):
         parts = urlsplit(url)
         origin = f'{parts.scheme}://{parts.netloc}'
         if origin not in self.robots:
@@ -216,6 +220,9 @@ class Fetcher:
             self.robots[origin] = parser
         if not self.robots[origin].can_fetch(AGENT, url):
             raise RuntimeError('Disallowed by robots.txt')
+
+    def get(self, url):
+        self.check_robots(url)
         time.sleep(1)
         return self.raw(url)
 
@@ -242,30 +249,93 @@ class Fetcher:
         return candidates
 
 
+class BrowserFetcher(Fetcher):
+    """Use a normal Chromium browser where listings require JavaScript."""
+    def __init__(self):
+        super().__init__()
+        self.engine = self.browser = None
+        self.verified_queries = set()
+
+    def get(self, url):
+        domain = urlsplit(url).hostname.removeprefix('www.')
+        top_feed = domain == 'delucru.md' and urlsplit(url).path == '/jobs/jobs-top'
+        if (domain not in {'jobber.md', '999.md', 'lucru.md'} and not top_feed) or urlsplit(url).path.endswith(('.xml', '.xml.gz')):
+            return super().get(url)
+        self.check_robots(url)
+        if self.browser is None:
+            try:
+                from playwright.sync_api import sync_playwright
+            except ImportError as exc:
+                raise RuntimeError('Browser sources require playwright and Chromium; see README') from exc
+            self.engine = sync_playwright().start()
+            self.browser = self.engine.chromium.launch()
+        page = self.browser.new_page()
+        try:
+            response = page.goto(url, wait_until='domcontentloaded', timeout=45000)
+            page.wait_for_timeout(6500)
+            if top_feed:
+                field = page.get_by_label('Juridic / Asigurări', exact=True)
+                if not field.is_visible():
+                    page.get_by_text('Arată mai mult', exact=True).first.click()
+                field.check()
+                page.wait_for_timeout(6500)
+                if not field.is_checked() or page.locator('#jobtop').input_value() != '1':
+                    raise RuntimeError('Top employer legal category filter was not applied')
+                self.verified_queries.add(url)
+            if urlsplit(page.url).hostname.removeprefix('www.') != domain:
+                raise RuntimeError('Unexpected cross-site browser redirect')
+            body = page.content()
+            title = page.title()
+            if response and response.status >= 400 or re.search(r'403 Forbidden|Access denied|Just a moment|Verify you are human', title, re.I):
+                raise RuntimeError('Site denied browser access; source unavailable')
+            return body
+        finally:
+            page.close()
+
+    def close(self):
+        if self.browser:
+            self.browser.close()
+        if self.engine:
+            self.engine.stop()
+        self.browser = self.engine = None
+
+
 def collect(fetcher, source, root):
     queue, visited, found, errors = [root], set(), [], []
     verified_board = False
     available_positions = 0
     while queue and len(visited) < 12:
         url = queue.pop(0)
-        if url in visited:
+        visit_key = url
+        if source == 'Jobber.md':
+            job_id = re.search(r'/job/[^/]+/(\d+)/?$', urlsplit(url).path)
+            if job_id:
+                visit_key = 'jobber:' + job_id[1]
+        if visit_key in visited:
             continue
-        visited.add(url)
+        visited.add(visit_key)
         try:
             body = fetcher.get(url)
             if not body.strip():
                 raise RuntimeError('Empty response; source not verified')
             page = Page(body)
+            if source == 'Jobber.md' and url == root:
+                verified_board = bool(re.search(r'jobs for the query|No jobs|No vacancies', Tree(body).root.text(), re.I))
             if source == 'Muncitorul.md':
                 rows, available_positions = muncitorul_jobs(body, url)
                 found.extend(rows)
                 verified_board = available_positions > 0
-            if url == root and hasattr(fetcher, 'sitemap_candidates'):
+            if url == root and source not in {'Jobber.md', '999.md', 'Lucru.md', 'TopAngajatori.md'} and hasattr(fetcher, 'sitemap_candidates'):
                 queue.extend(fetcher.sitemap_candidates(root))
-            if source == 'Delucru.md':
+            if source in {'Delucru.md', 'TopAngajatori.md'}:
                 row = delu_job(body, url)
                 if row:
+                    row['source'] = source
                     found.append(row)
+            if source == 'TopAngajatori.md' and url == root:
+                verified_board = url in getattr(fetcher, 'verified_queries', set())
+            if source == '999.md' and url == root:
+                verified_board = bool(re.search(r'Jurist, consilier juridic', Tree(body).root.text(), re.I) and re.search(r'Joburi.*CV-uri', Tree(body).root.text(), re.I))
             for script in page.scripts:
                 try:
                     data = json.loads(script)
@@ -277,10 +347,16 @@ def collect(fetcher, source, root):
                         found.append(row)
             for href, label in page.links:
                 target = urljoin(url, href).split('#')[0]
+                if source == 'TopAngajatori.md' and not re.search(r'^/job/\d+$', urlsplit(target).path):
+                    continue
+                if source == '999.md' and not re.search(r'^/ro/\d+$', urlsplit(target).path):
+                    continue
+                if source == 'Jobber.md' and not re.search(r'/en/job/[^/]+/\d+/?$', urlsplit(target).path):
+                    continue
                 if (urlsplit(target).scheme == 'https' and
                         urlsplit(target).netloc.removeprefix('www.') == urlsplit(root).netloc.removeprefix('www.') and
                         DISCOVERY.search(label + ' ' + href) and target not in visited and
-                        not (source == 'Delucru.md' and '/ru/' in target)):
+                        not (source in {'Delucru.md', 'TopAngajatori.md'} and '/ru/' in target)):
                     queue.append(target)
         except Exception as exc:
             errors.append(f'{url}: {type(exc).__name__}: {exc}')
@@ -289,7 +365,7 @@ def collect(fetcher, source, root):
     return found, dict(source=source, pages=len(visited), postings=len(found), errors=errors,
                        available_positions=available_positions,
                        verified=bool(found) or verified_board,
-                       coverage=('Limited: Delucru HTML vacancy adapter' if source == 'Delucru.md' else 'Limited: JobPosting structured data only'))
+                       coverage={'Delucru.md': 'Вакансии раздела «Юридические»', 'Jobber.md': 'Поиск jurist; браузерная загрузка, отбор юридических должностей', '999.md': 'Раздел вакансий юриста; только объявления работодателей', 'Muncitorul.md': f'Собственная страница вакансий Olisgrup; проверено позиций: {available_positions}', 'TopAngajatori.md': 'Официальный список TopAngajatori на Delucru с фильтром «Juridic / Asigurări»', 'Lucru.md': 'Доступ через обычный браузер'}.get(source, 'Структурированные вакансии'))
 
 
 def recent(row, today):
@@ -371,7 +447,7 @@ def main():
     state_path = Path('state/seen.json')
     seen = json.loads(state_path.read_text()) if state_path.exists() else {}
     rows, reports = [], []
-    fetcher = Fetcher()
+    fetcher = BrowserFetcher()
     if args.input_json:
         cached = json.loads(Path(args.input_json).read_text())
         batches = [(cached, dict(source='Previously collected vacancies', pages=0, postings=len(cached), errors=[], coverage='Cached data for delivery verification'))]
@@ -384,6 +460,7 @@ def main():
             if key not in seen and recent(row, now.date()):
                 rows.append(row)
                 seen[key] = now.isoformat()
+    fetcher.close()
     Path('output').mkdir(exist_ok=True)
     body = render(rows, reports)
     Path('output/digest.html').write_text(body)
