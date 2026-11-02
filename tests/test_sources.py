@@ -3,28 +3,10 @@ import unittest
 from datetime import date
 from pathlib import Path
 from unittest.mock import MagicMock, patch
-from collector import BrowserFetcher, Page, collect, jobs, muncitorul_jobs, normalize, recent
+from collector import BrowserFetcher, Page, collect, jobs, normalize, recent
 
 
 class SourceTests(unittest.TestCase):
-    def test_muncitorul_filters_roles_and_labels_missing_dates(self):
-        body = '<div class="lista__item"><h3>Agent vânzări</h3></div><div class="lista__item"><h3>Jurist</h3><p>Despre noi</p><h3>Cerințe:</h3><p>Studii juridice; 2 ani experiență</p></div>'
-        rows, count = muncitorul_jobs(body, 'https://muncitorul.md/ro/posturi_vacante', date(2026, 11, 2))
-        self.assertEqual(count, 2)
-        self.assertEqual(len(rows), 1)
-        self.assertEqual(rows[0]['date_basis'], 'first_seen')
-        self.assertEqual(rows[0]['date'], '2026-11-02')
-        self.assertTrue(rows[0]['requirements'].startswith('Cerințe'))
-
-    def test_empty_muncitorul_legal_results_are_verified(self):
-        class Fake:
-            def get(self, url):
-                return '<div class="lista__item"><h3>Agent vânzări</h3></div>'
-        rows, report = collect(Fake(), 'Muncitorul.md', 'https://muncitorul.md/ro/posturi_vacante')
-        self.assertEqual(rows, [])
-        self.assertTrue(report['verified'])
-        self.assertEqual(report['errors'], [])
-
     def test_jobber_english_roles_requirements_and_age(self):
         job = {'@type': 'JobPosting', 'title': 'Insolvency Lawyer', 'hiringOrganization': {'name': 'PFB Collection'}, 'datePosted': '2026-10-24T00:00:00', 'description': '<p>Responsibilities: recover debts</p><p>Requirements</p><p>Insolvency experience; Romanian and Russian</p>'}
         row = normalize(job, 'Jobber.md', 'https://jobber.md/en/job/jurisprudence-chisinau-pfb-collection-insolvency-lawyer/12237/')
