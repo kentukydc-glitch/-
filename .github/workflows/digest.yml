@@ -1,0 +1,89 @@
+name: Weekly legal vacancies
+on:
+  push:
+    branches: [automation/legal-digest]
+  schedule:
+    - cron: '0 6,7 * * 1'
+  workflow_dispatch:
+    inputs:
+      send_email:
+        description: 'Send email (requires SMTP secrets)'
+        type: boolean
+        default: false
+permissions:
+  contents: write
+concurrency:
+  group: legal-digest
+  cancel-in-progress: false
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Restore delivery history
+        run: |
+          mkdir -p state
+          if git ls-remote --exit-code --heads origin digest-state; then
+            git fetch origin digest-state
+            git show FETCH_HEAD:seen.json > state/seen.json
+          fi
+      - name: Test
+        run: python -m unittest discover -s tests -v
+      - name: Collect and deliver
+        env:
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          SMTP_FROM: ${{ secrets.SMTP_FROM }}
+          DIGEST_TO: kentukydc@gmail.com
+          SCHEDULED: ${{ github.event_name == 'schedule' }}
+          SEND_EMAIL: ${{ inputs.send_email }}
+        run: |
+          if [ "$SCHEDULED" = true ]; then
+            python collector.py --send --scheduled
+          elif [ "$SEND_EMAIL" = true ]; then
+            python collector.py --send
+          else
+            python collector.py
+          fi
+      - name: Save accepted delivery history
+        if: always()
+        run: |
+          if [ ! -f state/seen.json ]; then exit 0; fi
+          cp state/seen.json "$RUNNER_TEMP/seen.json"
+          if git show-ref --verify --quiet refs/remotes/origin/digest-state; then
+            git switch -C delivery-history origin/digest-state
+          else
+            git switch --orphan delivery-history
+          fi
+          git rm -rf .
+          cp "$RUNNER_TEMP/seen.json" seen.json
+          git add seen.json
+          git -c user.name=github-actions -c user.email=github-actions@users.noreply.github.com commit -m 'Save delivered vacancy URLs'
+          git push origin HEAD:refs/heads/digest-state
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: digest-report
+          path: output/
+          retention-days: 30
+      - name: Publish collection report
+        if: always()
+        run: |
+          if [ ! -f output/report.json ]; then exit 0; fi
+          report_dir=$(mktemp -d)
+          cp output/report.json output/digest.html "$report_dir/"
+          printf '%s\n' "$GITHUB_RUN_ID" > "$report_dir/run-id.txt"
+          cd "$report_dir"
+          git init -b collection-report
+          git add .
+          git -c user.name=github-actions -c user.email=github-actions@users.noreply.github.com commit -m 'Collection report'
+          git remote add origin "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY.git"
+          git -c "http.extraheader=AUTHORIZATION: basic $(printf 'x-access-token:%s' "$GH_REPORT_TOKEN" | base64 -w0)" push --force origin HEAD:refs/heads/collection-report
+        env:
+          GH_REPORT_TOKEN: ${{ github.token }}
