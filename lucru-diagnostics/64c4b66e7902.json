@@ -1,0 +1,550 @@
+{
+  "url": "https://www.lucru.md/ro/lucru/jurist-a/139952",
+  "final_url": "https://www.lucru.md/ro/lucru/jurist-a/139952",
+  "title": "Jurist/ă - post vacant MAIB",
+  "postings": [
+    {
+      "@context": "https://schema.org/",
+      "@type": "JobPosting",
+      "title": "Jurist/ă",
+      "description": "Compania MAIB angajeaza Jurist/ă.",
+      "datePosted": "2026-06-15T10:48:47+03:00",
+      "employmentType": "OTHER",
+      "hiringOrganization": {
+        "@type": "Organization",
+        "name": "MAIB",
+        "sameAs": "https://www.lucru.md/ro/companii/moldova-agroindbank",
+        "logo": "https://rabota-md-prod.s3.amazonaws.com/images/uploads/2021_12_10_11_54_48_logo.jpg"
+      },
+      "jobLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "",
+          "addressCountry": "MD"
+        }
+      }
+    }
+  ],
+  "legal_links": [],
+  "inputs": [
+    {
+      "type": "checkbox"
+    },
+    {
+      "type": "checkbox"
+    },
+    {
+      "type": "checkbox"
+    },
+    {
+      "type": "checkbox"
+    },
+    {
+      "name": "query",
+      "type": "text",
+      "placeholder": "Indică jobul"
+    },
+    {
+      "name": "full_name",
+      "type": "text",
+      "placeholder": "Nume și Prenume"
+    },
+    {
+      "name": "o_phone",
+      "type": "tel",
+      "placeholder": "Telefon"
+    },
+    {
+      "name": "o_email",
+      "type": "text",
+      "placeholder": "E-mail"
+    },
+    {
+      "name": "resumeFile2",
+      "type": "file"
+    },
+    {
+      "name": "terms_of_service",
+      "type": "checkbox"
+    },
+    {
+      "name": "cookie_agreement",
+      "type": "hidden"
+    },
+    {
+      "name": "full_name",
+      "type": "text",
+      "placeholder": "Nume și Prenume"
+    },
+    {
+      "name": "phone",
+      "type": "tel",
+      "placeholder": "Telefon"
+    },
+    {
+      "name": "email",
+      "type": "text",
+      "placeholder": "E-mail"
+    },
+    {
+      "name": "last_company",
+      "type": "text",
+      "placeholder": "Denumirea companiei"
+    },
+    {
+      "name": "last_company_id",
+      "type": "hidden"
+    },
+    {
+      "name": "last_position",
+      "type": "text",
+      "placeholder": "Postul ocupat"
+    },
+    {
+      "name": "terms_of_service",
+      "type": "checkbox"
+    },
+    {
+      "name": "cookie_agreement",
+      "type": "hidden"
+    }
+  ],
+  "headings": [
+    "Modifică cookie",
+    "Cookie-uri necesare",
+    "Cookie-uri funcționale",
+    "Cookie-uri de analiză",
+    "Cookie-uri de marketing",
+    "Jurist/ă",
+    "Foto",
+    "Alte joburi ale companiei",
+    "Alte joburi ale companiei",
+    "Foto",
+    "Alte joburi ale companiei",
+    "Alte joburi ale companiei",
+    "Nu s-a reușit încărcarea anunțului.",
+    "Cu părere de rău, această pagină nu există."
+  ],
+  "buttons": [
+    "",
+    "Salvează",
+    "Acceptă toate",
+    "Caută job",
+    "",
+    "",
+    "",
+    "Salvează job",
+    "Ascunde",
+    "Salvează job",
+    "Ascunde",
+    "Închide",
+    "Trimite CV-ul",
+    "Trimite CV-ul",
+    "Aplică",
+    "Încearcă din nou"
+  ],
+  "navigation": [
+    [
+      "/ro/agreement",
+      "cookies"
+    ],
+    [
+      "javascript:void(0);",
+      ""
+    ],
+    [
+      "https://www.lucru.md/ro/",
+      ""
+    ],
+    [
+      "/ro/posturi-vacante",
+      "Caut de lucru"
+    ],
+    [
+      "/ro/posturi-vacante",
+      "După rubrici"
+    ],
+    [
+      "/ro/posturi-vacante/companii",
+      "După companii"
+    ],
+    [
+      "/ro/profesii",
+      "După profesii"
+    ],
+    [
+      "/ro/locuri-de-munca/orase",
+      "După orașe"
+    ],
+    [
+      "/ro/jobs/chisinau",
+      "În Chișinău"
+    ],
+    [
+      "/ro/all",
+      "Joburi curente"
+    ],
+    [
+      "/ro/subscribe",
+      "Joburi pe E-mail"
+    ],
+    [
+      "/ro/inregistrare/cv",
+      "Creează CV"
+    ],
+    [
+      "/ro/preturi",
+      "Caut angajați"
+    ],
+    [
+      "/ro/cv",
+      "CV-uri după rubrici"
+    ],
+    [
+      "/ro/cv/#cities",
+      "CV-uri după orașe"
+    ],
+    [
+      "/ro/preturi",
+      "Prețuri și servicii"
+    ],
+    [
+      "/ro/preturi/vip",
+      "VIP joburi Popular"
+    ],
+    [
+      "/ro/preturi/cv",
+      "Acces la baza de CV-uri"
+    ],
+    [
+      "/ro/inregistrare/vacancy",
+      "Adaugă anunț"
+    ],
+    [
+      "tel:+373 696-19917",
+      "+373 696-19917"
+    ],
+    [
+      "mailto:lucru@lucru.md",
+      "lucru@lucru.md"
+    ],
+    [
+      "/ro/inregistrare/cv",
+      "Creează CV"
+    ],
+    [
+      "/ro/inregistrare/vacancy",
+      "Adaugă anunț"
+    ],
+    [
+      "javascript:void(0);",
+      "RU"
+    ],
+    [
+      "/ro/inregistrare",
+      "Cont nou"
+    ],
+    [
+      "https://www.lucru.md/ro/",
+      "Principala"
+    ],
+    [
+      "#",
+      "Caut de lucru"
+    ],
+    [
+      "https://www.lucru.md/ro/posturi-vacante",
+      "După rubrici"
+    ],
+    [
+      "https://www.lucru.md/ro/profesii",
+      "După profesii"
+    ],
+    [
+      "https://www.lucru.md/ro/lucru/chisinau",
+      "În Chișinău"
+    ],
+    [
+      "https://www.lucru.md/ro/locuri-de-munca/orase",
+      "După orașe"
+    ],
+    [
+      "https://www.lucru.md/ro/posturi-vacante/companii",
+      "După companii"
+    ],
+    [
+      "https://www.lucru.md/ro/all",
+      "Joburi curente"
+    ],
+    [
+      "https://www.lucru.md/ro/subscribe",
+      "Joburi pe E-mail"
+    ],
+    [
+      "https://www.lucru.md/ro/inregistrare/cv",
+      "Creează CV"
+    ],
+    [
+      "https://www.lucru.md/ro/cv",
+      "Baza de CV"
+    ],
+    [
+      "/ro/preturi",
+      "Prețuri și servicii"
+    ],
+    [
+      "/ro/preturi",
+      "Pentru companii"
+    ],
+    [
+      "/ro/preturi/vip",
+      "VIP joburi Popular"
+    ],
+    [
+      "/ro/preturi/premium",
+      "Premium joburi"
+    ],
+    [
+      "/ro/preturi/cv",
+      "Acces la baza de CV-uri"
+    ],
+    [
+      "/ro/preturi",
+      "Prețuri și servicii"
+    ],
+    [
+      "/ro/recenzii",
+      "Opiniile clienților +1 recenzie nouă"
+    ],
+    [
+      "/ro/statistica",
+      "Statistica site-ului New"
+    ],
+    [
+      "https://www.mantis.md/ro/",
+      "Recrutare personal"
+    ],
+    [
+      "/ro/inregistrare/vacancy",
+      "Adaugă anunț"
+    ],
+    [
+      "https://blog.rabota.md/ro/",
+      "Noutăți despre piața muncii"
+    ],
+    [
+      "javascript:void(0);",
+      "Limba site-ului RU"
+    ],
+    [
+      "/ro/inregistrare/cv",
+      "Creează CV"
+    ],
+    [
+      "/ro/inregistrare/vacancy",
+      "Adaugă anunț"
+    ],
+    [
+      "tel:+373 696-19917",
+      "+373 696-19917 Ala și Vladimir - manageri relații cu clienții"
+    ],
+    [
+      "tel:+37322921095",
+      "022 92-10-95 Moderatorul Svetlana — întrebări referitoare la anunțuri și CV"
+    ],
+    [
+      "tel:+37322921058",
+      "022 92-10-58 Contabilitatea: Ala și Elena - întrebări referitoare la plăți, conturi și acte de verificare"
+    ],
+    [
+      "tel:lucru@lucru.md",
+      "lucru@lucru.md Acceptăm E-mailuri 24/24"
+    ],
+    [
+      "https://www.facebook.com/Rabota.md",
+      "Facebook"
+    ],
+    [
+      "https://www.instagram.com/rabota.md/",
+      "Instagram"
+    ],
+    [
+      "https://t.me/Rabota_md",
+      "Telegram"
+    ],
+    [
+      "https://www.youtube.com/user/RabotaMD/videos",
+      "YouTube"
+    ],
+    [
+      "https://www.linkedin.com/company/rabota-md/",
+      "LinkedIn"
+    ],
+    [
+      "/ro/companii/moldova-agroindbank",
+      "MAIB"
+    ],
+    [
+      "javascript:void(0);",
+      "Trimite CV"
+    ],
+    [
+      "/ro/companii/moldova-agroindbank",
+      ""
+    ],
+    [
+      "/ro/companii/moldova-agroindbank",
+      "MAIB"
+    ],
+    [
+      "javascript:void(0);",
+      "Trimite CV"
+    ],
+    [
+      "/ro/companii/moldova-agroindbank#vacancies",
+      "Anunțuri"
+    ],
+    [
+      "/ro/companii/moldova-agroindbank",
+      "Companie"
+    ],
+    [
+      "/ro/companii/moldova-agroindbank#benefits",
+      "Beneficii"
+    ],
+    [
+      "/ro/companii/moldova-agroindbank#photos",
+      "Fotografii"
+    ],
+    [
+      "/ro/companii/moldova-agroindbank#video",
+      "Video"
+    ],
+    [
+      "/ro/companii/moldova-agroindbank#contacts",
+      "Rețelele sociale"
+    ],
+    [
+      "/ro/companii/moldova-agroindbank#contacts",
+      "Contacte"
+    ],
+    [
+      "mailto:resurseumane@maib.md",
+      "resurseumane@maib.md"
+    ],
+    [
+      "mailto:resurseumane@maib.md",
+      "E-mail: Copiază resurseumane@maib.md"
+    ],
+    [
+      "javascript:void(0);",
+      "Trimite CV"
+    ],
+    [
+      "https://rabota-md-prod.s3.amazonaws.com/images/company/moldova-agroindbank/image_17092845200.png",
+      ""
+    ],
+    [
+      "https://rabota-md-prod.s3.amazonaws.com/images/company/moldova-agroindbank/image_17092845201.png",
+      ""
+    ],
+    [
+      "https://rabota-md-prod.s3.amazonaws.com/images/company/moldova-agroindbank/image_17092845202.png",
+      ""
+    ],
+    [
+      "https://rabota-md-prod.s3.amazonaws.com/images/company/moldova-agroindbank/image_17092845203.png",
+      ""
+    ],
+    [
+      "https://rabota-md-prod.s3.amazonaws.com/images/company/moldova-agroindbank/image_17092845204.png",
+      ""
+    ],
+    [
+      "https://rabota-md-prod.s3.amazonaws.com/images/company/moldova-agroindbank/image_17092845215.png",
+      ""
+    ],
+    [
+      "https://rabota-md-prod.s3.amazonaws.com/images/company/moldova-agroindbank/image_17092845216.png",
+      ""
+    ],
+    [
+      "https://rabota-md-prod.s3.amazonaws.com/images/company/moldova-agroindbank/image_17092845217.png",
+      ""
+    ],
+    [
+      "/ro/companii/moldova-agroindbank",
+      ""
+    ],
+    [
+      "/ro/lucru/lead-integrari-it/139605",
+      "Lead Integrări IT"
+    ],
+    [
+      "/ro/companii/moldova-agroindbank",
+      ""
+    ],
+    [
+      "/ro/companii/moldova-agroindbank",
+      "MAIB"
+    ],
+    [
+      "javascript:void(0)",
+      "Trimite CV"
+    ],
+    [
+      "javascript:void(0)",
+      "Trimite CV"
+    ],
+    [
+      "/ro/companii/moldova-agroindbank",
+      ""
+    ],
+    [
+      "/ro/lucru/qa-engineer-manual-automation/145506",
+      "QA Engineer – Manual & Automation"
+    ],
+    [
+      "/ro/companii/moldova-agroindbank",
+      ""
+    ],
+    [
+      "/ro/companii/moldova-agroindbank",
+      "MAIB"
+    ],
+    [
+      "javascript:void(0)",
+      "Trimite CV"
+    ],
+    [
+      "javascript:void(0)",
+      "Trimite CV"
+    ],
+    [
+      "/ro/companii/moldova-agroindbank",
+      ""
+    ],
+    [
+      "/ro/lucru/specialist-servicii-clienti-mun-chisinau/83282",
+      "Specialist servicii clienți | mun. Chișinău"
+    ],
+    [
+      "/ro/companii/moldova-agroindbank",
+      ""
+    ],
+    [
+      "/ro/companii/moldova-agroindbank",
+      "MAIB"
+    ],
+    [
+      "javascript:void(0)",
+      "Trimite CV"
+    ],
+    [
+      "javascript:void(0)",
+      "Trimite CV"
+    ]
+  ],
+  "main_text": ""
+}

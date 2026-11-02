@@ -1,0 +1,577 @@
+{
+  "url": "https://www.lucru.md/ro/lucru/jurist/145168",
+  "final_url": "https://www.lucru.md/ro/lucru/jurist/145168",
+  "title": "Jurist - post vacant MAGNUM CLINIC",
+  "postings": [
+    {
+      "@context": "https://schema.org/",
+      "@type": "JobPosting",
+      "title": "Jurist",
+      "description": "Compania MAGNUM CLINIC angajeaza Jurist.",
+      "datePosted": "2026-10-29T12:22:01+02:00",
+      "employmentType": "OTHER",
+      "hiringOrganization": {
+        "@type": "Organization",
+        "name": "MAGNUM CLINIC",
+        "sameAs": "https://www.lucru.md/ro/companii/magnum-clinic",
+        "logo": "https://rabota-md-prod.s3.amazonaws.com/images/uploads/2024_06_10_15_57_15_logo_3.png"
+      },
+      "jobLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "",
+          "addressCountry": "MD"
+        }
+      }
+    }
+  ],
+  "legal_links": [
+    [
+      "https://www.lucru.md/ro/lucru/jurist/143361",
+      "Jurist"
+    ],
+    [
+      "https://www.lucru.md/ro/lucru/jurist-jurista/135415",
+      "Jurist / Juristă"
+    ],
+    [
+      "https://www.lucru.md/ro/lucru/yurist/86270",
+      "Юрист"
+    ],
+    [
+      "https://www.lucru.md/ro/lucru/jurist/143361",
+      "Jurist"
+    ],
+    [
+      "https://www.lucru.md/ro/lucru/jurist-jurista/135415",
+      "Jurist / Juristă"
+    ],
+    [
+      "https://www.lucru.md/ro/lucru/yurist/86270",
+      "Юрист"
+    ]
+  ],
+  "inputs": [
+    {
+      "type": "checkbox"
+    },
+    {
+      "type": "checkbox"
+    },
+    {
+      "type": "checkbox"
+    },
+    {
+      "type": "checkbox"
+    },
+    {
+      "name": "query",
+      "type": "text",
+      "placeholder": "Indică jobul"
+    },
+    {
+      "name": "full_name",
+      "type": "text",
+      "placeholder": "Nume și Prenume"
+    },
+    {
+      "name": "o_phone",
+      "type": "tel",
+      "placeholder": "Telefon"
+    },
+    {
+      "name": "o_email",
+      "type": "text",
+      "placeholder": "E-mail"
+    },
+    {
+      "name": "resumeFile2",
+      "type": "file"
+    },
+    {
+      "name": "terms_of_service",
+      "type": "checkbox"
+    },
+    {
+      "name": "cookie_agreement",
+      "type": "hidden"
+    },
+    {
+      "name": "full_name",
+      "type": "text",
+      "placeholder": "Nume și Prenume"
+    },
+    {
+      "name": "phone",
+      "type": "tel",
+      "placeholder": "Telefon"
+    },
+    {
+      "name": "email",
+      "type": "text",
+      "placeholder": "E-mail"
+    },
+    {
+      "name": "last_company",
+      "type": "text",
+      "placeholder": "Denumirea companiei"
+    },
+    {
+      "name": "last_company_id",
+      "type": "hidden"
+    },
+    {
+      "name": "last_position",
+      "type": "text",
+      "placeholder": "Postul ocupat"
+    },
+    {
+      "name": "terms_of_service",
+      "type": "checkbox"
+    },
+    {
+      "name": "cookie_agreement",
+      "type": "hidden"
+    }
+  ],
+  "headings": [
+    "Modifică cookie",
+    "Cookie-uri necesare",
+    "Cookie-uri funcționale",
+    "Cookie-uri de analiză",
+    "Cookie-uri de marketing",
+    "Jurist",
+    "Jurist",
+    "Joburi similare",
+    "Alte joburi ale companiei",
+    "Alte joburi ale companiei",
+    "Jurist",
+    "Joburi similare",
+    "Alte joburi ale companiei",
+    "Alte joburi ale companiei",
+    "Nu s-a reușit încărcarea anunțului.",
+    "Cu părere de rău, această pagină nu există."
+  ],
+  "buttons": [
+    "",
+    "Salvează",
+    "Acceptă toate",
+    "Caută job",
+    "",
+    "",
+    "",
+    "Salvează job",
+    "Ascunde",
+    "Salvează job",
+    "Ascunde",
+    "Închide",
+    "Trimite CV-ul",
+    "Trimite CV-ul",
+    "Aplică",
+    "Încearcă din nou"
+  ],
+  "navigation": [
+    [
+      "/ro/agreement",
+      "cookies"
+    ],
+    [
+      "javascript:void(0);",
+      ""
+    ],
+    [
+      "https://www.lucru.md/ro/",
+      ""
+    ],
+    [
+      "/ro/posturi-vacante",
+      "Caut de lucru"
+    ],
+    [
+      "/ro/posturi-vacante",
+      "După rubrici"
+    ],
+    [
+      "/ro/posturi-vacante/companii",
+      "După companii"
+    ],
+    [
+      "/ro/profesii",
+      "După profesii"
+    ],
+    [
+      "/ro/locuri-de-munca/orase",
+      "După orașe"
+    ],
+    [
+      "/ro/jobs/chisinau",
+      "În Chișinău"
+    ],
+    [
+      "/ro/all",
+      "Joburi curente"
+    ],
+    [
+      "/ro/subscribe",
+      "Joburi pe E-mail"
+    ],
+    [
+      "/ro/inregistrare/cv",
+      "Creează CV"
+    ],
+    [
+      "/ro/preturi",
+      "Caut angajați"
+    ],
+    [
+      "/ro/cv",
+      "CV-uri după rubrici"
+    ],
+    [
+      "/ro/cv/#cities",
+      "CV-uri după orașe"
+    ],
+    [
+      "/ro/preturi",
+      "Prețuri și servicii"
+    ],
+    [
+      "/ro/preturi/vip",
+      "VIP joburi Popular"
+    ],
+    [
+      "/ro/preturi/cv",
+      "Acces la baza de CV-uri"
+    ],
+    [
+      "/ro/inregistrare/vacancy",
+      "Adaugă anunț"
+    ],
+    [
+      "tel:+373 696-19917",
+      "+373 696-19917"
+    ],
+    [
+      "mailto:lucru@lucru.md",
+      "lucru@lucru.md"
+    ],
+    [
+      "/ro/inregistrare/cv",
+      "Creează CV"
+    ],
+    [
+      "/ro/inregistrare/vacancy",
+      "Adaugă anunț"
+    ],
+    [
+      "javascript:void(0);",
+      "RU"
+    ],
+    [
+      "/ro/inregistrare",
+      "Cont nou"
+    ],
+    [
+      "https://www.lucru.md/ro/",
+      "Principala"
+    ],
+    [
+      "#",
+      "Caut de lucru"
+    ],
+    [
+      "https://www.lucru.md/ro/posturi-vacante",
+      "După rubrici"
+    ],
+    [
+      "https://www.lucru.md/ro/profesii",
+      "După profesii"
+    ],
+    [
+      "https://www.lucru.md/ro/lucru/chisinau",
+      "În Chișinău"
+    ],
+    [
+      "https://www.lucru.md/ro/locuri-de-munca/orase",
+      "După orașe"
+    ],
+    [
+      "https://www.lucru.md/ro/posturi-vacante/companii",
+      "După companii"
+    ],
+    [
+      "https://www.lucru.md/ro/all",
+      "Joburi curente"
+    ],
+    [
+      "https://www.lucru.md/ro/subscribe",
+      "Joburi pe E-mail"
+    ],
+    [
+      "https://www.lucru.md/ro/inregistrare/cv",
+      "Creează CV"
+    ],
+    [
+      "https://www.lucru.md/ro/cv",
+      "Baza de CV"
+    ],
+    [
+      "/ro/preturi",
+      "Prețuri și servicii"
+    ],
+    [
+      "/ro/preturi",
+      "Pentru companii"
+    ],
+    [
+      "/ro/preturi/vip",
+      "VIP joburi Popular"
+    ],
+    [
+      "/ro/preturi/premium",
+      "Premium joburi"
+    ],
+    [
+      "/ro/preturi/cv",
+      "Acces la baza de CV-uri"
+    ],
+    [
+      "/ro/preturi",
+      "Prețuri și servicii"
+    ],
+    [
+      "/ro/recenzii",
+      "Opiniile clienților +1 recenzie nouă"
+    ],
+    [
+      "/ro/statistica",
+      "Statistica site-ului New"
+    ],
+    [
+      "https://www.mantis.md/ro/",
+      "Recrutare personal"
+    ],
+    [
+      "/ro/inregistrare/vacancy",
+      "Adaugă anunț"
+    ],
+    [
+      "https://blog.rabota.md/ro/",
+      "Noutăți despre piața muncii"
+    ],
+    [
+      "javascript:void(0);",
+      "Limba site-ului RU"
+    ],
+    [
+      "/ro/inregistrare/cv",
+      "Creează CV"
+    ],
+    [
+      "/ro/inregistrare/vacancy",
+      "Adaugă anunț"
+    ],
+    [
+      "tel:+373 696-19917",
+      "+373 696-19917 Ala și Vladimir - manageri relații cu clienții"
+    ],
+    [
+      "tel:+37322921095",
+      "022 92-10-95 Moderatorul Svetlana — întrebări referitoare la anunțuri și CV"
+    ],
+    [
+      "tel:+37322921058",
+      "022 92-10-58 Contabilitatea: Ala și Elena - întrebări referitoare la plăți, conturi și acte de verificare"
+    ],
+    [
+      "tel:lucru@lucru.md",
+      "lucru@lucru.md Acceptăm E-mailuri 24/24"
+    ],
+    [
+      "https://www.facebook.com/Rabota.md",
+      "Facebook"
+    ],
+    [
+      "https://www.instagram.com/rabota.md/",
+      "Instagram"
+    ],
+    [
+      "https://t.me/Rabota_md",
+      "Telegram"
+    ],
+    [
+      "https://www.youtube.com/user/RabotaMD/videos",
+      "YouTube"
+    ],
+    [
+      "https://www.linkedin.com/company/rabota-md/",
+      "LinkedIn"
+    ],
+    [
+      "/ro/companii/magnum-clinic",
+      "MAGNUM CLINIC"
+    ],
+    [
+      "javascript:void(0);",
+      "Trimite CV"
+    ],
+    [
+      "/ro/companii/magnum-clinic",
+      ""
+    ],
+    [
+      "/ro/companii/magnum-clinic",
+      "MAGNUM CLINIC"
+    ],
+    [
+      "javascript:void(0);",
+      "Trimite CV"
+    ],
+    [
+      "/ro/companii/magnum-clinic#vacancies",
+      "Anunțuri"
+    ],
+    [
+      "/ro/companii/magnum-clinic",
+      "Companie"
+    ],
+    [
+      "javascript:void(0);",
+      "Beneficii"
+    ],
+    [
+      "javascript:void(0);",
+      "Fotografii"
+    ],
+    [
+      "javascript:void(0);",
+      "Video"
+    ],
+    [
+      "#contacts",
+      "Rețelele sociale"
+    ],
+    [
+      "#contacts",
+      "Contacte"
+    ],
+    [
+      "mailto:hr@magnumclinic.md",
+      "hr@magnumclinic.md"
+    ],
+    [
+      "mailto:hr@magnumclinic.md",
+      "E-mail: Copiază hr@magnumclinic.md"
+    ],
+    [
+      "javascript:void(0);",
+      "Trimite CV"
+    ],
+    [
+      "/ro/companii/emigrare-md",
+      ""
+    ],
+    [
+      "/ro/lucru/jurist/143361",
+      "Jurist"
+    ],
+    [
+      "/ro/companii/emigrare-md",
+      ""
+    ],
+    [
+      "/ro/companii/emigrare-md",
+      "Emigrare.md"
+    ],
+    [
+      "javascript:void(0)",
+      "Trimite CV"
+    ],
+    [
+      "javascript:void(0)",
+      "Trimite CV"
+    ],
+    [
+      "/ro/companii/moldcell",
+      ""
+    ],
+    [
+      "/ro/lucru/jurist-jurista/135415",
+      "Jurist / Juristă"
+    ],
+    [
+      "/ro/companii/moldcell",
+      ""
+    ],
+    [
+      "/ro/companii/moldcell",
+      "Moldcell"
+    ],
+    [
+      "javascript:void(0)",
+      "Trimite CV"
+    ],
+    [
+      "javascript:void(0)",
+      "Trimite CV"
+    ],
+    [
+      "/ro/companii/promstroi-grup",
+      ""
+    ],
+    [
+      "/ro/lucru/yurist/86270",
+      "Юрист"
+    ],
+    [
+      "/ro/companii/promstroi-grup",
+      ""
+    ],
+    [
+      "/ro/companii/promstroi-grup",
+      "Promstroi-Grup SA"
+    ],
+    [
+      "javascript:void(0)",
+      "Trimite CV"
+    ],
+    [
+      "javascript:void(0)",
+      "Trimite CV"
+    ],
+    [
+      "/ro/companii/magnum-clinic",
+      ""
+    ],
+    [
+      "/ro/lucru/tehnician-dentar-ceramist/141603",
+      "Tehnician Dentar (Ceramist)"
+    ],
+    [
+      "/ro/companii/magnum-clinic",
+      ""
+    ],
+    [
+      "/ro/companii/magnum-clinic",
+      "MAGNUM CLINIC"
+    ],
+    [
+      "javascript:void(0)",
+      "Trimite CV"
+    ],
+    [
+      "javascript:void(0)",
+      "Trimite CV"
+    ],
+    [
+      "/ro/companii/magnum-clinic",
+      ""
+    ],
+    [
+      "/ro/lucru/videograf-editor-full-time/119812",
+      "Videograf / Editor (full-time)"
+    ]
+  ],
+  "main_text": ""
+}

@@ -1,0 +1,138 @@
+{
+  "version": 1,
+  "source": "Lucru.md",
+  "collected_at": "2026-11-03T00:08:12.798771+02:00",
+  "vacancies": [
+    {
+      "source": "Lucru.md",
+      "employer": "Rogob carne si mezeluri",
+      "title": "Jurist/ă junior",
+      "requirements": "Compania Rogob carne si mezeluri angajeaza Jurist/ă junior.",
+      "city": "",
+      "date": "2026-10-13",
+      "date_source": "JobPosting.datePosted",
+      "expires": "",
+      "url": "https://www.lucru.md/ro/lucru/jurist-a-junior/144794"
+    },
+    {
+      "source": "Lucru.md",
+      "employer": "Media Show Grup",
+      "title": "Jurist – Achiziții Publice",
+      "requirements": "Compania Media Show Grup angajeaza Jurist – Achiziții Publice.",
+      "city": "",
+      "date": "2026-08-31",
+      "date_source": "JobPosting.datePosted",
+      "expires": "",
+      "url": "https://www.lucru.md/ro/lucru/jurist-achizitii-publice/143143"
+    },
+    {
+      "source": "Lucru.md",
+      "employer": "Vitra SRL",
+      "title": "Jurist",
+      "requirements": "Compania Vitra SRL angajeaza Jurist.",
+      "city": "",
+      "date": "2025-06-24",
+      "date_source": "JobPosting.datePosted",
+      "expires": "",
+      "url": "https://www.lucru.md/ro/lucru/jurist/121356"
+    },
+    {
+      "source": "Lucru.md",
+      "employer": "MAIB",
+      "title": "Jurist/ă",
+      "requirements": "Compania MAIB angajeaza Jurist/ă.",
+      "city": "",
+      "date": "2026-06-15",
+      "date_source": "JobPosting.datePosted",
+      "expires": "",
+      "url": "https://www.lucru.md/ro/lucru/jurist-a/139952"
+    },
+    {
+      "source": "Lucru.md",
+      "employer": "Midnight Works",
+      "title": "Jurist Junior / Asistent Jurist",
+      "requirements": "Compania Midnight Works angajeaza Jurist Junior / Asistent Jurist.",
+      "city": "",
+      "date": "2026-10-23",
+      "date_source": "JobPosting.datePosted",
+      "expires": "",
+      "url": "https://www.lucru.md/ro/lucru/jurist-junior-asistent-jurist/145384"
+    },
+    {
+      "source": "Lucru.md",
+      "employer": "Midnight Works",
+      "title": "Jurist",
+      "requirements": "Compania Midnight Works angajeaza Jurist.",
+      "city": "",
+      "date": "2026-10-27",
+      "date_source": "JobPosting.datePosted",
+      "expires": "",
+      "url": "https://www.lucru.md/ro/lucru/jurist/145385"
+    },
+    {
+      "source": "Lucru.md",
+      "employer": "Crowe Turcan Mikhailenko",
+      "title": "Jurist junior / Младший юрист",
+      "requirements": "Compania Crowe Turcan Mikhailenko angajeaza Jurist junior / Младший юрист.",
+      "city": "",
+      "date": "2026-09-08",
+      "date_source": "JobPosting.datePosted",
+      "expires": "",
+      "url": "https://www.lucru.md/ro/lucru/jurist-junior-mladshiy-yurist/143581"
+    },
+    {
+      "source": "Lucru.md",
+      "employer": "Promstroi-Grup SA",
+      "title": "Jurist",
+      "requirements": "Compania Promstroi-Grup SA angajeaza Jurist.",
+      "city": "",
+      "date": "2026-09-18",
+      "date_source": "JobPosting.datePosted",
+      "expires": "",
+      "url": "https://www.lucru.md/ro/lucru/jurist/83593"
+    },
+    {
+      "source": "Lucru.md",
+      "employer": "Emigrare.md",
+      "title": "Jurist",
+      "requirements": "Compania Emigrare.md angajeaza Jurist.",
+      "city": "",
+      "date": "2026-09-08",
+      "date_source": "JobPosting.datePosted",
+      "expires": "",
+      "url": "https://www.lucru.md/ro/lucru/jurist/143361"
+    },
+    {
+      "source": "Lucru.md",
+      "employer": "MAGNUM CLINIC",
+      "title": "Jurist",
+      "requirements": "Compania MAGNUM CLINIC angajeaza Jurist.",
+      "city": "",
+      "date": "2026-10-29",
+      "date_source": "JobPosting.datePosted",
+      "expires": "",
+      "url": "https://www.lucru.md/ro/lucru/jurist/145168"
+    },
+    {
+      "source": "Lucru.md",
+      "employer": "Medpark",
+      "title": "Jurist / Legal Business Partner",
+      "requirements": "Compania Medpark angajeaza Jurist / Legal Business Partner.",
+      "city": "",
+      "date": "2026-09-15",
+      "date_source": "JobPosting.datePosted",
+      "expires": "",
+      "url": "https://www.lucru.md/ro/lucru/jurist-legal-business-partner/50873"
+    }
+  ],
+  "report": {
+    "source": "Lucru.md",
+    "pages": 12,
+    "postings": 11,
+    "errors": [],
+    "with_publication_date": 11,
+    "missing_publication_date": 0,
+    "verified": true,
+    "coverage": "Доступ через обычный браузер"
+  }
+}

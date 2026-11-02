@@ -1,0 +1,559 @@
+{
+  "url": "https://www.lucru.md/ro/lucru/jurist/145385",
+  "final_url": "https://www.lucru.md/ro/lucru/jurist/145385",
+  "title": "Jurist - post vacant Midnight Works",
+  "postings": [
+    {
+      "@context": "https://schema.org/",
+      "@type": "JobPosting",
+      "title": "Jurist",
+      "description": "Compania Midnight Works angajeaza Jurist.",
+      "datePosted": "2026-10-27T10:45:48+02:00",
+      "employmentType": "OTHER",
+      "hiringOrganization": {
+        "@type": "Organization",
+        "name": "Midnight Works",
+        "sameAs": "https://www.lucru.md/ro/companii/midnight-works",
+        "logo": "https://rabota-md-prod.s3.amazonaws.com/images/uploads/2022_09_28_14_54_08_logo.png"
+      },
+      "jobLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "str. Nicolae Testemițanu 29/5",
+          "addressCountry": "MD"
+        }
+      }
+    }
+  ],
+  "legal_links": [
+    [
+      "https://www.lucru.md/ro/lucru/jurist-junior-asistent-jurist/145384",
+      "Jurist Junior / Asistent Jurist"
+    ],
+    [
+      "https://www.lucru.md/ro/lucru/jurist-junior-asistent-jurist/145384",
+      "Jurist Junior / Asistent Jurist"
+    ]
+  ],
+  "inputs": [
+    {
+      "type": "checkbox"
+    },
+    {
+      "type": "checkbox"
+    },
+    {
+      "type": "checkbox"
+    },
+    {
+      "type": "checkbox"
+    },
+    {
+      "name": "query",
+      "type": "text",
+      "placeholder": "Indică jobul"
+    },
+    {
+      "name": "full_name",
+      "type": "text",
+      "placeholder": "Nume și Prenume"
+    },
+    {
+      "name": "o_phone",
+      "type": "tel",
+      "placeholder": "Telefon"
+    },
+    {
+      "name": "o_email",
+      "type": "text",
+      "placeholder": "E-mail"
+    },
+    {
+      "name": "resumeFile2",
+      "type": "file"
+    },
+    {
+      "name": "terms_of_service",
+      "type": "checkbox"
+    },
+    {
+      "name": "cookie_agreement",
+      "type": "hidden"
+    },
+    {
+      "name": "full_name",
+      "type": "text",
+      "placeholder": "Nume și Prenume"
+    },
+    {
+      "name": "phone",
+      "type": "tel",
+      "placeholder": "Telefon"
+    },
+    {
+      "name": "email",
+      "type": "text",
+      "placeholder": "E-mail"
+    },
+    {
+      "name": "last_company",
+      "type": "text",
+      "placeholder": "Denumirea companiei"
+    },
+    {
+      "name": "last_company_id",
+      "type": "hidden"
+    },
+    {
+      "name": "last_position",
+      "type": "text",
+      "placeholder": "Postul ocupat"
+    },
+    {
+      "name": "terms_of_service",
+      "type": "checkbox"
+    },
+    {
+      "name": "cookie_agreement",
+      "type": "hidden"
+    }
+  ],
+  "headings": [
+    "Modifică cookie",
+    "Cookie-uri necesare",
+    "Cookie-uri funcționale",
+    "Cookie-uri de analiză",
+    "Cookie-uri de marketing",
+    "Jurist",
+    "Foto",
+    "Alte joburi ale companiei",
+    "Alte joburi ale companiei",
+    "Foto",
+    "Alte joburi ale companiei",
+    "Alte joburi ale companiei",
+    "Nu s-a reușit încărcarea anunțului.",
+    "Cu părere de rău, această pagină nu există."
+  ],
+  "buttons": [
+    "",
+    "Salvează",
+    "Acceptă toate",
+    "Caută job",
+    "",
+    "",
+    "",
+    "Salvează job",
+    "Ascunde",
+    "Salvează job",
+    "Ascunde",
+    "Închide",
+    "Trimite CV-ul",
+    "Trimite CV-ul",
+    "Aplică",
+    "Încearcă din nou"
+  ],
+  "navigation": [
+    [
+      "/ro/agreement",
+      "cookies"
+    ],
+    [
+      "javascript:void(0);",
+      ""
+    ],
+    [
+      "https://www.lucru.md/ro/",
+      ""
+    ],
+    [
+      "/ro/posturi-vacante",
+      "Caut de lucru"
+    ],
+    [
+      "/ro/posturi-vacante",
+      "După rubrici"
+    ],
+    [
+      "/ro/posturi-vacante/companii",
+      "După companii"
+    ],
+    [
+      "/ro/profesii",
+      "După profesii"
+    ],
+    [
+      "/ro/locuri-de-munca/orase",
+      "După orașe"
+    ],
+    [
+      "/ro/jobs/chisinau",
+      "În Chișinău"
+    ],
+    [
+      "/ro/all",
+      "Joburi curente"
+    ],
+    [
+      "/ro/subscribe",
+      "Joburi pe E-mail"
+    ],
+    [
+      "/ro/inregistrare/cv",
+      "Creează CV"
+    ],
+    [
+      "/ro/preturi",
+      "Caut angajați"
+    ],
+    [
+      "/ro/cv",
+      "CV-uri după rubrici"
+    ],
+    [
+      "/ro/cv/#cities",
+      "CV-uri după orașe"
+    ],
+    [
+      "/ro/preturi",
+      "Prețuri și servicii"
+    ],
+    [
+      "/ro/preturi/vip",
+      "VIP joburi Popular"
+    ],
+    [
+      "/ro/preturi/cv",
+      "Acces la baza de CV-uri"
+    ],
+    [
+      "/ro/inregistrare/vacancy",
+      "Adaugă anunț"
+    ],
+    [
+      "tel:+373 696-19917",
+      "+373 696-19917"
+    ],
+    [
+      "mailto:lucru@lucru.md",
+      "lucru@lucru.md"
+    ],
+    [
+      "/ro/inregistrare/cv",
+      "Creează CV"
+    ],
+    [
+      "/ro/inregistrare/vacancy",
+      "Adaugă anunț"
+    ],
+    [
+      "javascript:void(0);",
+      "RU"
+    ],
+    [
+      "/ro/inregistrare",
+      "Cont nou"
+    ],
+    [
+      "https://www.lucru.md/ro/",
+      "Principala"
+    ],
+    [
+      "#",
+      "Caut de lucru"
+    ],
+    [
+      "https://www.lucru.md/ro/posturi-vacante",
+      "După rubrici"
+    ],
+    [
+      "https://www.lucru.md/ro/profesii",
+      "După profesii"
+    ],
+    [
+      "https://www.lucru.md/ro/lucru/chisinau",
+      "În Chișinău"
+    ],
+    [
+      "https://www.lucru.md/ro/locuri-de-munca/orase",
+      "După orașe"
+    ],
+    [
+      "https://www.lucru.md/ro/posturi-vacante/companii",
+      "După companii"
+    ],
+    [
+      "https://www.lucru.md/ro/all",
+      "Joburi curente"
+    ],
+    [
+      "https://www.lucru.md/ro/subscribe",
+      "Joburi pe E-mail"
+    ],
+    [
+      "https://www.lucru.md/ro/inregistrare/cv",
+      "Creează CV"
+    ],
+    [
+      "https://www.lucru.md/ro/cv",
+      "Baza de CV"
+    ],
+    [
+      "/ro/preturi",
+      "Prețuri și servicii"
+    ],
+    [
+      "/ro/preturi",
+      "Pentru companii"
+    ],
+    [
+      "/ro/preturi/vip",
+      "VIP joburi Popular"
+    ],
+    [
+      "/ro/preturi/premium",
+      "Premium joburi"
+    ],
+    [
+      "/ro/preturi/cv",
+      "Acces la baza de CV-uri"
+    ],
+    [
+      "/ro/preturi",
+      "Prețuri și servicii"
+    ],
+    [
+      "/ro/recenzii",
+      "Opiniile clienților +1 recenzie nouă"
+    ],
+    [
+      "/ro/statistica",
+      "Statistica site-ului New"
+    ],
+    [
+      "https://www.mantis.md/ro/",
+      "Recrutare personal"
+    ],
+    [
+      "/ro/inregistrare/vacancy",
+      "Adaugă anunț"
+    ],
+    [
+      "https://blog.rabota.md/ro/",
+      "Noutăți despre piața muncii"
+    ],
+    [
+      "javascript:void(0);",
+      "Limba site-ului RU"
+    ],
+    [
+      "/ro/inregistrare/cv",
+      "Creează CV"
+    ],
+    [
+      "/ro/inregistrare/vacancy",
+      "Adaugă anunț"
+    ],
+    [
+      "tel:+373 696-19917",
+      "+373 696-19917 Ala și Vladimir - manageri relații cu clienții"
+    ],
+    [
+      "tel:+37322921095",
+      "022 92-10-95 Moderatorul Svetlana — întrebări referitoare la anunțuri și CV"
+    ],
+    [
+      "tel:+37322921058",
+      "022 92-10-58 Contabilitatea: Ala și Elena - întrebări referitoare la plăți, conturi și acte de verificare"
+    ],
+    [
+      "tel:lucru@lucru.md",
+      "lucru@lucru.md Acceptăm E-mailuri 24/24"
+    ],
+    [
+      "https://www.facebook.com/Rabota.md",
+      "Facebook"
+    ],
+    [
+      "https://www.instagram.com/rabota.md/",
+      "Instagram"
+    ],
+    [
+      "https://t.me/Rabota_md",
+      "Telegram"
+    ],
+    [
+      "https://www.youtube.com/user/RabotaMD/videos",
+      "YouTube"
+    ],
+    [
+      "https://www.linkedin.com/company/rabota-md/",
+      "LinkedIn"
+    ],
+    [
+      "/ro/companii/midnight-works",
+      "Midnight Works"
+    ],
+    [
+      "javascript:void(0);",
+      "Trimite CV"
+    ],
+    [
+      "javascript:void(0);",
+      "Aplică fără CV"
+    ],
+    [
+      "/ro/companii/midnight-works",
+      ""
+    ],
+    [
+      "/ro/companii/midnight-works",
+      "Midnight Works"
+    ],
+    [
+      "javascript:void(0);",
+      "Trimite CV"
+    ],
+    [
+      "javascript:void(0);",
+      "Aplică fără CV"
+    ],
+    [
+      "/ro/companii/midnight-works#vacancies",
+      "Anunțuri"
+    ],
+    [
+      "/ro/companii/midnight-works",
+      "Companie"
+    ],
+    [
+      "/ro/companii/midnight-works#benefits",
+      "Beneficii"
+    ],
+    [
+      "/ro/companii/midnight-works#photos",
+      "Fotografii"
+    ],
+    [
+      "javascript:void(0);",
+      "Video"
+    ],
+    [
+      "/ro/companii/midnight-works#contacts",
+      "Rețelele sociale"
+    ],
+    [
+      "/ro/companii/midnight-works#contacts",
+      "Contacte"
+    ],
+    [
+      "mailto:hr@midnight.works",
+      "hr@midnight.works"
+    ],
+    [
+      "https://www.instagram.com/midnight_works",
+      "https://www.instagram.com/midnight_works"
+    ],
+    [
+      "https://www.facebook.com/www.midnight.works",
+      "https://www.facebook.com/www.midnight.works"
+    ],
+    [
+      "https://midnight.works",
+      "https://midnight.works"
+    ],
+    [
+      "mailto:hr@midnight.works",
+      "E-mail: Copiază hr@midnight.works"
+    ],
+    [
+      "javascript:void(0);",
+      "Trimite CV"
+    ],
+    [
+      "javascript:void(0);",
+      "Aplică fără CV"
+    ],
+    [
+      "https://rabota-md-prod.s3.amazonaws.com/images/company/midnight-works/image_16643644240.jpg",
+      ""
+    ],
+    [
+      "https://rabota-md-prod.s3.amazonaws.com/images/company/midnight-works/image_16643657770.jpg",
+      ""
+    ],
+    [
+      "https://rabota-md-prod.s3.amazonaws.com/images/company/midnight-works/image_16643658850.jpg",
+      ""
+    ],
+    [
+      "https://rabota-md-prod.s3.amazonaws.com/images/company/midnight-works/image_17164675000.png",
+      ""
+    ],
+    [
+      "https://rabota-md-prod.s3.amazonaws.com/images/company/midnight-works/image_17164675001.png",
+      ""
+    ],
+    [
+      "https://rabota-md-prod.s3.amazonaws.com/images/company/midnight-works/image_17164675002.png",
+      ""
+    ],
+    [
+      "https://rabota-md-prod.s3.amazonaws.com/images/company/midnight-works/image_17164675013.png",
+      ""
+    ],
+    [
+      "https://rabota-md-prod.s3.amazonaws.com/images/company/midnight-works/image_17164675014.png",
+      ""
+    ],
+    [
+      "/ro/companii/midnight-works",
+      ""
+    ],
+    [
+      "/ro/lucru/game-marketing-manager-steam/142217",
+      "Game Marketing Manager (Steam)"
+    ],
+    [
+      "/ro/companii/midnight-works",
+      ""
+    ],
+    [
+      "/ro/companii/midnight-works",
+      "Midnight Works"
+    ],
+    [
+      "javascript:void(0)",
+      "Trimite CV"
+    ],
+    [
+      "javascript:void(0)",
+      "Trimite CV"
+    ],
+    [
+      "/ro/companii/midnight-works",
+      ""
+    ],
+    [
+      "/ro/lucru/ai-content-creator/145516",
+      "AI Content Creator"
+    ],
+    [
+      "/ro/companii/midnight-works",
+      ""
+    ],
+    [
+      "/ro/companii/midnight-works",
+      "Midnight Works"
+    ],
+    [
+      "javascript:void(0)",
+      "Trimite CV"
+    ],
+    [
+      "javascript:void(0)",
+      "Trimite CV"
+    ]
+  ],
+  "main_text": ""
+}
