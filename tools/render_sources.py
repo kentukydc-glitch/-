@@ -28,7 +28,7 @@ async def main():
       await page.wait_for_timeout(6000)
     body=await page.content()
     parsed=Page(body)
-    result.update(final_url=page.url,status=response.status if response else None,text=Tree(body).root.text()[:80000],links=parsed.links,scripts=parsed.scripts,forms=re.findall(r'<form[^>]*>|<input[^>]*>|<select[^>]*>',body)))
+    result.update(final_url=page.url,status=response.status if response else None,text=Tree(body).root.text()[:80000],links=parsed.links,scripts=parsed.scripts,forms=re.findall(r'<form[^>]*>|<input[^>]*>|<select[^>]*>',body))
     clean=re.sub(r'<(style|script)\b[^>]*>.*?</\1>','',body,flags=re.S|re.I)
     Path('output',name+'.html').write_text(clean[:1000000])
    except Exception as e:result['error']=str(e)
