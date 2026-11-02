@@ -1,0 +1,43 @@
+[
+  {
+    "source": "Lucru.md",
+    "pages": 12,
+    "postings": 11,
+    "errors": [],
+    "with_publication_date": 11,
+    "missing_publication_date": 0,
+    "verified": true,
+    "coverage": "Собрано на вашем Mac: 2026-11-03T00:08:12.798771+02:00. Доступ через обычный браузер",
+    "collected_at": "2026-11-03T00:08:12.798771+02:00"
+  },
+  {
+    "source": "Delucru.md",
+    "pages": 12,
+    "postings": 11,
+    "errors": [],
+    "with_publication_date": 2,
+    "missing_publication_date": 9,
+    "verified": true,
+    "coverage": "Вакансии раздела «Юридические»"
+  },
+  {
+    "source": "Jobber.md",
+    "pages": 7,
+    "postings": 6,
+    "errors": [],
+    "with_publication_date": 6,
+    "missing_publication_date": 0,
+    "verified": true,
+    "coverage": "Поиск jurist; браузерная загрузка, отбор юридических должностей"
+  },
+  {
+    "source": "999.md",
+    "pages": 2,
+    "postings": 1,
+    "errors": [],
+    "with_publication_date": 1,
+    "missing_publication_date": 0,
+    "verified": true,
+    "coverage": "Раздел вакансий юриста; только объявления работодателей"
+  }
+]
