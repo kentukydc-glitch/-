@@ -7,6 +7,24 @@ from collector import BrowserFetcher, Page, collect, delu_job, jobs, load_lucru_
 
 
 class SourceTests(unittest.TestCase):
+    def test_reading_mac_cache_does_not_refresh_its_collection_time(self):
+        import os
+        import tempfile
+        import collector
+        from datetime import datetime, timedelta, timezone
+        original = os.getcwd()
+        stamp = (datetime.now(timezone.utc) - timedelta(hours=2)).isoformat()
+        try:
+            with tempfile.TemporaryDirectory() as directory:
+                path, _ = self.mac_cache(directory, collected=stamp)
+                os.chdir(directory)
+                with patch.dict(os.environ, {'DIGEST_LUCRU_CACHE': str(path)}), patch.object(collector, 'collect', side_effect=AssertionError('Unexpected direct collection')), patch('sys.argv', ['collector.py', '--source', 'Lucru.md']):
+                    collector.main()
+                data = json.loads(Path('output/lucru-cache.json').read_text())
+                self.assertEqual(data['collected_at'], stamp)
+        finally:
+            os.chdir(original)
+
     def mac_cache(self, directory, collected='2026-11-02T20:00:00+00:00', posted='2026-10-29'):
         row = dict(source='Lucru.md', employer='Clinic', title='Jurist', requirements='Studii juridice', city='Chișinău', date=posted, date_source='JobPosting.datePosted', expires='', url='https://www.lucru.md/ro/lucru/jurist/145168')
         report = dict(source='Lucru.md', verified=True, pages=2, postings=1, errors=[], coverage='Mac')

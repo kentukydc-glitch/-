@@ -551,7 +551,8 @@ def main():
         writer.writerows(rows)
     Path('output/report.json').write_text(json.dumps(reports, ensure_ascii=False, indent=2))
     if args.source == ['Lucru.md'] and not args.input_json:
-        cache = dict(version=1, source='Lucru.md', collected_at=datetime.now(ZoneInfo('Europe/Chisinau')).isoformat(), vacancies=observed, report=reports[0])
+        collected_at = reports[0].get('collected_at') or datetime.now(ZoneInfo('Europe/Chisinau')).isoformat()
+        cache = dict(version=1, source='Lucru.md', collected_at=collected_at, vacancies=observed, report=reports[0])
         Path('output/lucru-cache.json').write_text(json.dumps(cache, ensure_ascii=False, indent=2))
     print(json.dumps(dict(new=len(rows), sources=reports), ensure_ascii=False))
     if args.send:
