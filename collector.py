@@ -1,5 +1,6 @@
 """Weekly Moldova legal vacancies digest; Python 3.11+, no dependencies."""
 import argparse
+import csv
 import hashlib
 import html
 import json
@@ -19,15 +20,91 @@ from zoneinfo import ZoneInfo
 
 SOURCES = {
     'Lucru.md': 'https://www.lucru.md/ro/jobs-moldova',
-    'Delucru.md': 'https://www.delucru.md/',
+    'Delucru.md': 'https://www.delucru.md/jobs/law',
     'Jobber.md': 'https://jobber.md/en/',
     '999.md': 'https://999.md/ro/work',
     'Muncitorul.md': 'https://muncitorul.md/',
     'TopAngajatori.md': 'https://topangajatori.md/',
 }
-KEYWORDS = re.compile(r'юрист|юрисконсульт|адвокат|\bjurist\w*|consilier\s+juridic|\bavocat\w*|legal\s+counsel', re.I)
+KEYWORDS = re.compile(r'юрист|юрисконсульт|адвокат|\bjurist\w*|\bjurisconsult\w*|juridic|\bavocat\w*|legal\s+counsel', re.I)
 DISCOVERY = re.compile(KEYWORDS.pattern + r'|juridic|\blaw\b', re.I)
 AGENT = 'LegalVacancyDigest/1.0'
+
+
+class Node:
+    def __init__(self, tag='', attrs=None, parent=None):
+        self.tag, self.attrs, self.parent, self.children = tag, dict(attrs or []), parent, []
+
+    def text(self):
+        return plain(' '.join(child.text() if isinstance(child, Node) else child for child in self.children))
+
+    def find(self, predicate):
+        if predicate(self):
+            yield self
+        for child in self.children:
+            if isinstance(child, Node):
+                yield from child.find(predicate)
+
+    def has_class(self, name):
+        return name in self.attrs.get('class', '').split()
+
+
+class Tree(HTMLParser):
+    def __init__(self, body):
+        super().__init__()
+        self.root = Node()
+        self.stack = [self.root]
+        self.feed(body)
+
+    def handle_starttag(self, tag, attrs):
+        node = Node(tag, attrs, self.stack[-1])
+        self.stack[-1].children.append(node)
+        if tag not in {'area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link', 'meta', 'param', 'source', 'track', 'wbr'}:
+            self.stack.append(node)
+
+    def handle_endtag(self, tag):
+        for index in range(len(self.stack) - 1, 0, -1):
+            if self.stack[index].tag == tag:
+                del self.stack[index:]
+                break
+
+    def handle_data(self, value):
+        if self.stack[-1].tag not in ('script', 'style'):
+            self.stack[-1].children.append(value)
+
+
+def delu_job(body, url, today=None):
+    if not re.search(r'/job/\d+', urlsplit(url).path):
+        return None
+    tree = Tree(body).root
+    def first(predicate):
+        return next(tree.find(predicate), Node())
+    title = first(lambda n: n.has_class('job-item-title')).text()
+    if not KEYWORDS.search(title):
+        return None
+    employer = first(lambda n: n.tag == 'a' and '/company/' in n.attrs.get('href', '')).text()
+    description = first(lambda n: n.attrs.get('id') == 'job-description').text()
+    requirements = re.search(r'cerin[țţt]e|требования|requirements|calificări', description, re.I)
+    if requirements:
+        description = description[requirements.start():]
+    date_text = first(lambda n: n.has_class('page-item-date')).text()
+    posted = ''
+    match = re.search(r'(\d{2})\.(\d{2})\.(\d{4})', date_text)
+    today = today or datetime.now(ZoneInfo('Europe/Chisinau')).date()
+    if match:
+        day, month, year = match.groups()
+        posted = f'{year}-{month}-{day}'
+    elif re.search(r'\bazi\b|сегодня', date_text, re.I):
+        posted = today.isoformat()
+    elif re.search(r'\bieri\b|вчера', date_text, re.I):
+        posted = (today - timedelta(days=1)).isoformat()
+    else:
+        relative = re.search(r'(\d+)\s*(?:zile|дн)', date_text, re.I)
+        if relative:
+            posted = (today - timedelta(days=int(relative[1]))).isoformat()
+    city_label = first(lambda n: n.tag == 'div' and n.text() == 'Oraș:')
+    city = city_label.parent.text().removeprefix('Oraș:').strip() if city_label.parent else ''
+    return dict(source='Delucru.md', employer=employer, title=title, requirements=description[:700], city=city, date=posted, expires='', url=url)
 
 
 class Page(HTMLParser):
@@ -133,15 +210,10 @@ def collect(fetcher, source, root):
             if not body.strip():
                 raise RuntimeError('Empty response; source not verified')
             page = Page(body)
-            debug_id = hashlib.sha256(url.encode()).hexdigest()[:10]
-            Path('output').mkdir(exist_ok=True)
-            Path(f'output/{source}-{debug_id}.json').write_text(json.dumps(dict(url=url, links=page.links, scripts=page.scripts), ensure_ascii=False))
-            if len(visited) <= 4:
-                Path(f'output/{source}-{debug_id}.html').write_text(body[:500000])
-            if url == root:
-                Path('output').mkdir(exist_ok=True)
-                Path(f'output/{source}-links.json').write_text(json.dumps(page.links, ensure_ascii=False, indent=2))
-                Path(f'output/{source}-sample.html').write_text(body[:200000])
+            if source == 'Delucru.md':
+                row = delu_job(body, url)
+                if row:
+                    found.append(row)
             for script in page.scripts:
                 try:
                     data = json.loads(script)
@@ -155,10 +227,13 @@ def collect(fetcher, source, root):
                 target = urljoin(url, href).split('#')[0]
                 if (urlsplit(target).scheme == 'https' and
                         urlsplit(target).netloc.removeprefix('www.') == urlsplit(root).netloc.removeprefix('www.') and
-                        DISCOVERY.search(label + ' ' + href) and target not in visited):
+                        DISCOVERY.search(label + ' ' + href) and target not in visited and
+                        not (source == 'Delucru.md' and '/ru/' in target)):
                     queue.append(target)
         except Exception as exc:
             errors.append(f'{url}: {type(exc).__name__}: {exc}')
+    if not found:
+        errors.append('No supported vacancy data extracted; coverage NOT verified')
     return found, dict(source=source, pages=len(visited), postings=len(found), errors=errors,
                        coverage='Limited: linked legal vacancies with JobPosting structured data only')
 
@@ -237,6 +312,12 @@ def main():
     Path('output').mkdir(exist_ok=True)
     body = render(rows, reports)
     Path('output/digest.html').write_text(body)
+    Path('output/vacancies.json').write_text(json.dumps(rows, ensure_ascii=False, indent=2))
+    with Path('output/vacancies.csv').open('w', encoding='utf-8-sig', newline='') as stream:
+        fields = ['source', 'employer', 'title', 'requirements', 'city', 'date', 'url']
+        writer = csv.DictWriter(stream, fieldnames=fields, extrasaction='ignore')
+        writer.writeheader()
+        writer.writerows(rows)
     Path('output/report.json').write_text(json.dumps(reports, ensure_ascii=False, indent=2))
     print(json.dumps(dict(new=len(rows), sources=reports), ensure_ascii=False))
     if args.send:
