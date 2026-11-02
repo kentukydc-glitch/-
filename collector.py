@@ -297,7 +297,15 @@ class BrowserFetcher(Fetcher):
                 diagnostics = Path('output/lucru-diagnostics')
                 diagnostics.mkdir(parents=True, exist_ok=True)
                 identity = hashlib.sha256(url.encode()).hexdigest()[:12]
-                (diagnostics / (identity + '.json')).write_text(json.dumps(dict(url=url, title=title, postings=postings, legal_links=legal_links), ensure_ascii=False, indent=2))
+                tree = Tree(body).root
+                inputs = [{key: node.attrs[key] for key in ('name', 'type', 'placeholder', 'aria-label', 'role') if key in node.attrs}
+                          for node in tree.find(lambda node: node.tag == 'input')]
+                headings = [node.text() for node in tree.find(lambda node: node.tag in ('h1', 'h2', 'h3'))][:60]
+                buttons = [node.text()[:100] for node in tree.find(lambda node: node.tag == 'button')][:50]
+                navigation = [(href, plain(label)) for href, label in parsed.links
+                              if not re.search(r'login|auth|cabinet|signin|oauth|token|account|register', href, re.I)][:100]
+                main = next(tree.find(lambda node: node.tag == 'main' or node.attrs.get('role') == 'main'), Node())
+                (diagnostics / (identity + '.json')).write_text(json.dumps(dict(url=url, title=title, postings=postings, legal_links=legal_links, inputs=inputs, headings=headings, buttons=buttons, navigation=navigation, main_text=main.text()[:30000]), ensure_ascii=False, indent=2))
             if response and response.status >= 400 or re.search(r'403 Forbidden|Access denied|Just a moment|Verify you are human', title, re.I):
                 raise RuntimeError('Site denied browser access; source unavailable')
             return body
