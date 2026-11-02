@@ -1,0 +1,26 @@
+{
+  "url": "https://www.bing.com/search?format=rss&q=Lucru.md+RSS+Telegram+vacancies",
+  "status": 200,
+  "final_url": "https://www.bing.com/search?format=rss&q=Lucru.md+RSS+Telegram+vacancies",
+  "content_type": "text/xml; charset=utf-8",
+  "bytes": 5233,
+  "title": [
+    "Bing: Lucru.md RSS Telegram vacancies",
+    "Lucru.md RSS Telegram vacancies",
+    "Facebook - Log In or Sign Up",
+    "Creating facebook app with callback url - Stack Overflow",
+    "How to add facebook share button on my website? - Stack Overflow",
+    "Facebook showing page not found when sharing link",
+    "How to embed a facebook page in an iframe? - Stack Overflow",
+    "application_id needs to be Valid Facebook Ad - Stack Overflow",
+    "Facebook share link - can you customize the message body text?",
+    "Facebook profile URL regular expression - Stack Overflow",
+    "Automatically embed newest Facebook posts on my website",
+    "Open Facebook page from Android app? - Stack Overflow"
+  ],
+  "links": [],
+  "scripts": [],
+  "text": "Bing: Lucru.md RSS Telegram vacancies http://www.bing.com:80/search?q=Lucru.md+RSS+Telegram+vacancies Search results http://www.bing.com:80/s/a/rsslogo.gif Lucru.md RSS Telegram vacancies http://www.bing.com:80/search?q=Lucru.md+RSS+Telegram+vacancies Copyright © 2026 Microsoft. All rights reserved. These XML results may not be used, reproduced or transmitted in any manner or for any purpose other than rendering Bing results within an RSS aggregator for your personal, non-commercial use. Any other use of these results requires express written permission from Microsoft Corporation. By accessing this web page or using these results in any manner whatsoever, you agree to be bound by the foregoing restrictions. Facebook - Log In or Sign Up https://www.facebook.com Create an account or log into Facebook. Connect with friends, family and other people you know. Share photos and videos, send messages and get updates. Creating facebook app with callback url - Stack Overflow https://stackoverflow.com/questions/15036706/creating-facebook-app-with-callback-url I am creating a facebook app. And I want to let users to login to my website using it (Using passportjs). But to do that, I need to give callback url (my website url). But I couldn't find that field... Mon, 02 Nov 2026 07:37:00 GMT How to add facebook share button on my website? - Stack Overflow https://stackoverflow.com/questions/16463030/how-to-add-facebook-share-button-on-my-website I want to add facebook share button on my website, that should just post my website's content on the wall. Can anyone help me? Mon, 02 Nov 2026 05:35:00 GMT Facebook showing page not found when sharing link https://stackoverflow.com/questions/22077743/facebook-showing-page-not-found-when-sharing-link I'm sharing content from a website and every time I paste the link into Facebook it says 'page not found'. Sometimes it works when I manually add the 'www.' in front of the URL in the address bar. Mon, 02 Nov 2026 21:06:00 GMT How to embed a facebook page in an iframe? - Stack Overflow https://stackoverflow.com/questions/5352759/how-to-embed-a-facebook-page-in-an-iframe For my application I need to embed Facebook page in an iframe, here is the html code: ... But it does not work, any idea why and how to circumvent ? Mon, 02 Nov 2026 13:13:00 GMT application_id needs to be Valid Facebook Ad - Stack Overflow https://stackoverflow.com/questions/65247111/application-id-needs-to-be-valid-facebook-ad application_id needs to be Valid Facebook Ad Ask Question Asked 5 years, 10 months ago Modified 2 years, 5 months ago Mon, 02 Nov 2026 10:50:00 GMT Facebook share link - can you customize the message body text? https://stackoverflow.com/questions/5023602/facebook-share-link-can-you-customize-the-message-body-text Facebook will not allow developers pre-fill messages. Developers may customize the story by providing OG meta tags, but it's up to the user to fill the message. This is only possible if you are posting on the user's behalf, which requires the user authorizing your application with the publish_actions permission. AND even then: Mon, 02 Nov 2026 09:39:00 GMT Facebook profile URL regular expression - Stack Overflow https://stackoverflow.com/questions/5205652/facebook-profile-url-regular-expression It is just the original Facebook URL and not a user or page address. But this regex can distinguish a normal url from a profile and page url and only accepts the valid one. Mon, 02 Nov 2026 20:59:00 GMT Automatically embed newest Facebook posts on my website https://stackoverflow.com/questions/19348278/automatically-embed-newest-facebook-posts-on-my-website The Page plugin lets you easily embed and promote any public Facebook Page on your website. Just like on Facebook, your visitors can like and share the Page without leaving your site. Mon, 02 Nov 2026 04:31:00 GMT Open Facebook page from Android app? - Stack Overflow https://stackoverflow.com/questions/4810803/open-facebook-page-from-android-app from my Android app, I would like to open a link to a Facebook profile in the official Facebook app (if the app is installed, of course). For iPhone, there exists the fb:// URL scheme, but trying the Mon, 02 Nov 2026 07:51:00 GMT",
+  "canonical": [],
+  "branding": []
+}

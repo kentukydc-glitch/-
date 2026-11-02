@@ -1,0 +1,28 @@
+{
+  "url": "https://www.google.com/search?q=Lucru.md+RSS+vacancies",
+  "status": 200,
+  "final_url": "https://www.google.com/search?q=Lucru.md+RSS+vacancies",
+  "content_type": "text/html; charset=ISO-8859-1",
+  "bytes": 92985,
+  "title": [
+    "Google Search"
+  ],
+  "links": [
+    [
+      "/httpservice/retry/enablejs?sei=OADpav_RHsyiqtsP8N2wgAE",
+      "here"
+    ],
+    [
+      "/search?q=Lucru.md+RSS+vacancies&sca_esv=2d0425a6e8c84c30&ie=UTF-8&sxsrf=AKL5yDiIvR0ARHzwqcEbhhFckoh6KjxhlA:1793654840508&emsg=SG_REL&sei=OADpav_RHsyiqtsP8N2wgAE",
+      "click here"
+    ],
+    [
+      "https://support.google.com/websearch",
+      "feedback"
+    ]
+  ],
+  "scripts": [],
+  "text": "Google Search Please click here if you are not redirected within a few seconds. If you're having trouble accessing Google Search, please click here , or send feedback .",
+  "canonical": [],
+  "branding": []
+}
