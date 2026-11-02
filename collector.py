@@ -315,7 +315,16 @@ def send(body):
         connection.ehlo()
     with connection as smtp:
         stage('authenticate')
-        smtp.login(os.environ['SMTP_USER'], os.environ['SMTP_PASSWORD'])
+        password = os.environ['SMTP_PASSWORD']
+        if host == 'smtp.gmail.com':
+            normalized = ''.join(password.split())
+            Path('output/password-format.json').write_text(json.dumps(dict(valid_app_password_format=bool(re.fullmatch('[a-zA-Z]{16}', normalized)), whitespace_removed=normalized != password)))
+            smtp.ehlo_or_helo_if_needed()
+            smtp.user = os.environ['SMTP_USER'].strip()
+            smtp.password = normalized
+            smtp.auth('LOGIN', smtp.auth_login, initial_response_ok=False)
+        else:
+            smtp.login(os.environ['SMTP_USER'], password)
         stage('send_message')
         smtp.send_message(message)
         stage('accepted')
@@ -325,6 +334,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--send', action='store_true')
     parser.add_argument('--scheduled', action='store_true')
+    parser.add_argument('--input-json', help='Use previously collected vacancies for a delivery check')
     args = parser.parse_args()
     now = datetime.now(ZoneInfo('Europe/Chisinau'))
     # Two UTC schedules cover DST; only the local 09:00 invocation runs.
@@ -334,8 +344,12 @@ def main():
     seen = json.loads(state_path.read_text()) if state_path.exists() else {}
     rows, reports = [], []
     fetcher = Fetcher()
-    for source, root in SOURCES.items():
-        found, report = collect(fetcher, source, root)
+    if args.input_json:
+        cached = json.loads(Path(args.input_json).read_text())
+        batches = [(cached, dict(source='Previously collected vacancies', pages=0, postings=len(cached), errors=[], coverage='Cached data for delivery verification'))]
+    else:
+        batches = (collect(fetcher, source, root) for source, root in SOURCES.items())
+    for found, report in batches:
         reports.append(report)
         for row in found:
             key = hashlib.sha256(row['url'].encode()).hexdigest()

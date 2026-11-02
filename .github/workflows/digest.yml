@@ -47,7 +47,9 @@ jobs:
           if [ "$SCHEDULED" = true ]; then
             python collector.py --send --scheduled
           elif [ "$SEND_EMAIL" = true ]; then
-            python collector.py --send
+            git fetch origin collection-report
+            git show FETCH_HEAD:vacancies.json > "$RUNNER_TEMP/vacancies.json"
+            python collector.py --send --input-json "$RUNNER_TEMP/vacancies.json"
           else
             python collector.py
           fi
