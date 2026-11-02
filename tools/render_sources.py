@@ -5,10 +5,8 @@ sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from collector import Fetcher,Page,Tree
 from playwright.async_api import async_playwright
 TARGETS={
- 'jobber-detail':'https://jobber.md/en/job/jurisprudence-chisinau-pfb-collection-insolvency-lawyer/12237/',
- '999-jurisprudence':'https://999.md/ro/list/work/jurisprudence?tab=vacancy&o_16_1=983',
- '999-detail':'https://999.md/ro/105674715',
- 'top-company':'https://www.topangajatori.md/company/documente-4324',
+ '999-vacancy':'https://999.md/ro/86590453',
+ 'top-vacancies':'https://www.delucru.md/jobs/jobs-top',
 }
 
 async def main():
@@ -30,7 +28,7 @@ async def main():
       await page.wait_for_timeout(6000)
     body=await page.content()
     parsed=Page(body)
-    result.update(final_url=page.url,status=response.status if response else None,text=Tree(body).root.text()[:80000],links=parsed.links,scripts=parsed.scripts)
+    result.update(final_url=page.url,status=response.status if response else None,text=Tree(body).root.text()[:80000],links=parsed.links,scripts=parsed.scripts,forms=re.findall(r'<form[^>]*>|<input[^>]*>|<select[^>]*>',body)))
     clean=re.sub(r'<(style|script)\b[^>]*>.*?</\1>','',body,flags=re.S|re.I)
     Path('output',name+'.html').write_text(clean[:1000000])
    except Exception as e:result['error']=str(e)
