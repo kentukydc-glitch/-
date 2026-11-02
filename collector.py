@@ -9,6 +9,7 @@ import re
 import smtplib
 import ssl
 import time
+import textwrap
 import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta
 from email.message import EmailMessage
@@ -105,7 +106,7 @@ def delu_job(body, url, today=None):
             posted = (today - timedelta(days=int(relative[1]))).isoformat()
     city_label = first(lambda n: n.tag == 'div' and n.text() == 'Oraș:')
     city = city_label.parent.text().removeprefix('Oraș:').strip() if city_label.parent else ''
-    return dict(source='Delucru.md', employer=employer, title=title, requirements=description[:700], city=city, date=posted, expires='', url=url)
+    return dict(source='Delucru.md', employer=employer, title=title, requirements=textwrap.shorten(description, width=350, placeholder='…'), city=city, date=posted, expires='', url=url)
 
 
 class Page(HTMLParser):
@@ -167,7 +168,7 @@ def normalize(job, source, page_url):
     parts = urlsplit(url)
     url = urlunsplit((parts.scheme, parts.netloc, parts.path, parts.query, ''))
     return dict(source=source, employer=plain(org.get('name')) if isinstance(org, dict) else plain(org), title=title,
-                requirements=plain(job.get('qualifications') or job.get('skills') or job.get('description'))[:700],
+                requirements=textwrap.shorten(plain(job.get('qualifications') or job.get('skills') or job.get('description')), width=350, placeholder='…'),
                 city=city, date=plain(job.get('datePosted')), expires=plain(job.get('validThrough')), url=url)
 
 
@@ -260,7 +261,7 @@ def collect(fetcher, source, root):
     if not found:
         errors.append('No supported vacancy data extracted; coverage NOT verified')
     return found, dict(source=source, pages=len(visited), postings=len(found), errors=errors,
-                       coverage='Limited: linked legal vacancies with JobPosting structured data only')
+                       coverage=('Limited: Delucru HTML vacancy adapter' if source == 'Delucru.md' else 'Limited: JobPosting structured data only'))
 
 
 def recent(row, today):
@@ -341,7 +342,7 @@ def main():
     with Path('output/vacancies.csv').open('w', encoding='utf-8-sig', newline='') as stream:
         fields = ['source', 'employer', 'title', 'requirements', 'city', 'date', 'url']
         writer = csv.DictWriter(stream, fieldnames=fields, extrasaction='ignore')
-        writer.writeheader()
+        writer.writerow(dict(zip(fields, ['Сайт', 'Кто ищет', 'Кого ищут', 'Краткие требования', 'Город', 'Дата на сайте', 'Ссылка'])))
         writer.writerows(rows)
     Path('output/report.json').write_text(json.dumps(reports, ensure_ascii=False, indent=2))
     print(json.dumps(dict(new=len(rows), sources=reports), ensure_ascii=False))

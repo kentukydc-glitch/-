@@ -4,6 +4,18 @@ from collector import Page, jobs, normalize, recent, render, collect, delu_job
 
 
 class DigestTests(unittest.TestCase):
+    def test_sitemap_discovery_filters_legal_urls(self):
+        from collector import Fetcher
+        from urllib.robotparser import RobotFileParser
+        from unittest.mock import patch
+        fetcher = Fetcher()
+        robots = RobotFileParser()
+        robots.parse(['User-agent: *', 'Allow: /', 'Sitemap: https://example.com/sitemap.xml'])
+        fetcher.robots['https://example.com'] = robots
+        xml = '<urlset><url><loc>https://example.com/job/jurist/1</loc></url><url><loc>https://example.com/job/accountant/2</loc></url></urlset>'
+        with patch.object(fetcher, 'get', return_value=xml):
+            self.assertEqual(fetcher.sitemap_candidates('https://example.com/'), ['https://example.com/job/jurist/1'])
+
     def test_delu_html_adapter(self):
         row = delu_job('''<h2 class="job-item-title">Jurisconsult</h2><a href="/company/bnm">BNM</a><div class="page-item-date">Publicat azi</div><div><div>Oraș:</div><div>Chișinău</div></div><div id="job-description"><p>Despre noi</p><strong>Cerințe</strong><ul><li>Studii juridice</li><li>4 ani experiență</li></ul></div>''', 'https://www.delucru.md/job/1', date(2026, 11, 2))
         self.assertEqual(row['employer'], 'BNM')
