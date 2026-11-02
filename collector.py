@@ -123,7 +123,7 @@ class Fetcher:
 
 def collect(fetcher, source, root):
     queue, visited, found, errors = [root], set(), [], []
-    while queue and len(visited) < 35:
+    while queue and len(visited) < 12:
         url = queue.pop(0)
         if url in visited:
             continue
@@ -133,6 +133,11 @@ def collect(fetcher, source, root):
             if not body.strip():
                 raise RuntimeError('Empty response; source not verified')
             page = Page(body)
+            debug_id = hashlib.sha256(url.encode()).hexdigest()[:10]
+            Path('output').mkdir(exist_ok=True)
+            Path(f'output/{source}-{debug_id}.json').write_text(json.dumps(dict(url=url, links=page.links, scripts=page.scripts), ensure_ascii=False))
+            if len(visited) <= 4:
+                Path(f'output/{source}-{debug_id}.html').write_text(body[:500000])
             if url == root:
                 Path('output').mkdir(exist_ok=True)
                 Path(f'output/{source}-links.json').write_text(json.dumps(page.links, ensure_ascii=False, indent=2))
