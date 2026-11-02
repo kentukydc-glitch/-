@@ -13,7 +13,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: python tools/probe_dates.py
+      - run: python tools/probe_lucru.py
       - name: Save public endpoint evidence
         env:
           GH_REPORT_TOKEN: ${{ github.token }}

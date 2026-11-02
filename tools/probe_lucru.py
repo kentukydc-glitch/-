@@ -6,15 +6,11 @@ from urllib.parse import urlsplit
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from collector import Page,Tree,AGENT
 TARGETS={
- 'lucru-nonwww':'https://lucru.md/ro/jobs-moldova',
- 'lucru-www':'https://www.lucru.md/ro/jobs-moldova',
- 'lucru-robots':'https://www.lucru.md/robots.txt',
- 'lucru-sitemap':'https://www.lucru.md/sitemap.xml',
- 'lucru-ru':'https://www.lucru.md/ru/jobs-moldova',
- 'lucru-search':'https://www.lucru.md/ro/jobs-moldova?query=jurist',
- 'rabota-legacy':'https://www.rabota.md/ro/jobs-moldova',
- 'rabota-robots':'https://www.rabota.md/robots.txt',
+ 'public-search-rss':'https://www.bing.com/search?format=rss&q=Lucru.md+RSS+Telegram+vacancies',
+ 'public-search-jurist':'https://www.bing.com/search?format=rss&q=site%3Alucru.md+jurist',
+ 'public-search-google':'https://www.google.com/search?q=Lucru.md+RSS+vacancies',
 }
+
 Path('output').mkdir(exist_ok=True)
 def probe(item):
  name,url=item;out={'url':url}
