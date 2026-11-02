@@ -128,7 +128,12 @@ def collect(fetcher, source, root):
             continue
         visited.add(url)
         try:
-            page = Page(fetcher.get(url))
+            body = fetcher.get(url)
+            page = Page(body)
+            if url == root:
+                Path('output').mkdir(exist_ok=True)
+                Path(f'output/{source}-links.json').write_text(json.dumps(page.links, ensure_ascii=False, indent=2))
+                Path(f'output/{source}-sample.html').write_text(body[:200000])
             for script in page.scripts:
                 try:
                     data = json.loads(script)

@@ -77,7 +77,7 @@ jobs:
         run: |
           if [ ! -f output/report.json ]; then exit 0; fi
           report_dir=$(mktemp -d)
-          cp output/report.json output/digest.html "$report_dir/"
+          cp -R output/. "$report_dir/"
           printf '%s\n' "$GITHUB_RUN_ID" > "$report_dir/run-id.txt"
           cd "$report_dir"
           git init -b collection-report
