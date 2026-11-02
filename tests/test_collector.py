@@ -4,6 +4,26 @@ from collector import Page, jobs, normalize, recent, render, collect, delu_job
 
 
 class DigestTests(unittest.TestCase):
+    def test_gmail_login_uses_tls_and_normalized_password(self):
+        import os
+        import tempfile
+        from unittest.mock import MagicMock, patch
+        import collector
+        smtp = MagicMock()
+        smtp.__enter__.return_value = smtp
+        original = os.getcwd()
+        try:
+            with tempfile.TemporaryDirectory() as directory:
+                os.chdir(directory)
+                with patch.dict(os.environ, dict(SMTP_HOST='smtp.gmail.com', SMTP_PORT='587', SMTP_USER='test@example.com', SMTP_FROM='test@example.com', SMTP_PASSWORD='abcd efgh ijkl mnop')), patch.object(collector.smtplib, 'SMTP', return_value=smtp):
+                    collector.send('<table></table>')
+                smtp.starttls.assert_called_once()
+                smtp.auth.assert_called_once_with('LOGIN', smtp.auth_login, initial_response_ok=False)
+                self.assertEqual(smtp.password, 'abcdefghijklmnop')
+                smtp.send_message.assert_called_once()
+        finally:
+            os.chdir(original)
+
     def test_sitemap_discovery_filters_legal_urls(self):
         from collector import Fetcher
         from urllib.robotparser import RobotFileParser
