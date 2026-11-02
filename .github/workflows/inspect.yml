@@ -13,7 +13,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: python tools/inspect_sources.py
+      - run: python -m pip install playwright==1.56.0
+      - run: python -m playwright install --with-deps chromium
+      - run: python tools/render_sources.py
       - name: Save public source evidence
         env:
           GH_REPORT_TOKEN: ${{ github.token }}
