@@ -73,6 +73,29 @@ class Tree(HTMLParser):
             self.stack[-1].children.append(value)
 
 
+def explicit_publication_date(body, title):
+    """Use declared posting metadata, never promotion or relative display labels."""
+    candidates = set()
+    for script in Page(body).scripts:
+        try:
+            data = json.loads(script, strict=False)
+        except ValueError:
+            continue
+        for job in jobs(data):
+            if plain(job.get('title')).casefold() != title.casefold():
+                continue
+            value = job.get('datePosted')
+            if isinstance(value, str):
+                try:
+                    parsed = datetime.fromisoformat(value.replace('Z', '+00:00')).date()
+                    candidates.add(parsed.isoformat())
+                except ValueError:
+                    pass
+    if len(candidates) == 1:
+        return candidates.pop(), 'JobPosting.datePosted'
+    return '', 'missing' if not candidates else 'conflicting'
+
+
 def delu_job(body, url, today=None):
     if not re.search(r'/job/\d+', urlsplit(url).path):
         return None
@@ -104,7 +127,8 @@ def delu_job(body, url, today=None):
             posted = (today - timedelta(days=int(relative[1]))).isoformat()
     city_label = first(lambda n: n.tag == 'div' and n.text() == 'Oraș:')
     city = city_label.parent.text().removeprefix('Oraș:').strip() if city_label.parent else ''
-    return dict(source='Delucru.md', employer=employer, title=title, requirements=textwrap.shorten(description, width=350, placeholder='…'), city=city, date=posted, expires='', url=url)
+    publication_date, date_source = explicit_publication_date(body, title)
+    return dict(source='Delucru.md', employer=employer, title=title, requirements=textwrap.shorten(description, width=350, placeholder='…'), city=city, date=publication_date, date_source=date_source, displayed_date=posted, displayed_date_label=date_text, expires='', url=url)
 
 
 class Page(HTMLParser):
@@ -171,7 +195,7 @@ def normalize(job, source, page_url):
         description = description[required.start():]
     return dict(source=source, employer=plain(org.get('name')) if isinstance(org, dict) else plain(org), title=title,
                 requirements=textwrap.shorten(description, width=350, placeholder='…'),
-                city=city, date=plain(job.get('datePosted')), expires=plain(job.get('validThrough')), url=url)
+                city=city, date=plain(job.get('datePosted')), date_source='JobPosting.datePosted' if job.get('datePosted') else 'missing', expires=plain(job.get('validThrough')), url=url)
 
 
 class Fetcher:
@@ -289,16 +313,18 @@ def collect(fetcher, source, root):
                 verified_board = bool(re.search(r'jobs for the query|No jobs|No vacancies', Tree(body).root.text(), re.I))
             if url == root and source not in {'Jobber.md', '999.md', 'Lucru.md'} and hasattr(fetcher, 'sitemap_candidates'):
                 queue.extend(fetcher.sitemap_candidates(root))
+            html_row = None
             if source == 'Delucru.md':
                 row = delu_job(body, url)
+                html_row = row
                 if row:
                     row['source'] = source
                     found.append(row)
             if source == '999.md' and url == root:
                 verified_board = bool(re.search(r'Jurist, consilier juridic', Tree(body).root.text(), re.I) and re.search(r'Joburi.*CV-uri', Tree(body).root.text(), re.I))
-            for script in page.scripts:
+            for script in ([] if html_row else page.scripts):
                 try:
-                    data = json.loads(script)
+                    data = json.loads(script, strict=False)
                 except ValueError:
                     continue
                 for job in jobs(data):
@@ -321,11 +347,15 @@ def collect(fetcher, source, root):
     if not found and not verified_board:
         errors.append('No supported vacancy data extracted; coverage NOT verified')
     return found, dict(source=source, pages=len(visited), postings=len(found), errors=errors,
+                       with_publication_date=sum(bool(row['date']) for row in found),
+                       missing_publication_date=sum(not row['date'] for row in found),
                        verified=bool(found) or verified_board,
                        coverage={'Delucru.md': 'Вакансии раздела «Юридические»', 'Jobber.md': 'Поиск jurist; браузерная загрузка, отбор юридических должностей', '999.md': 'Раздел вакансий юриста; только объявления работодателей', 'Lucru.md': 'Доступ через обычный браузер'}.get(source, 'Структурированные вакансии'))
 
 
 def recent(row, today):
+    if row.get('date_source') != 'JobPosting.datePosted':
+        return False
     try:
         posted = datetime.fromisoformat(row['date'].replace('Z', '+00:00')).date()
         if not today - timedelta(days=7) <= posted <= today:
@@ -337,17 +367,19 @@ def recent(row, today):
         return False
 
 
-def render(rows, reports):
-    fields = [('source', 'Сайт'), ('employer', 'Кто ищет'), ('title', 'Кого ищут'), ('requirements', 'Требования / описание'), ('city', 'Город'), ('date', 'Дата')]
-    output = '<meta charset="utf-8"><h2>Новые вакансии юриста за 7 дней</h2>'
+def render(rows, reports, title="Новые вакансии юриста за 7 дней", count_label="Найдено новых объявлений"):
+    fields = [('source', 'Сайт'), ('employer', 'Кто ищет'), ('title', 'Кого ищут'), ('requirements', 'Требования / описание'), ('city', 'Город'), ('date', 'Дата публикации')]
+    output = '<meta charset="utf-8"><h2>' + html.escape(title) + '</h2>'
     output += '<table border="1" cellpadding="6"><tr>' + ''.join(f'<th>{label}</th>' for _, label in fields) + '<th>Ссылка</th></tr>'
     for row in rows:
-        output += '<tr>' + ''.join('<td>' + html.escape(row[key]) + '</td>' for key, _ in fields)
+        output += '<tr>' + ''.join('<td>' + html.escape(row[key] or ('Не указана' if key == 'date' else '')) + '</td>' for key, _ in fields)
         output += '<td><a href="' + html.escape(row['url'], quote=True) + '">Открыть</a></td></tr>'
-    output += '</table><p>Найдено новых объявлений: ' + str(len(rows)) + '.</p>'
-    output += '<p>Требования приведены выдержкой из объявления. Объявления без даты публикации не включаются. Полнота охвата не гарантируется.</p><h3>Проверка источников</h3><ul>'
+    output += '</table><p>' + html.escape(count_label) + ': ' + str(len(rows)) + '.</p>'
+    output += '<p>Требования приведены выдержкой из объявления. Используется явно указанная сайтом дата размещения, а не дата поднятия или обновления. Объявления без подтверждённой даты размещения не включаются в недельную подборку. Полнота охвата не гарантируется.</p><h3>Проверка источников</h3><ul>'
     for report in reports:
         output += '<li>' + html.escape(f"{report['source']}: страниц {report['pages']}, вакансий {report['postings']}, ошибок {len(report['errors'])}. {report['coverage']}")
+        if report.get('missing_publication_date'):
+            output += '<p>Без подтверждённой даты размещения: ' + str(report['missing_publication_date']) + '. В свежую подборку не включены.</p>'
         for error in report['errors'][:3]:
             output += '<pre>' + html.escape(error) + '</pre>'
         output += '</li>'
@@ -425,7 +457,7 @@ def main():
     with Path('output/vacancies.csv').open('w', encoding='utf-8-sig', newline='') as stream:
         fields = ['source', 'employer', 'title', 'requirements', 'city', 'date', 'url']
         writer = csv.DictWriter(stream, fieldnames=fields, extrasaction='ignore')
-        writer.writerow(dict(zip(fields, ['Сайт', 'Кто ищет', 'Кого ищут', 'Краткие требования', 'Город', 'Дата на сайте', 'Ссылка'])))
+        writer.writerow(dict(zip(fields, ['Сайт', 'Кто ищет', 'Кого ищут', 'Краткие требования', 'Город', 'Дата публикации', 'Ссылка'])))
         writer.writerows(rows)
     Path('output/report.json').write_text(json.dumps(reports, ensure_ascii=False, indent=2))
     print(json.dumps(dict(new=len(rows), sources=reports), ensure_ascii=False))
