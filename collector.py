@@ -294,6 +294,9 @@ def render(rows, reports):
 
 
 def send(body):
+    def stage(name):
+        Path('output').mkdir(exist_ok=True)
+        Path('output/smtp-stage.json').write_text(json.dumps(dict(stage=name)))
     message = EmailMessage()
     message['Subject'] = 'Новые вакансии юриста — еженедельная подборка'
     message['From'] = os.environ['SMTP_FROM']
@@ -302,6 +305,7 @@ def send(body):
     message.add_alternative(body, subtype='html')
     host, port = os.environ['SMTP_HOST'], int(os.environ.get('SMTP_PORT') or '465')
     context = ssl.create_default_context()
+    stage('connect')
     if port == 465:
         connection = smtplib.SMTP_SSL(host, port, context=context, timeout=30)
     else:
@@ -310,8 +314,11 @@ def send(body):
         connection.starttls(context=context)
         connection.ehlo()
     with connection as smtp:
+        stage('authenticate')
         smtp.login(os.environ['SMTP_USER'], os.environ['SMTP_PASSWORD'])
+        stage('send_message')
         smtp.send_message(message)
+        stage('accepted')
 
 
 def main():

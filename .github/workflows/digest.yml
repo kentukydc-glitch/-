@@ -36,7 +36,7 @@ jobs:
       - name: Collect and deliver
         env:
           SMTP_HOST: smtp.gmail.com
-          SMTP_PORT: '465'
+          SMTP_PORT: '587'
           SMTP_USER: kentukydc@gmail.com
           SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
           SMTP_FROM: kentukydc@gmail.com

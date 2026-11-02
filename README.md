@@ -14,7 +14,7 @@ Europe/Chisinau (GitHub может запускать задания с заде
 1. Загрузите изменения в основную ветку GitHub и включите Actions.
 2. В Settings → Secrets and variables → Actions добавьте секрет
    `SMTP_PASSWORD`: пароль приложения Gmail для kentukydc@gmail.com.
-   В workflow уже указаны smtp.gmail.com, порт 465, отправитель и логин
+   В workflow уже указаны smtp.gmail.com, порт 587 (STARTTLS), отправитель и логин
    kentukydc@gmail.com. Для другого аккаунта измените workflow.
    Создание пароля приложения требует двухэтапной аутентификации.
    Обычный пароль аккаунта в проект не добавляйте.
