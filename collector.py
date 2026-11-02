@@ -270,7 +270,6 @@ class BrowserFetcher(Fetcher):
 def collect(fetcher, source, root):
     queue, visited, found, errors = [root], set(), [], []
     verified_board = False
-    available_positions = 0
     while queue and len(visited) < 12:
         url = queue.pop(0)
         visit_key = url
@@ -322,7 +321,6 @@ def collect(fetcher, source, root):
     if not found and not verified_board:
         errors.append('No supported vacancy data extracted; coverage NOT verified')
     return found, dict(source=source, pages=len(visited), postings=len(found), errors=errors,
-                       available_positions=available_positions,
                        verified=bool(found) or verified_board,
                        coverage={'Delucru.md': 'Вакансии раздела «Юридические»', 'Jobber.md': 'Поиск jurist; браузерная загрузка, отбор юридических должностей', '999.md': 'Раздел вакансий юриста; только объявления работодателей', 'Lucru.md': 'Доступ через обычный браузер'}.get(source, 'Структурированные вакансии'))
 
@@ -344,10 +342,10 @@ def render(rows, reports):
     output = '<meta charset="utf-8"><h2>Новые вакансии юриста за 7 дней</h2>'
     output += '<table border="1" cellpadding="6"><tr>' + ''.join(f'<th>{label}</th>' for _, label in fields) + '<th>Ссылка</th></tr>'
     for row in rows:
-        output += '<tr>' + ''.join('<td>' + html.escape(row[key] + (' (обнаружено)' if key == 'date' and row.get('date_basis') == 'first_seen' else '')) + '</td>' for key, _ in fields)
+        output += '<tr>' + ''.join('<td>' + html.escape(row[key]) + '</td>' for key, _ in fields)
         output += '<td><a href="' + html.escape(row['url'], quote=True) + '">Открыть</a></td></tr>'
     output += '</table><p>Найдено новых объявлений: ' + str(len(rows)) + '.</p>'
-    output += '<p>Требования приведены выдержкой из объявления. Метка «обнаружено» означает дату первого обнаружения: сайт не указал дату публикации. Полнота охвата не гарантируется.</p><h3>Проверка источников</h3><ul>'
+    output += '<p>Требования приведены выдержкой из объявления. Объявления без даты публикации не включаются. Полнота охвата не гарантируется.</p><h3>Проверка источников</h3><ul>'
     for report in reports:
         output += '<li>' + html.escape(f"{report['source']}: страниц {report['pages']}, вакансий {report['postings']}, ошибок {len(report['errors'])}. {report['coverage']}")
         for error in report['errors'][:3]:
