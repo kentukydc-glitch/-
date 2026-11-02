@@ -9,6 +9,7 @@ import re
 import smtplib
 import ssl
 import time
+import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta
 from email.message import EmailMessage
 from html.parser import HTMLParser
@@ -21,7 +22,7 @@ from zoneinfo import ZoneInfo
 SOURCES = {
     'Lucru.md': 'https://www.lucru.md/ro/jobs-moldova',
     'Delucru.md': 'https://www.delucru.md/jobs/law',
-    'Jobber.md': 'https://jobber.md/en/',
+    'Jobber.md': 'https://jobber.md/en/jobs/',
     '999.md': 'https://999.md/ro/work',
     'Muncitorul.md': 'https://muncitorul.md/',
     'TopAngajatori.md': 'https://topangajatori.md/',
@@ -197,6 +198,28 @@ class Fetcher:
         time.sleep(1)
         return self.raw(url)
 
+    def sitemap_candidates(self, root):
+        parts = urlsplit(root)
+        origin = f'{parts.scheme}://{parts.netloc}'
+        parser = self.robots.get(origin)
+        pending = list(parser.site_maps() or []) if parser else []
+        visited, candidates = set(), []
+        while pending and len(visited) < 4:
+            url = pending.pop(0)
+            if url in visited or urlsplit(url).netloc.removeprefix('www.') != parts.netloc.removeprefix('www.'):
+                continue
+            visited.add(url)
+            try:
+                document = ET.fromstring(self.get(url))
+                links = [node.text.strip() for node in document.iter() if node.tag.rsplit('}', 1)[-1] == 'loc' and node.text]
+                if document.tag.rsplit('}', 1)[-1] == 'sitemapindex':
+                    pending.extend(sorted(links, key=lambda value: not bool(re.search('job|vacan|en|ro', value, re.I))))
+                else:
+                    candidates.extend(link for link in links if DISCOVERY.search(link))
+            except (OSError, ValueError, RuntimeError, ET.ParseError):
+                continue
+        return candidates
+
 
 def collect(fetcher, source, root):
     queue, visited, found, errors = [root], set(), [], []
@@ -210,6 +233,8 @@ def collect(fetcher, source, root):
             if not body.strip():
                 raise RuntimeError('Empty response; source not verified')
             page = Page(body)
+            if url == root and hasattr(fetcher, 'sitemap_candidates'):
+                queue.extend(fetcher.sitemap_candidates(root))
             if source == 'Delucru.md':
                 row = delu_job(body, url)
                 if row:
