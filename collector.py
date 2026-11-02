@@ -347,7 +347,17 @@ def main():
     Path('output/report.json').write_text(json.dumps(reports, ensure_ascii=False, indent=2))
     print(json.dumps(dict(new=len(rows), sources=reports), ensure_ascii=False))
     if args.send:
-        send(body)
+        required = ['SMTP_HOST', 'SMTP_USER', 'SMTP_PASSWORD', 'SMTP_FROM']
+        missing = [name for name in required if not os.environ.get(name)]
+        # Record only safe metadata, never credentials or SMTP conversation.
+        try:
+            if missing:
+                raise ValueError('Missing SMTP settings: ' + ', '.join(missing))
+            send(body)
+        except Exception as exc:
+            Path('output/delivery.json').write_text(json.dumps(dict(status='failed', missing_settings=missing, error_type=type(exc).__name__, smtp_code=getattr(exc, 'smtp_code', None)), indent=2))
+            raise
+        Path('output/delivery.json').write_text(json.dumps(dict(status='accepted_by_smtp', recipient=os.environ.get('DIGEST_TO', 'kentukydc@gmail.com')), indent=2))
         # Commit deduplication state only after SMTP accepts the message.
         state_path.parent.mkdir(exist_ok=True)
         state_path.write_text(json.dumps(seen, indent=2))

@@ -38,11 +38,11 @@ class DigestTests(unittest.TestCase):
         try:
             with tempfile.TemporaryDirectory() as directory:
                 os.chdir(directory)
-                with patch.object(collector, 'SOURCES', {'Example': 'https://example.com'}), patch.object(collector, 'collect', return_value=([row], report)), patch('sys.argv', ['collector.py', '--send']), patch.object(collector, 'send', side_effect=RuntimeError('SMTP unavailable')):
+                with patch.object(collector, 'SOURCES', {'Example': 'https://example.com'}), patch.object(collector, 'collect', return_value=([row], report)), patch('sys.argv', ['collector.py', '--send']), patch.dict(os.environ, dict(SMTP_HOST='smtp.example.com', SMTP_USER='test', SMTP_PASSWORD='test-fixture', SMTP_FROM='test@example.com')), patch.object(collector, 'send', side_effect=RuntimeError('SMTP unavailable')):
                     with self.assertRaises(RuntimeError):
                         collector.main()
                 self.assertFalse(Path('state/seen.json').exists())
-                with patch.object(collector, 'SOURCES', {'Example': 'https://example.com'}), patch.object(collector, 'collect', return_value=([row], report)), patch('sys.argv', ['collector.py', '--send']), patch.object(collector, 'send'):
+                with patch.object(collector, 'SOURCES', {'Example': 'https://example.com'}), patch.object(collector, 'collect', return_value=([row], report)), patch('sys.argv', ['collector.py', '--send']), patch.dict(os.environ, dict(SMTP_HOST='smtp.example.com', SMTP_USER='test', SMTP_PASSWORD='test-fixture', SMTP_FROM='test@example.com')), patch.object(collector, 'send'):
                     collector.main()
                     self.assertTrue(Path('state/seen.json').exists())
                     collector.main()

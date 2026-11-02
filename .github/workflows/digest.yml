@@ -1,7 +1,7 @@
 name: Weekly legal vacancies
 on:
   push:
-    branches: [automation/legal-digest, main]
+    branches: [automation/legal-digest, automation/email-check, main]
   schedule:
     - cron: '0 6,7 * * 1'
   workflow_dispatch:
@@ -42,7 +42,7 @@ jobs:
           SMTP_FROM: ${{ secrets.SMTP_FROM }}
           DIGEST_TO: kentukydc@gmail.com
           SCHEDULED: ${{ github.event_name == 'schedule' }}
-          SEND_EMAIL: ${{ inputs.send_email }}
+          SEND_EMAIL: ${{ inputs.send_email || github.ref == 'refs/heads/automation/email-check' }}
         run: |
           if [ "$SCHEDULED" = true ]; then
             python collector.py --send --scheduled
