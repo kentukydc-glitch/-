@@ -21,7 +21,7 @@ from urllib.robotparser import RobotFileParser
 from zoneinfo import ZoneInfo
 
 SOURCES = {
-    'Lucru.md': 'https://www.lucru.md/ro/jobs-moldova',
+    'Lucru.md': 'https://www.lucru.md/ro/lucru-moldova-jurist',
     'Delucru.md': 'https://www.delucru.md/jobs/law',
     'Jobber.md': 'https://jobber.md/en/jobs/?query=jurist',
     '999.md': 'https://999.md/ro/list/work/jurisprudence?tab=vacancy&o_16_1=983',
@@ -193,9 +193,14 @@ def normalize(job, source, page_url):
     required = re.search(r'cerin[țţt]e|требования|requirements|qualifications', description, re.I)
     if required:
         description = description[required.start():]
+    posted = plain(job.get('datePosted'))
+    try:
+        posted = datetime.fromisoformat(posted.replace('Z', '+00:00')).date().isoformat()
+    except ValueError:
+        posted = ''
     return dict(source=source, employer=plain(org.get('name')) if isinstance(org, dict) else plain(org), title=title,
                 requirements=textwrap.shorten(description, width=350, placeholder='…'),
-                city=city, date=plain(job.get('datePosted')), date_source='JobPosting.datePosted' if job.get('datePosted') else 'missing', expires=plain(job.get('validThrough')), url=url)
+                city=city, date=posted, date_source='JobPosting.datePosted' if posted else 'missing', expires=plain(job.get('validThrough')), url=url)
 
 
 class Fetcher:
@@ -371,6 +376,8 @@ def collect(fetcher, source, root):
                         found.append(row)
             for href, label in page.links:
                 target = urljoin(url, href).split('#')[0]
+                if source == 'Lucru.md' and not re.search(r'^/ro/lucru/[^/]+/\d+/?$', urlsplit(target).path):
+                    continue
                 if source == '999.md' and not re.search(r'^/ro/\d+$', urlsplit(target).path):
                     continue
                 if source == 'Jobber.md' and not re.search(r'/en/job/[^/]+/\d+/?$', urlsplit(target).path):
@@ -403,6 +410,49 @@ def recent(row, today):
         return True
     except (ValueError, TypeError):
         return False
+
+
+def load_lucru_cache(path, now):
+    """Read a recent Mac collection without treating collection time as publication."""
+    data = json.loads(Path(path).read_text())
+    if data.get('version') != 1 or data.get('source') != 'Lucru.md':
+        raise ValueError('Unknown Lucru cache format')
+    collected = datetime.fromisoformat(data['collected_at'].replace('Z', '+00:00'))
+    if collected.tzinfo is None or not -timedelta(minutes=5) <= now - collected <= timedelta(hours=24):
+        raise ValueError('Mac Lucru collection is older than 24 hours or has an invalid timestamp')
+    report = dict(data['report'])
+    if report.get('source') != 'Lucru.md' or not report.get('verified'):
+        raise ValueError('Mac Lucru collection was not verified')
+    rows = data['vacancies']
+    if not isinstance(rows, list):
+        raise ValueError('Invalid Lucru vacancy list')
+    for row in rows:
+        required = ('source', 'employer', 'title', 'requirements', 'city', 'date', 'url', 'expires')
+        if not isinstance(row, dict) or not all(isinstance(row.get(key), str) for key in required):
+            raise ValueError('Incomplete Lucru vacancy data')
+        link = urlsplit(row['url'])
+        if row.get('source') != 'Lucru.md' or link.scheme != 'https' or link.hostname not in {'lucru.md', 'www.lucru.md'}:
+            raise ValueError('Unexpected source in Mac Lucru collection')
+    report['collected_at'] = data['collected_at']
+    report['coverage'] = 'Собрано на вашем Mac: ' + data['collected_at'] + '. ' + report.get('coverage', '')
+    return rows, report
+
+
+def source_batches(fetcher, selected=None, cache_path=None):
+    for source, root in SOURCES.items():
+        if selected and source not in selected:
+            continue
+        cache_error = None
+        if source == 'Lucru.md' and cache_path:
+            try:
+                yield load_lucru_cache(cache_path, datetime.now(ZoneInfo('Europe/Chisinau')))
+                continue
+            except (OSError, ValueError, TypeError, KeyError) as exc:
+                cache_error = str(exc)
+        rows, report = collect(fetcher, source, root)
+        if cache_error:
+            report['errors'].append('Данные с Mac недоступны: ' + cache_error)
+        yield rows, report
 
 
 def render(rows, reports, title="Новые вакансии юриста за 7 дней", count_label="Найдено новых объявлений"):
@@ -474,14 +524,15 @@ def main():
         return
     state_path = Path('state/seen.json')
     seen = json.loads(state_path.read_text()) if state_path.exists() else {}
-    rows, reports = [], []
+    rows, reports, observed = [], [], []
     fetcher = BrowserFetcher()
     if args.input_json:
         cached = json.loads(Path(args.input_json).read_text())
         batches = [(cached, dict(source='Previously collected vacancies', pages=0, postings=len(cached), errors=[], coverage='Cached data for delivery verification'))]
     else:
-        batches = (collect(fetcher, source, root) for source, root in SOURCES.items() if not args.source or source in args.source)
+        batches = source_batches(fetcher, args.source, os.environ.get('DIGEST_LUCRU_CACHE'))
     for found, report in batches:
+        observed.extend(found)
         reports.append(report)
         for row in found:
             key = hashlib.sha256(row['url'].encode()).hexdigest()
@@ -499,6 +550,9 @@ def main():
         writer.writerow(dict(zip(fields, ['Сайт', 'Кто ищет', 'Кого ищут', 'Краткие требования', 'Город', 'Дата публикации', 'Ссылка'])))
         writer.writerows(rows)
     Path('output/report.json').write_text(json.dumps(reports, ensure_ascii=False, indent=2))
+    if args.source == ['Lucru.md'] and not args.input_json:
+        cache = dict(version=1, source='Lucru.md', collected_at=datetime.now(ZoneInfo('Europe/Chisinau')).isoformat(), vacancies=observed, report=reports[0])
+        Path('output/lucru-cache.json').write_text(json.dumps(cache, ensure_ascii=False, indent=2))
     print(json.dumps(dict(new=len(rows), sources=reports), ensure_ascii=False))
     if args.send:
         required = ['SMTP_HOST', 'SMTP_USER', 'SMTP_PASSWORD', 'SMTP_FROM']

@@ -3,10 +3,66 @@ import unittest
 from datetime import date
 from pathlib import Path
 from unittest.mock import MagicMock, patch
-from collector import BrowserFetcher, Page, collect, delu_job, jobs, normalize, recent
+from collector import BrowserFetcher, Page, collect, delu_job, jobs, load_lucru_cache, normalize, recent, source_batches
 
 
 class SourceTests(unittest.TestCase):
+    def mac_cache(self, directory, collected='2026-11-02T20:00:00+00:00', posted='2026-10-29'):
+        row = dict(source='Lucru.md', employer='Clinic', title='Jurist', requirements='Studii juridice', city='Chișinău', date=posted, date_source='JobPosting.datePosted', expires='', url='https://www.lucru.md/ro/lucru/jurist/145168')
+        report = dict(source='Lucru.md', verified=True, pages=2, postings=1, errors=[], coverage='Mac')
+        data = dict(version=1, source='Lucru.md', collected_at=collected, vacancies=[row], report=report)
+        path = Path(directory) / 'lucru-cache.json'
+        path.write_text(json.dumps(data))
+        return path, data
+
+    def test_fresh_mac_cache_keeps_original_publication_date(self):
+        import tempfile
+        from datetime import datetime, timezone
+        with tempfile.TemporaryDirectory() as directory:
+            path, _ = self.mac_cache(directory, posted='2025-06-24')
+            rows, report = load_lucru_cache(path, datetime(2026, 11, 2, 21, tzinfo=timezone.utc))
+        self.assertEqual(rows[0]['date'], '2025-06-24')
+        self.assertFalse(recent(rows[0], date(2026, 11, 2)))
+        self.assertIn('Собрано на вашем Mac', report['coverage'])
+
+    def test_stale_or_future_mac_cache_is_rejected(self):
+        import tempfile
+        from datetime import datetime, timezone
+        with tempfile.TemporaryDirectory() as directory:
+            for stamp in ('2026-10-30T20:00:00+00:00', '2026-11-03T20:00:00+00:00'):
+                path, _ = self.mac_cache(directory, collected=stamp)
+                with self.assertRaises(ValueError):
+                    load_lucru_cache(path, datetime(2026, 11, 2, 21, tzinfo=timezone.utc))
+
+    def test_unverified_or_wrong_domain_mac_cache_is_rejected(self):
+        import tempfile
+        from datetime import datetime, timezone
+        now = datetime(2026, 11, 2, 21, tzinfo=timezone.utc)
+        with tempfile.TemporaryDirectory() as directory:
+            path, data = self.mac_cache(directory)
+            data['report']['verified'] = False
+            path.write_text(json.dumps(data))
+            with self.assertRaises(ValueError):
+                load_lucru_cache(path, now)
+            data['report']['verified'] = True
+            data['vacancies'][0]['url'] = 'https://other.example/job'
+            path.write_text(json.dumps(data))
+            with self.assertRaises(ValueError):
+                load_lucru_cache(path, now)
+
+    def test_missing_mac_cache_does_not_block_other_collection(self):
+        import collector
+        report = dict(source='Lucru.md', verified=False, pages=1, postings=0, errors=['Denied'], coverage='Direct')
+        with patch.object(collector, 'collect', return_value=([], report)) as mocked:
+            batches = list(source_batches(object(), ['Lucru.md'], '/missing/lucru-cache.json'))
+        mocked.assert_called_once()
+        self.assertTrue(any('Mac' in error for error in batches[0][1]['errors']))
+
+    def test_posting_timestamp_is_displayed_as_publication_date(self):
+        row = normalize(dict(title='Jurist', datePosted='2026-10-29T12:22:01+02:00'), 'Lucru.md', 'https://www.lucru.md/ro/lucru/jurist/145168')
+        self.assertEqual(row['date'], '2026-10-29')
+        self.assertEqual(row['date_source'], 'JobPosting.datePosted')
+
     def test_source_selection_checks_only_lucru(self):
         import os
         import tempfile

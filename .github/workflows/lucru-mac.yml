@@ -3,6 +3,8 @@ on:
   push:
     branches: [automation/lucru-mac-check]
   workflow_dispatch:
+  schedule:
+    - cron: '15 5,6 * * 1'
 permissions:
   contents: write
 concurrency:
@@ -14,28 +16,41 @@ jobs:
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
+      - name: Check local collection window
+        id: window
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          if [ "$EVENT_NAME" = schedule ] && [ "$(TZ=Europe/Chisinau date '+%u %H')" != '1 08' ]; then
+            echo 'run=false' >> "$GITHUB_OUTPUT"
+          else
+            echo 'run=true' >> "$GITHUB_OUTPUT"
+          fi
       - uses: astral-sh/setup-uv@v6
+        if: steps.window.outputs.run == 'true'
       - name: Prepare browser
+        if: steps.window.outputs.run == 'true'
         run: |
           uv python install 3.12
           uv venv --python 3.12 .venv
           uv pip install --python .venv/bin/python -r requirements.txt
           .venv/bin/python -m playwright install chromium
       - name: Check public Lucru vacancies
+        if: steps.window.outputs.run == 'true'
         env:
           DIGEST_BROWSER_HEADLESS: 'false'
           DIGEST_BROWSER_PROFILE: ${{ runner.tool_cache }}/lucru-browser-profile
           DIGEST_BROWSER_WAIT_MS: '20000'
-          DIGEST_LUCRU_DIAGNOSTICS: 'true'
-        run: .venv/bin/python collector.py --source Lucru.md
+          DIGEST_LUCRU_DIAGNOSTICS: ${{ github.event_name != 'schedule' && 'true' || 'false' }}
+        run: /usr/bin/caffeinate -i .venv/bin/python collector.py --source Lucru.md
       - uses: actions/upload-artifact@v4
-        if: always()
+        if: always() && steps.window.outputs.run == 'true'
         with:
           name: lucru-mac-check
           path: output/
           retention-days: 7
       - name: Save check results
-        if: always()
+        if: always() && steps.window.outputs.run == 'true'
         env:
           GH_REPORT_TOKEN: ${{ github.token }}
         run: |

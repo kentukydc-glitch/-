@@ -35,6 +35,16 @@ jobs:
             git fetch origin digest-state
             git show FETCH_HEAD:seen.json > state/seen.json
           fi
+      - name: Read recent Lucru collection from Mac
+        run: |
+          cache_file="$RUNNER_TEMP/lucru-cache.json"
+          if git ls-remote --exit-code --heads origin lucru-mac-report; then
+            git fetch origin lucru-mac-report
+            if ! git show FETCH_HEAD:lucru-cache.json > "$cache_file"; then
+              rm -f "$cache_file"
+              echo 'No verified Mac cache available yet'
+            fi
+          fi
       - name: Test
         run: python -m unittest discover -s tests -v
       - name: Collect and deliver
@@ -45,6 +55,7 @@ jobs:
           SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
           SMTP_FROM: kentukydc@gmail.com
           DIGEST_TO: kentukydc@gmail.com
+          DIGEST_LUCRU_CACHE: ${{ runner.temp }}/lucru-cache.json
           SCHEDULED: ${{ github.event_name == 'schedule' }}
           SEND_EMAIL: ${{ inputs.send_email || github.ref == 'refs/heads/automation/email-check' }}
         run: |
