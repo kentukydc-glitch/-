@@ -26,6 +26,7 @@ SOURCES = {
     'TopAngajatori.md': 'https://topangajatori.md/',
 }
 KEYWORDS = re.compile(r'юрист|юрисконсульт|адвокат|\bjurist\w*|consilier\s+juridic|\bavocat\w*|legal\s+counsel', re.I)
+DISCOVERY = re.compile(KEYWORDS.pattern + r'|juridic|\blaw\b', re.I)
 AGENT = 'LegalVacancyDigest/1.0'
 
 
@@ -129,6 +130,8 @@ def collect(fetcher, source, root):
         visited.add(url)
         try:
             body = fetcher.get(url)
+            if not body.strip():
+                raise RuntimeError('Empty response; source not verified')
             page = Page(body)
             if url == root:
                 Path('output').mkdir(exist_ok=True)
@@ -146,8 +149,8 @@ def collect(fetcher, source, root):
             for href, label in page.links:
                 target = urljoin(url, href).split('#')[0]
                 if (urlsplit(target).scheme == 'https' and
-                        urlsplit(target).netloc == urlsplit(root).netloc and
-                        KEYWORDS.search(label + ' ' + href) and target not in visited):
+                        urlsplit(target).netloc.removeprefix('www.') == urlsplit(root).netloc.removeprefix('www.') and
+                        DISCOVERY.search(label + ' ' + href) and target not in visited):
                     queue.append(target)
         except Exception as exc:
             errors.append(f'{url}: {type(exc).__name__}: {exc}')
