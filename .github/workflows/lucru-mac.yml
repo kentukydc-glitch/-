@@ -14,20 +14,20 @@ jobs:
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
+      - uses: astral-sh/setup-uv@v6
       - name: Prepare browser
         run: |
-          python -m pip install -r requirements.txt
-          python -m playwright install chromium
+          uv python install 3.12
+          uv venv --python 3.12 .venv
+          uv pip install --python .venv/bin/python -r requirements.txt
+          .venv/bin/python -m playwright install chromium
       - name: Check public Lucru vacancies
         env:
           DIGEST_BROWSER_HEADLESS: 'false'
           DIGEST_BROWSER_PROFILE: ${{ runner.tool_cache }}/lucru-browser-profile
           DIGEST_BROWSER_WAIT_MS: '20000'
           DIGEST_LUCRU_DIAGNOSTICS: 'true'
-        run: python collector.py --source Lucru.md
+        run: .venv/bin/python collector.py --source Lucru.md
       - uses: actions/upload-artifact@v4
         if: always()
         with:
