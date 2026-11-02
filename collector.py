@@ -279,6 +279,15 @@ class BrowserFetcher(Fetcher):
             response = page.goto(url, wait_until='domcontentloaded', timeout=45000)
             wait_ms = int(os.environ.get('DIGEST_BROWSER_WAIT_MS', '6500'))
             page.wait_for_timeout(wait_ms)
+            if domain == 'lucru.md' and urlsplit(url).path in {'/ro/jobs-moldova', '/ro/lucru-moldova'}:
+                search = page.locator('input[name="query"]:visible').first
+                if search.count():
+                    save_cookies = page.get_by_role('button', name='Salvează', exact=True)
+                    if save_cookies.count() and save_cookies.is_visible():
+                        save_cookies.click()
+                    search.fill('jurist')
+                    search.press('Enter')
+                    page.wait_for_timeout(wait_ms)
             if urlsplit(page.url).hostname.removeprefix('www.') != domain:
                 raise RuntimeError('Unexpected cross-site browser redirect')
             body = page.content()
@@ -305,7 +314,7 @@ class BrowserFetcher(Fetcher):
                 navigation = [(href, plain(label)) for href, label in parsed.links
                               if not re.search(r'login|auth|cabinet|signin|oauth|token|account|register', href, re.I)][:100]
                 main = next(tree.find(lambda node: node.tag == 'main' or node.attrs.get('role') == 'main'), Node())
-                (diagnostics / (identity + '.json')).write_text(json.dumps(dict(url=url, title=title, postings=postings, legal_links=legal_links, inputs=inputs, headings=headings, buttons=buttons, navigation=navigation, main_text=main.text()[:30000]), ensure_ascii=False, indent=2))
+                (diagnostics / (identity + '.json')).write_text(json.dumps(dict(url=url, final_url=page.url, title=title, postings=postings, legal_links=legal_links, inputs=inputs, headings=headings, buttons=buttons, navigation=navigation, main_text=main.text()[:30000]), ensure_ascii=False, indent=2))
             if response and response.status >= 400 or re.search(r'403 Forbidden|Access denied|Just a moment|Verify you are human', title, re.I):
                 raise RuntimeError('Site denied browser access; source unavailable')
             return body
