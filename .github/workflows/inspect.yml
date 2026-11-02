@@ -1,0 +1,27 @@
+name: Inspect vacancy source markup
+on:
+  push:
+    branches: [automation/source-inspection]
+permissions:
+  contents: write
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python tools/inspect_sources.py
+      - name: Save public source evidence
+        env:
+          GH_REPORT_TOKEN: ${{ github.token }}
+        run: |
+          cd output
+          printf '%s\n' "$GITHUB_RUN_ID" > run-id.txt
+          git init -b source-inspection
+          git add .
+          git -c user.name=github-actions -c user.email=github-actions@users.noreply.github.com commit -m 'Public source markup'
+          git remote add origin "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY.git"
+          git -c "http.extraheader=AUTHORIZATION: basic $(printf 'x-access-token:%s' "$GH_REPORT_TOKEN" | base64 -w0)" push --force origin HEAD:refs/heads/source-inspection
