@@ -5,10 +5,12 @@ sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from collector import Fetcher,Page,Tree
 from playwright.async_api import async_playwright
 TARGETS={
- 'browser-jobber':'https://jobber.md/en/jobs/',
- 'browser-999':'https://999.md/ro/search?query=jurist&o_16_1=983',
- 'browser-lucru':'https://www.lucru.md/ro/jobs-moldova',
+ 'jobber-detail':'https://jobber.md/en/job/jurisprudence-chisinau-pfb-collection-insolvency-lawyer/12237/',
+ '999-jurisprudence':'https://999.md/ro/list/work/jurisprudence?tab=vacancy&o_16_1=983',
+ '999-detail':'https://999.md/ro/105674715',
+ 'top-company':'https://www.topangajatori.md/company/documente-4324',
 }
+
 async def main():
  Path('output').mkdir(exist_ok=True)
  async with async_playwright() as p:

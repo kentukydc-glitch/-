@@ -25,8 +25,8 @@ SOURCES = {
     'Delucru.md': 'https://www.delucru.md/jobs/law',
     'Jobber.md': 'https://jobber.md/en/jobs/',
     '999.md': 'https://999.md/ro/work',
-    'Muncitorul.md': 'https://muncitorul.md/',
-    'TopAngajatori.md': 'https://topangajatori.md/',
+    'Muncitorul.md': 'https://muncitorul.md/ro/posturi_vacante',
+    'TopAngajatori.md': 'https://www.topangajatori.md/juridic',
 }
 KEYWORDS = re.compile(r'юрист|юрисконсульт|адвокат|\bjurist\w*|\bjurisconsult\w*|juridic|\bavocat\w*|legal\s+counsel', re.I)
 DISCOVERY = re.compile(KEYWORDS.pattern + r'|juridic|\blaw\b', re.I)
@@ -107,6 +107,26 @@ def delu_job(body, url, today=None):
     city_label = first(lambda n: n.tag == 'div' and n.text() == 'Oraș:')
     city = city_label.parent.text().removeprefix('Oraș:').strip() if city_label.parent else ''
     return dict(source='Delucru.md', employer=employer, title=title, requirements=textwrap.shorten(description, width=350, placeholder='…'), city=city, date=posted, expires='', url=url)
+
+
+def muncitorul_jobs(body, url, today=None):
+    tree = Tree(body).root
+    blocks = list(tree.find(lambda n: n.has_class('lista__item')))
+    rows = []
+    today = today or datetime.now(ZoneInfo('Europe/Chisinau')).date()
+    for block in blocks:
+        heading = next(block.find(lambda n: n.tag == 'h3'), Node()).text()
+        if not KEYWORDS.search(heading):
+            continue
+        description = block.text()
+        match = re.search(r'cerin[țţt]e|требования|requirements', description, re.I)
+        if match:
+            description = description[match.start():]
+        identity = hashlib.sha256(heading.casefold().encode()).hexdigest()[:12]
+        rows.append(dict(source='Muncitorul.md', employer='Olisgrup SRL (Muncitorul.md)', title=heading,
+                         requirements=textwrap.shorten(description, width=350, placeholder='…'), city='',
+                         date=today.isoformat(), date_basis='first_seen', expires='', url=url + '#vacancy-' + identity))
+    return rows, len(blocks)
 
 
 class Page(HTMLParser):
@@ -224,6 +244,8 @@ class Fetcher:
 
 def collect(fetcher, source, root):
     queue, visited, found, errors = [root], set(), [], []
+    verified_board = False
+    available_positions = 0
     while queue and len(visited) < 12:
         url = queue.pop(0)
         if url in visited:
@@ -234,6 +256,10 @@ def collect(fetcher, source, root):
             if not body.strip():
                 raise RuntimeError('Empty response; source not verified')
             page = Page(body)
+            if source == 'Muncitorul.md':
+                rows, available_positions = muncitorul_jobs(body, url)
+                found.extend(rows)
+                verified_board = available_positions > 0
             if url == root and hasattr(fetcher, 'sitemap_candidates'):
                 queue.extend(fetcher.sitemap_candidates(root))
             if source == 'Delucru.md':
@@ -258,9 +284,11 @@ def collect(fetcher, source, root):
                     queue.append(target)
         except Exception as exc:
             errors.append(f'{url}: {type(exc).__name__}: {exc}')
-    if not found:
+    if not found and not verified_board:
         errors.append('No supported vacancy data extracted; coverage NOT verified')
     return found, dict(source=source, pages=len(visited), postings=len(found), errors=errors,
+                       available_positions=available_positions,
+                       verified=bool(found) or verified_board,
                        coverage=('Limited: Delucru HTML vacancy adapter' if source == 'Delucru.md' else 'Limited: JobPosting structured data only'))
 
 
@@ -281,10 +309,10 @@ def render(rows, reports):
     output = '<meta charset="utf-8"><h2>Новые вакансии юриста за 7 дней</h2>'
     output += '<table border="1" cellpadding="6"><tr>' + ''.join(f'<th>{label}</th>' for _, label in fields) + '<th>Ссылка</th></tr>'
     for row in rows:
-        output += '<tr>' + ''.join('<td>' + html.escape(row[key]) + '</td>' for key, _ in fields)
+        output += '<tr>' + ''.join('<td>' + html.escape(row[key] + (' (обнаружено)' if key == 'date' and row.get('date_basis') == 'first_seen' else '')) + '</td>' for key, _ in fields)
         output += '<td><a href="' + html.escape(row['url'], quote=True) + '">Открыть</a></td></tr>'
     output += '</table><p>Найдено новых объявлений: ' + str(len(rows)) + '.</p>'
-    output += '<p>Требования приведены выдержкой из объявления. Объявления без даты не включаются. Полнота охвата не гарантируется.</p><h3>Проверка источников</h3><ul>'
+    output += '<p>Требования приведены выдержкой из объявления. Метка «обнаружено» означает дату первого обнаружения: сайт не указал дату публикации. Полнота охвата не гарантируется.</p><h3>Проверка источников</h3><ul>'
     for report in reports:
         output += '<li>' + html.escape(f"{report['source']}: страниц {report['pages']}, вакансий {report['postings']}, ошибок {len(report['errors'])}. {report['coverage']}")
         for error in report['errors'][:3]:
