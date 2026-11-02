@@ -7,6 +7,43 @@ from collector import BrowserFetcher, Page, collect, delu_job, jobs, normalize, 
 
 
 class SourceTests(unittest.TestCase):
+    def test_source_selection_checks_only_lucru(self):
+        import os
+        import tempfile
+        import collector
+        original = os.getcwd()
+        try:
+            with tempfile.TemporaryDirectory() as directory:
+                os.chdir(directory)
+                report = dict(source='Lucru.md', pages=1, postings=0, errors=[], coverage='Fixture')
+                with patch.object(collector, 'collect', return_value=([], report)) as mocked, patch('sys.argv', ['collector.py', '--source', 'Lucru.md']):
+                    collector.main()
+                self.assertEqual(mocked.call_count, 1)
+                self.assertEqual(mocked.call_args.args[1], 'Lucru.md')
+        finally:
+            os.chdir(original)
+
+    def test_mac_uses_separate_visible_browser_profile(self):
+        import os
+        import sys
+        from types import SimpleNamespace
+        manager, engine, context, page = MagicMock(), MagicMock(), MagicMock(), MagicMock()
+        manager.start.return_value = engine
+        engine.chromium.launch_persistent_context.return_value = context
+        context.new_page.return_value = page
+        page.url = 'https://www.lucru.md/ro/jobs-moldova'
+        page.title.return_value = 'Vacancies'
+        page.goto.return_value.status = 200
+        page.content.return_value = '<html>Vacancies</html>'
+        module = SimpleNamespace(sync_playwright=lambda: manager)
+        fetcher = BrowserFetcher()
+        with patch.dict(sys.modules, {'playwright.sync_api': module}), patch.dict(os.environ, dict(DIGEST_BROWSER_PROFILE='/tmp/test-lucru-profile', DIGEST_BROWSER_HEADLESS='false', DIGEST_BROWSER_WAIT_MS='0')), patch.object(fetcher, 'check_robots'):
+            self.assertIn('Vacancies', fetcher.get(page.url))
+            fetcher.close()
+        engine.chromium.launch_persistent_context.assert_called_once_with('/tmp/test-lucru-profile', headless=False)
+        engine.chromium.launch.assert_not_called()
+        engine.stop.assert_called_once()
+
     def test_weekly_gate_rejects_dates_without_publication_provenance(self):
         row = dict(date='2026-11-02', expires='')
         self.assertFalse(recent(row, date(2026, 11, 2)))

@@ -1,0 +1,52 @@
+name: Check Lucru on Mac
+on:
+  push:
+    branches: [automation/lucru-mac-check]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: lucru-mac-check
+  cancel-in-progress: false
+jobs:
+  inspect:
+    runs-on: [self-hosted, macOS]
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Prepare browser
+        run: |
+          python -m pip install -r requirements.txt
+          python -m playwright install chromium
+      - name: Check public Lucru vacancies
+        env:
+          DIGEST_BROWSER_HEADLESS: 'false'
+          DIGEST_BROWSER_PROFILE: ${{ runner.tool_cache }}/lucru-browser-profile
+          DIGEST_BROWSER_WAIT_MS: '20000'
+          DIGEST_LUCRU_DIAGNOSTICS: 'true'
+        run: python collector.py --source Lucru.md
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: lucru-mac-check
+          path: output/
+          retention-days: 7
+      - name: Save check results
+        if: always()
+        env:
+          GH_REPORT_TOKEN: ${{ github.token }}
+        run: |
+          if [ ! -f output/report.json ]; then exit 0; fi
+          report_dir=$(mktemp -d)
+          cp -R output/. "$report_dir/"
+          printf '%s\n' "$GITHUB_RUN_ID" > "$report_dir/run-id.txt"
+          cd "$report_dir"
+          git init -b lucru-mac-report
+          git add .
+          git -c user.name=github-actions -c user.email=github-actions@users.noreply.github.com commit -m 'Lucru check from Mac'
+          git remote add origin "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY.git"
+          auth_header=$(printf 'x-access-token:%s' "$GH_REPORT_TOKEN" | /usr/bin/base64 | tr -d '\n')
+          git -c "http.extraheader=AUTHORIZATION: basic $auth_header" push --force origin HEAD:refs/heads/lucru-mac-report

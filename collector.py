@@ -268,15 +268,36 @@ class BrowserFetcher(Fetcher):
             except ImportError as exc:
                 raise RuntimeError('Browser sources require playwright and Chromium; see README') from exc
             self.engine = sync_playwright().start()
-            self.browser = self.engine.chromium.launch()
+            headless = os.environ.get('DIGEST_BROWSER_HEADLESS', 'true').lower() != 'false'
+            profile = os.environ.get('DIGEST_BROWSER_PROFILE')
+            if profile:
+                self.browser = self.engine.chromium.launch_persistent_context(profile, headless=headless)
+            else:
+                self.browser = self.engine.chromium.launch(headless=headless)
         page = self.browser.new_page()
         try:
             response = page.goto(url, wait_until='domcontentloaded', timeout=45000)
-            page.wait_for_timeout(6500)
+            wait_ms = int(os.environ.get('DIGEST_BROWSER_WAIT_MS', '6500'))
+            page.wait_for_timeout(wait_ms)
             if urlsplit(page.url).hostname.removeprefix('www.') != domain:
                 raise RuntimeError('Unexpected cross-site browser redirect')
             body = page.content()
             title = page.title()
+            if domain == 'lucru.md' and os.environ.get('DIGEST_LUCRU_DIAGNOSTICS') == 'true':
+                # Store public vacancy metadata only, never browser cookies or headers.
+                parsed = Page(body)
+                postings = []
+                for script in parsed.scripts:
+                    try:
+                        postings.extend(jobs(json.loads(script, strict=False)))
+                    except ValueError:
+                        pass
+                legal_links = [(urljoin(url, href), plain(label)) for href, label in parsed.links
+                               if KEYWORDS.search(label) and urlsplit(urljoin(url, href)).hostname in {'lucru.md', 'www.lucru.md'}]
+                diagnostics = Path('output/lucru-diagnostics')
+                diagnostics.mkdir(parents=True, exist_ok=True)
+                identity = hashlib.sha256(url.encode()).hexdigest()[:12]
+                (diagnostics / (identity + '.json')).write_text(json.dumps(dict(url=url, title=title, postings=postings, legal_links=legal_links), ensure_ascii=False, indent=2))
             if response and response.status >= 400 or re.search(r'403 Forbidden|Access denied|Just a moment|Verify you are human', title, re.I):
                 raise RuntimeError('Site denied browser access; source unavailable')
             return body
@@ -428,6 +449,7 @@ def main():
     parser.add_argument('--send', action='store_true')
     parser.add_argument('--scheduled', action='store_true')
     parser.add_argument('--input-json', help='Use previously collected vacancies for a delivery check')
+    parser.add_argument('--source', action='append', choices=list(SOURCES), help='Check only the selected source; may be repeated')
     args = parser.parse_args()
     now = datetime.now(ZoneInfo('Europe/Chisinau'))
     # Two UTC schedules cover DST; only the local 09:00 invocation runs.
@@ -441,7 +463,7 @@ def main():
         cached = json.loads(Path(args.input_json).read_text())
         batches = [(cached, dict(source='Previously collected vacancies', pages=0, postings=len(cached), errors=[], coverage='Cached data for delivery verification'))]
     else:
-        batches = (collect(fetcher, source, root) for source, root in SOURCES.items())
+        batches = (collect(fetcher, source, root) for source, root in SOURCES.items() if not args.source or source in args.source)
     for found, report in batches:
         reports.append(report)
         for row in found:
