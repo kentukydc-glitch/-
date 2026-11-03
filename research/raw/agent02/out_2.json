@@ -1,0 +1,854 @@
+[
+ {
+  "name": "Commitbiz (Commitbiz LLC)",
+  "website": "https://www.commitbiz.com",
+  "hq": "Dubai, UAE (10th floor, Dubai World Trade Center, Sheikh Zayed Road)",
+  "exists": {
+   "value": "yes - active 2025-2026",
+   "confidence": "High",
+   "sources": [
+    "https://www.commitbiz.com/contact-us",
+    "https://www.prnewswire.com/ae/ar/news-releases/u0645u0643u062Au0628u002Du0063u006Fu006Du006Du0069u0074u0062u0069u007Au002Du0641u064Au002Du062Fu0628u064Au002Du064Au064Eu062Du0635u0644u002D-302530821.html",
+    "https://aijourn.com/?p=382000"
+   ],
+   "note": "Aug 2025 press release (ISO 9001 / ISO 20700); Abu Dhabi page shows 2026-style pricing (AED 12,345). WebFetch failed (ENOTFOUND); snippets only."
+  },
+  "specialization": "UAE/GCC business setup (mainland, free zone, offshore), PRO/visa, accounting & bookkeeping, VAT & corporate tax, audit support, entity management/compliance (ESR, CRS, FATCA), IP, commercial contracts. Core market is GCC; European offices are secondary.",
+  "multi_country": {
+   "value": "yes",
+   "evidence": "Formation/PRO pages for UAE, Qatar, Bahrain, Saudi Arabia, Oman; offices listed in Dubai, Abu Dhabi, Sharjah, Sanabis (Bahrain), Doha, Barka (Oman), London, Moscow, Naples, Bucharest.",
+   "confidence": "Medium",
+   "sources": [
+    "https://www.commitbiz.com/contact-us",
+    "https://www.commitbiz.com/sa/pro-services-in-saudi-arabia"
+   ]
+  },
+  "moldova": {
+   "value": "not found",
+   "delivery": "n/a",
+   "evidence": "Moldova appears only in the UAE double-tax-treaty list on the tax residency certificate page. No Moldova formation page found. Romania (Bucharest) office address exists on contact page, but Romanian office phone shown with +971 code - office may be a representative/virtual presence (ASSUMPTION).",
+   "confidence": "Medium",
+   "sources": [
+    "https://www.commitbiz.com/tax-residency-certificate-uae",
+    "https://www.commitbiz.com/contact-us"
+   ]
+  },
+  "law_firm_cooperation": {
+   "value": "yes - formal two-way referral agreement published",
+   "evidence": "Published REFERRAL AGREEMENT: either party may refer leads via referral form; 7 days to accept/decline; referral fee 20% of professional fee per conversion (or referrer adds a margin); 30-day termination; 1-year non-solicit; UAE law, Dubai courts. Not law-firm-specific, but a ready bilateral B2B model. Blog mentions a business unit head with corporate lawyer background; no named external law-firm network found.",
+   "confidence": "High",
+   "sources": [
+    "https://www.commitbiz.com/refer-and-earn-terms-conditions"
+   ]
+  },
+  "contacts": {
+   "email": "info@commitbiz.com (from agent 01; not re-confirmed in this check)",
+   "phone": "+971 4 386 7444 (shown in contact page title); +971 4 871 4159 not re-confirmed",
+   "contact_page": "https://www.commitbiz.com/contact-us",
+   "current": "yes",
+   "confidence": "Medium",
+   "sources": [
+    "https://www.commitbiz.com/contact-us"
+   ],
+   "offices": "London: Level 17, Dashwood House, 69 Old Broad St, EC2M 1QS; Moscow: 13 Kalanchevskaya St; Naples: Via Raffaele Vastola 5, Poggiomarino 80040; Bucharest: Bd. Maresal Alexandru Averescu 8-10, building C, office 8, 2nd floor"
+  },
+  "one_off_signals": "Moderate: package pricing ('from AED 12,345'), cost pages for 2026, claims of 10,000-20,000 businesses incorporated; but bundled with ongoing accounting/VAT/PRO. Homepage disclaimer reportedly names a separate entity 'RC Migration' - template artefact or affiliate; needs check.",
+  "long_term_services": {
+   "value": "yes",
+   "evidence": "Accounting & bookkeeping, payroll, VAT returns, corporate tax compliance, audit support, entity management (ESR/CRS/FATCA/governance), PRO services.",
+   "sources": [
+    "https://www.commitbiz.com/accounting-bookkeeping-services-in-dubai-uae",
+    "https://www.commitbiz.com/vat-in-uae",
+    "https://www.commitbiz.com/business-management-services-uae"
+   ]
+  },
+  "decision_makers": [
+   {
+    "name": "Manu Thomas V",
+    "title": "Managing Director, Commitbiz LLC",
+    "source": "https://aijourn.com/?p=382000 (PRNewswire release, 14 Aug 2025)",
+    "confidence": "Medium"
+   }
+  ],
+  "scores": {
+   "profile_fit": {
+    "score": 15,
+    "why": "Genuine CSP with formation plus recurring accounting/compliance; core is GCC, not Europe, so Moldova is adjacent rather than central."
+   },
+   "recurring_client_potential": {
+    "score": 19,
+    "why": "Large GCC client base (claims 10k-20k clients) incl. CIS/Eastern European founders via Moscow/Bucharest offices; plausible flow of UAE-Moldova structures (DTT exists), but volume of Moldova demand is unproven."
+   },
+   "local_legal_partner_cooperation": {
+    "score": 17,
+    "why": "Only company in batch with a published bilateral referral agreement (two-way leads, 20% fee). Not law-firm-specific."
+   },
+   "moldova_commercial_interest": {
+    "score": 9,
+    "why": "No Moldova service; Bucharest office and Moscow office suggest regional clientele; UAE-Moldova DTT referenced on site."
+   },
+   "decision_maker_accessibility": {
+    "score": 10,
+    "why": "MD named in 2025 press release; general contact channels live; no named partnerships head."
+   }
+  },
+  "exclude": {
+   "value": false,
+   "reason": "Real CSP with recurring services and an existing two-way referral framework."
+  },
+  "audit": [
+   {
+    "claim": "HQ UAE; Dubai WTC address",
+    "status": "confirmed",
+    "note": "Contact page and directories agree.",
+    "source": "https://www.commitbiz.com/contact-us"
+   },
+   {
+    "claim": "Offices London, Naples, Bucharest, Moscow",
+    "status": "confirmed",
+    "note": "Full addresses on contact page; Romanian entry uses +971 phone.",
+    "source": "https://www.commitbiz.com/contact-us"
+   },
+   {
+    "claim": "Oman office in Muscat",
+    "status": "needs_check",
+    "note": "Own-domain snippet lists Barka (Oman), not Muscat.",
+    "source": "https://www.commitbiz.com/contact-us"
+   },
+   {
+    "claim": "Moldova not offered",
+    "status": "confirmed",
+    "note": "Only DTT list mention found. Phrase as 'not found' rather than 'no'.",
+    "source": "https://www.commitbiz.com/tax-residency-certificate-uae"
+   },
+   {
+    "claim": "Refer & Earn / referral agreement with 7-day window, 30-day termination",
+    "status": "confirmed",
+    "note": "Agent 01 omitted that the agreement is bilateral and states a 20% referral fee (published by company), 1-year non-solicit, UAE law/Dubai courts.",
+    "source": "https://www.commitbiz.com/refer-and-earn-terms-conditions"
+   },
+   {
+    "claim": "Main phone +971 4 871 4159 vs +971 4 386 7444",
+    "status": "needs_check",
+    "note": "Only +97143867444 re-seen (contact page title).",
+    "source": "https://www.commitbiz.com/contact-us"
+   },
+   {
+    "claim": "Abu Dhabi address may be outdated",
+    "status": "unconfirmed",
+    "note": "Directory shows Al Salam Street near Canon building; low-confidence third-party.",
+    "source": "https://leadstal.com/sb/commitbiz-llc-business-setup-in-abu-dhabi"
+   },
+   {
+    "claim": "'Strongest regional fit' / Legitimus as Moldova node next to Romania office",
+    "status": "needs_check",
+    "note": "Analytical; Romania office substance unverified (UAE phone number). Moscow office also needs sanctions/reputational screening.",
+    "source": "https://www.commitbiz.com/contact-us"
+   },
+   {
+    "claim": "No decision maker given",
+    "status": "needs_check",
+    "note": "Found MD Manu Thomas V in Aug 2025 release.",
+    "source": "https://aijourn.com/?p=382000"
+   }
+  ],
+  "dossier": {
+   "main_services": "UAE/GCC company formation, PRO/visa, accounting, VAT/corporate tax, audit support, entity management, IP",
+   "geography": "UAE (Dubai, Abu Dhabi, Sharjah), Bahrain, Qatar, Oman, KSA; offices London, Naples, Bucharest, Moscow",
+   "moldova_status": "Not offered (not found); Moldova only cited in UAE DTT list",
+   "local_partner_need": "Medium - would need a Moldovan provider for any client wanting a Moldovan entity, IT Park residency or UAE-Moldova treaty structuring",
+   "long_term_legal_potential": "Medium - recurring Moldovan accounting/legal compliance for any entity referred; plus two-way flow of Moldovan clients to UAE",
+   "why_legitimus_interesting": "Fills a gap next to their Bucharest office; Commitbiz already has a published two-way referral contract so onboarding friction is low",
+   "what_to_offer": "Moldovan company formation and registered office, ongoing corporate/legal compliance, IT Park residency support, legal opinions on UAE-Moldova DTT use; in return Legitimus refers Moldovan founders seeking UAE setup",
+   "preferred_format": "two-way referral",
+   "objections": [
+    "Low current Moldova demand",
+    "Their referral terms are a fixed template (20% fee) - may not suit a law firm's professional conduct rules on fee-sharing",
+    "Moscow office - sanctions/KYC screening required",
+    "Unclear whether Bucharest office is operational"
+   ],
+   "first_step": "Email info@commitbiz.com / contact form addressed to MD Manu Thomas V proposing Legitimus as Moldova referral partner under their published referral agreement; ask how the Bucharest office handles Eastern European clients"
+  },
+  "check_date": "2026-10-08",
+  "total_score": 70
+ },
+ {
+  "name": "The Sovereign Group",
+  "website": "https://www.sovereigngroup.com",
+  "hq": "Gibraltar (Sovereign Place, 117 Main Street) - founded 1987",
+  "exists": {
+   "value": "yes - active",
+   "confidence": "High",
+   "sources": [
+    "https://www.sovereigngroup.com/offices/",
+    "https://www.sovereigngroup.com/events/sovereign-at-going-global-live-2025/",
+    "https://www.sovereigngroup.com/news/sovereign-group-acquires-pro-partner-group-to-further-expand-its-gcc-footprint/"
+   ]
+  },
+  "specialization": "Independent corporate & trust services provider: company formation & management, back-office, tax and regulatory compliance, cross-border restructuring, trusts, pensions, residency/citizenship planning, family office.",
+  "multi_country": {
+   "value": "yes - 20+ jurisdictions",
+   "evidence": "Offices page lists ~23 entries (Abu Dhabi, Bahrain, Cyprus, Dubai, Gibraltar, Guernsey, Hong Kong, Isle of Man, Malta, Mauritius, Oman, Portugal, Qatar, Saudi Arabia, Singapore, Cape Town, Switzerland, London, Chester); locations page adds Bahamas, Turks & Caicos. Claims 20,000 structures since 1987, 400+ staff, 30+ licences.",
+   "confidence": "High",
+   "sources": [
+    "https://www.sovereigngroup.com/offices/",
+    "https://www.sovereigngroup.com/locations/",
+    "https://www.sovereigngroup.com/our-services/corporate-services/"
+   ]
+  },
+  "moldova": {
+   "value": "not found",
+   "delivery": "n/a",
+   "evidence": "No Moldova or Romania pages/offices in domain-restricted searches; no CEE office.",
+   "confidence": "Medium",
+   "sources": [
+    "https://www.sovereigngroup.com/locations/"
+   ]
+  },
+  "law_firm_cooperation": {
+   "value": "yes - works with and for professional intermediaries",
+   "evidence": "Offices serve 'professional intermediaries'; Isle of Man and Dubai offer white-label services so professional firms deliver structures under their own brand; BD roles focus on relationships with accountants, legal and tax advisors; jobs ad mentions building referral networks with law and accounting firms. No formal introducer programme page or published terms.",
+   "confidence": "Medium",
+   "sources": [
+    "https://www.sovereigngroup.com/isle-man/",
+    "https://www.sovereigngroup.com/dubai/",
+    "https://www.sovereigngroup.com/staff/herman-redelinghuys/",
+    "https://www.sovereigngroup.com/jobs/trust-and-corporate-services-consultant/"
+   ]
+  },
+  "contacts": {
+   "email": "info@SovereignGroup.com; gib@SovereignGroup.com (from agent 01, not re-confirmed)",
+   "phone": "+350 200 76173 (Gibraltar, from agent 01, not re-confirmed)",
+   "contact_page": "https://www.sovereigngroup.com/contact-us/",
+   "current": "yes",
+   "confidence": "Medium",
+   "sources": [
+    "https://www.sovereigngroup.com/contact-us/"
+   ]
+  },
+  "one_off_signals": "Low. Positioned on ongoing administration, trusts, pensions, compliance. No '24h company' style selling seen.",
+  "long_term_services": {
+   "value": "yes",
+   "evidence": "Company management, back-office, tax & regulatory compliance, trusts, pensions, family office.",
+   "sources": [
+    "https://www.sovereigngroup.com/our-services/corporate-services/"
+   ]
+  },
+  "decision_makers": [
+   {
+    "name": "Gerry Kelly",
+    "title": "Group Chief Executive Officer",
+    "source": "https://www.sovereigngroup.com/staff/gerry-kelly/",
+    "confidence": "Medium"
+   },
+   {
+    "name": "Howard Bilton",
+    "title": "Group Chairman and founder",
+    "source": "https://www.sovereigngroup.com/staff/howard-bilton/",
+    "confidence": "Medium"
+   },
+   {
+    "name": "Nicholas Cully",
+    "title": "Group Sales Director",
+    "source": "https://www.sovereigngroup.com/sovereign-stories/nicholas-cully-group-sales-director/",
+    "confidence": "Medium"
+   },
+   {
+    "name": "Sebastien Philipona",
+    "title": "Head of Business Development, Malta & Cyprus",
+    "source": "https://www.sovereigngroup.com/staff/sebastien-philipona/",
+    "confidence": "Medium"
+   },
+   {
+    "name": "Ejaz Niazi",
+    "title": "Head of Business Development, Sovereign Trust (Gibraltar) Ltd",
+    "source": "https://www.sovereigngroup.com/staff/ejaz-niazi/",
+    "confidence": "Medium"
+   }
+  ],
+  "scores": {
+   "profile_fit": {
+    "score": 17,
+    "why": "Large, established independent CSP with exactly the long-term corporate/trust admin profile sought; offshore/IFC-heavy rather than CEE."
+   },
+   "recurring_client_potential": {
+    "score": 20,
+    "why": "Scale (20k structures, 20+ offices) and HNW/corporate client base can generate recurring needs, but no evidence of existing Moldova demand."
+   },
+   "local_legal_partner_cooperation": {
+    "score": 14,
+    "why": "Explicitly serves and builds referral networks with lawyers/accountants and offers white-label to intermediaries; no formal introducer terms published."
+   },
+   "moldova_commercial_interest": {
+    "score": 6,
+    "why": "No CEE/Moldova footprint visible; Cyprus and Malta offices are the nearest relevant hubs for CIS-origin structures (ASSUMPTION)."
+   },
+   "decision_maker_accessibility": {
+    "score": 12,
+    "why": "Named CEO, Group Sales Director and regional BD heads on own site; team pages undated."
+   }
+  },
+  "exclude": {
+   "value": false,
+   "reason": "Real, active, large CSP with intermediary-facing model; Moldova gap is an opportunity not a disqualifier."
+  },
+  "audit": [
+   {
+    "claim": "20+ jurisdictions; 600 professionals",
+    "status": "needs_check",
+    "note": "20+ confirmed; corporate services page says 400+ staff directly - figures conflict.",
+    "source": "https://www.sovereigngroup.com/our-services/corporate-services/"
+   },
+   {
+    "claim": "Jurisdiction examples incl. Shanghai, BVI (Wikipedia)",
+    "status": "needs_check",
+    "note": "Current offices page shows ~23 entries; Shanghai/BVI not seen in it; Bahamas listed on locations page. Wikipedia list may be a dated snapshot.",
+    "source": "https://www.sovereigngroup.com/offices/"
+   },
+   {
+    "claim": "Moldova not offered",
+    "status": "confirmed",
+    "note": "Not found; express as 'not found'.",
+    "source": "https://www.sovereigngroup.com/locations/"
+   },
+   {
+    "claim": "No public partner/introducer program",
+    "status": "erroneous",
+    "note": "No formal programme page, but site explicitly offers white-label services to professional firms and BD staff build relationships with lawyers/accountants - partner cooperation exists in practice.",
+    "source": "https://www.sovereigngroup.com/isle-man/ ; https://www.sovereigngroup.com/dubai/"
+   },
+   {
+    "claim": "Contacts info@/gib@, +350 200 76173",
+    "status": "unconfirmed",
+    "note": "Not re-seen in this pass; contact page live.",
+    "source": "https://www.sovereigngroup.com/contact-us/"
+   },
+   {
+    "claim": "No decision makers given",
+    "status": "needs_check",
+    "note": "CEO Gerry Kelly, Chairman Howard Bilton, BD heads now identified.",
+    "source": "https://www.sovereigngroup.com/staff/gerry-kelly/"
+   },
+   {
+    "claim": "Saudi entity licence",
+    "status": "outdated",
+    "note": "Saudi page cites MISA licence valid until 6 May 2026 (now passed) - not an agent 01 claim but a currency flag.",
+    "source": "https://www.sovereigngroup.com/saudi-arabia/"
+   }
+  ],
+  "dossier": {
+   "main_services": "Company formation & administration, trusts, pensions, tax/regulatory compliance, restructuring, residency planning, family office",
+   "geography": "Gibraltar, UK, Channel Islands/IoM, Malta, Cyprus, Portugal, Switzerland, GCC (6 offices), Hong Kong, Singapore, Mauritius, South Africa, Caribbean",
+   "moldova_status": "Not offered (not found); no CEE office",
+   "local_partner_need": "Medium - any client needing a Moldovan subsidiary/asset would require local counsel; Sovereign uses agents where it has no office",
+   "long_term_legal_potential": "Medium-High per mandate (ongoing compliance for administered entities), low frequency",
+   "why_legitimus_interesting": "Brand-name CSP; agent-network model means it buys local services; Cyprus/Malta desk handles CIS-origin structures",
+   "what_to_offer": "Moldovan local agent/counsel: incorporation, registered office, UBO register filings, ongoing corporate secretarial, legal opinions, Moldovan real estate/asset due diligence; white-label delivery under Sovereign brand",
+   "preferred_format": "local counsel / white-label subcontracting",
+   "objections": [
+    "Little Moldova demand in their client base",
+    "Likely already have CEE correspondents",
+    "Large-group vendor onboarding / KYC requirements",
+    "No published introducer terms"
+   ],
+   "first_step": "Short introduction via contact page to Sebastien Philipona (Head of BD Malta & Cyprus) or Nicholas Cully (Group Sales Director) offering Moldova local-agent coverage, with a one-page Legitimus capability note"
+  },
+  "check_date": "2026-10-08",
+  "total_score": 69
+ },
+ {
+  "name": "GSL (GSL Law & Consulting group)",
+  "website": "https://gsl.org",
+  "hq": "Moscow, Russia (head office; Russian-language site, Moscow contact page, +7 phone); also registered entities e.g. GSL Law & Consulting (Hong Kong) Ltd; London office since 2002",
+  "exists": {
+   "value": "yes - active 2025-2026",
+   "confidence": "High",
+   "sources": [
+    "https://gsl.org/ru/press-center/corporate-news/gsl-law-consulting-v-rejtinge-luchshih-yuridicheskih-firm-i-yuristov-private-wealth-2026-id-kommersant/",
+    "https://gsl.org/ru/press-center/corporate-news/gsl-law-consulting-v-rejtinge-wealth-navigator-2026/"
+   ],
+   "note": "Listed in Kommersant 'Private Wealth 2026' (30 Sep 2026) and WEALTH Navigator 2026 (Aug 2026) Russian rankings; BRICS+ legal forum Dubai Nov 2025."
+  },
+  "specialization": "Russian-origin law, tax, audit and consulting group: offshore/onshore company registration (claims 20,000+ companies in 81 countries), international tax structuring, bank account introductions, foreign-trade (VED) support, relocation, Russian law practice. It is itself a law firm (Russian 'advokat' partners), not a pure CSP.",
+  "multi_country": {
+   "value": "yes",
+   "evidence": "Offices claimed: London, Moscow, Limassol/Nicosia, Hong Kong, Budapest, Bali, Phuket, Istanbul, Dubai, Riga, Oradea (Romania), Tortola, Mahe, Andorra, California; registers in 70-80+ countries (self-claim).",
+   "confidence": "Medium",
+   "sources": [
+    "https://gsl.org/en/offshore/",
+    "https://gsl.org/en/contacts/",
+    "https://www.gsl.org/ru/"
+   ]
+  },
+  "moldova": {
+   "value": "offered",
+   "delivery": "unclear",
+   "evidence": "Moldova page: incorporation or shelf company, registered office, apostilled docs, secretarial, bank pre-approval; EUR 2,000 incl. state fees; compliance fee USD 385; 1-3 workdays LLC. Also Moldova tax page. No Moldovan office listed -> almost certainly delivered via a local partner (ASSUMPTION).",
+   "confidence": "High",
+   "sources": [
+    "https://gsl.org/en/offshore/offshore-zones/eastern-europe/moldova/",
+    "https://gsl.org/ru/taxes/moldova/"
+   ]
+  },
+  "law_firm_cooperation": {
+   "value": "yes (general)",
+   "evidence": "States 'many trusted partners in different countries' and 'direct representation in several popular jurisdictions'; historically ran international conferences (2003-2006) connecting Russian clients with foreign banks, trust companies and law firms. No partner programme page.",
+   "confidence": "Medium",
+   "sources": [
+    "https://gsl.org/en/offshore/",
+    "https://gsl.org/en/international/2003-1/"
+   ]
+  },
+  "contacts": {
+   "email": "gsl@gsl.org",
+   "phone": "+7 495 234 3833 (Moscow); +44 (0)20 7822 8593 (London)",
+   "contact_page": "https://gsl.org/en/contacts/",
+   "current": "unclear",
+   "confidence": "Medium",
+   "sources": [
+    "https://gsl.org/en/contacts/",
+    "https://gsl.org/en/contacts/moscow/"
+   ],
+   "note": "Office staff listings inconsistent (e.g. HK contact differs between pages; two Riga addresses)."
+  },
+  "one_off_signals": "Significant: fixed-price jurisdiction packages, shelf companies, 'offshore' framing (incl. Moldova labelled offshore), price comparison tables. Offset by tax/accounting/legal practices.",
+  "long_term_services": {
+   "value": "yes",
+   "evidence": "Annual compliance/administration fees, secretarial, audit (GSL Audit), tax reporting, legal advice, bank account support.",
+   "sources": [
+    "https://gsl.org/en/offshore/offshore-zones/eastern-europe/moldova/",
+    "https://gsl.org/en/hello/"
+   ]
+  },
+  "decision_makers": [
+   {
+    "name": "Alexander Alekseev",
+    "title": "Managing Partner, GSL Law & Consulting",
+    "source": "https://gsl.org/en/users/alexander-alekseev/ ; https://gsl.org/en/hello/",
+    "confidence": "Medium"
+   },
+   {
+    "name": "Aniko Sebok",
+    "title": "Head of UK (London) office",
+    "source": "https://gsl.org/en/contacts/",
+    "confidence": "Medium"
+   },
+   {
+    "name": "Maksim Gladyr",
+    "title": "Head of Foreign Economic Activity (VED) department",
+    "source": "https://gsl.org/ru/users/maksim-gladyr/",
+    "confidence": "Medium"
+   }
+  ],
+  "sanctions_reputational_check": {
+   "result": "No designation found",
+   "detail": "Searches for 'GSL Law' / GSL Law & Consulting with OFAC, EU sanctions, OpenSanctions, ICIJ offshore leaks returned no entries naming the firm or Alexander Alekseev. This is a search-engine check only, NOT a list screening - absence of evidence is not clearance.",
+   "red_flags": [
+    "Moscow-headquartered Russian law firm whose core clientele is Russian residents moving assets/companies abroad",
+    "Publishes content on payments from Russia, redomiciliation 'under sanctions', EU payment sanctions for Russians with residence permits, re-export (topics, not wrongdoing)",
+    "Active in BRICS+ legal forum (Dubai 2025); offices in UAE, Turkey, Hong Kong - jurisdictions flagged by UK/EU authorities as common sanctions-evasion routes (typology only, no allegation against GSL)",
+    "Markets Moldova as an 'offshore' zone - reputational misalignment with Moldova's EU accession / AML posture",
+    "Moldova aligns with EU sanctions; Moldovan law firm acting as local agent for Russian-originated structures carries elevated AML/sanctions exposure"
+   ],
+   "required_before_any_contact": "Formal screening of GSL entities, Alexander Alekseev and any referred UBOs against EU, UK OFSI, US OFAC, UN and Moldovan (SIS/Moldova sanctions) lists; enhanced due diligence on each referred client.",
+   "sources": [
+    "https://gsl.org/ru/press-center/press/redomiczilyacziya-v-usloviyah-sankczij-kakimi-riskami-dlya-kompanij-i-beneficziarov-oborachivaetsya-proczedura/",
+    "https://gsl.org/ru/press-center/press/evrokomissiya-rasskazala-bankam-kak-primenyat-platezhnye-sankczii-k-rossiyanam-s-vnzh/",
+    "https://lawsociety.org.uk/topics/anti-money-laundering/red-alert-for-sanctions-evasion-by-russian-elites",
+    "https://www.opensanctions.org/"
+   ],
+   "confidence": "Low (search-based)"
+  },
+  "scores": {
+   "profile_fit": {
+    "score": 13,
+    "why": "Multi-jurisdiction formation plus tax/legal; but it is a competing law firm with heavy offshore/package orientation."
+   },
+   "recurring_client_potential": {
+    "score": 18,
+    "why": "Already sells Moldova packages with annual compliance fees, so each sale implies recurring local work; client base is Russia-origin, which raises compliance cost."
+   },
+   "local_legal_partner_cooperation": {
+    "score": 12,
+    "why": "States it works through trusted foreign partners; no program; likely already has a Moldovan agent (unknown)."
+   },
+   "moldova_commercial_interest": {
+    "score": 13,
+    "why": "Explicit Moldova formation and tax pages with pricing - clear existing commercial interest."
+   },
+   "decision_maker_accessibility": {
+    "score": 9,
+    "why": "Managing partner named on own site; Moscow-centric contacts; office staff listings partly outdated."
+   }
+  },
+  "exclude": {
+   "value": false,
+   "reason": "Not excluded on brief criteria (real services, active, Moldova interest). However flagged HIGH reputational/sanctions risk: do not approach before formal sanctions screening and Legitimus partner-level risk decision. ASSUMPTION: Legitimus may decide to exclude on risk appetite grounds."
+  },
+  "audit": [
+   {
+    "claim": "HQ not verified",
+    "status": "needs_check",
+    "note": "Evidence points to Moscow head office (Russian main site, Moscow contact, Russian rankings, 'advokat' partners).",
+    "source": "https://www.gsl.org/ru/"
+   },
+   {
+    "claim": "Moldova offered; EUR 2,000; 1-3 workdays; tax page",
+    "status": "confirmed",
+    "note": "Also compliance fee USD 385; no date on page so pricing may be stale.",
+    "source": "https://gsl.org/en/offshore/offshore-zones/eastern-europe/moldova/"
+   },
+   {
+    "claim": "Offices London, Moscow, Nicosia, HK, Dubai, Riga, Bali",
+    "status": "confirmed",
+    "note": "Agent 01 missed Oradea (Romania), Budapest, Istanbul, Phuket; Riga address conflicting.",
+    "source": "https://gsl.org/en/offshore/ ; https://gsl.org/en/contacts/"
+   },
+   {
+    "claim": "'Many trusted partners', no programme",
+    "status": "confirmed",
+    "note": "",
+    "source": "https://gsl.org/en/offshore/"
+   },
+   {
+    "claim": "Contacts gsl@gsl.org, +7 495 234 3833",
+    "status": "confirmed",
+    "note": "London +44 20 7822 8593 also listed; staff listings partly outdated.",
+    "source": "https://gsl.org/en/contacts/"
+   },
+   {
+    "claim": "Segment = offshore registration provider",
+    "status": "needs_check",
+    "note": "Under-describes: GSL is a Russian law/tax/audit firm ranked in 2026 Russian legal rankings - a potential competitor as well as referrer.",
+    "source": "https://gsl.org/ru/press-center/corporate-news/gsl-law-consulting-v-rejtinge-wealth-navigator-2026/"
+   },
+   {
+    "claim": "Sanctions/reputational concern",
+    "status": "confirmed",
+    "note": "Concern is valid as a risk; no sanctions designation found in public search (not a formal screening).",
+    "source": "see sanctions_reputational_check"
+   },
+   {
+    "claim": "No decision maker",
+    "status": "needs_check",
+    "note": "Managing Partner Alexander Alekseev named on gsl.org.",
+    "source": "https://gsl.org/en/users/alexander-alekseev/"
+   }
+  ],
+  "dossier": {
+   "main_services": "Offshore/onshore company registration, tax structuring, audit, legal advice, bank account introductions, relocation, VED",
+   "geography": "Russia (HQ), UK, Cyprus, Hungary, Romania (Oradea), Latvia, UAE, Turkey, Hong Kong, Indonesia, Thailand, BVI, Seychelles, Andorra, US",
+   "moldova_status": "Offered (package EUR 2,000) via unclear delivery - probably a local agent",
+   "local_partner_need": "High - sells Moldova incorporation without a Moldovan office",
+   "long_term_legal_potential": "Medium-High in volume, but each matter needs EDD",
+   "why_legitimus_interesting": "Existing Moldova product line with recurring compliance fees needs a local executor",
+   "what_to_offer": "Only after compliance clearance: local counsel for incorporation, registered office, UBO register, annual compliance - on a per-client EDD basis",
+   "preferred_format": "local counsel (case-by-case, with EDD)",
+   "objections": [
+    "Sanctions/AML and reputational risk for a Moldovan law firm working with Russia-origin flows",
+    "Likely has an incumbent Moldovan agent",
+    "Competes as a law firm",
+    "Package price (EUR 2,000 all-in) leaves thin margin for local counsel"
+   ],
+   "first_step": "Internal: run formal sanctions/PEP screening on GSL group entities and Alexander Alekseev and obtain Legitimus partner sign-off; only then a neutral inquiry via gsl@gsl.org / London office (Aniko Sebok)"
+  },
+  "check_date": "2026-10-08",
+  "total_score": 65
+ },
+ {
+  "name": "SFM Corporate Services (SFM Offshore)",
+  "website": "https://www.sfmoffshore.com",
+  "hq": "unclear - self-description on Feefo: Switzerland (Geneva), Dubai, Seychelles, Hong Kong; Dubai office Capricorn Tower, Sheikh Zayed Road",
+  "exists": {
+   "value": "probably yes, current activity unverified",
+   "confidence": "Low",
+   "sources": [
+    "https://www.feefo.com/reviews/sfm-offshore"
+   ],
+   "note": "Own domain not returned by any search (incl. domain-restricted). Feefo: 397 reviews, mostly 2014-2017 and 2020-2025, none 2026."
+  },
+  "specialization": "Offshore company formation, Dubai free-zone formation, nominee services, bank account opening, UAE residency, trusts/foundations (per Feefo self-description).",
+  "multi_country": {
+   "value": "yes (claimed)",
+   "evidence": "Offices Switzerland, Dubai, Seychelles, Hong Kong; ~50 jurisdictions per third-party directory.",
+   "confidence": "Low",
+   "sources": [
+    "https://www.feefo.com/reviews/sfm-offshore",
+    "https://www.jasminedirectory.com/business-marketing/detail,1856595773,sfm.html"
+   ]
+  },
+  "moldova": {
+   "value": "not found",
+   "delivery": "n/a",
+   "evidence": "No Moldova mention in any result; own site not indexed in searches.",
+   "confidence": "Low",
+   "sources": []
+  },
+  "law_firm_cooperation": {
+   "value": "not found",
+   "evidence": "No introducer/partner/affiliate pages found.",
+   "confidence": "Low",
+   "sources": []
+  },
+  "contacts": {
+   "email": "not found",
+   "phone": "not found",
+   "contact_page": "not found",
+   "current": "unclear",
+   "confidence": "Low",
+   "sources": [
+    "https://feefo.com/fr-CA/reviews/sfm-offshore"
+   ]
+  },
+  "one_off_signals": "Strong: offshore formation + nominee + bank account opening retail model; reviews focus on single incorporations.",
+  "long_term_services": {
+   "value": "limited/unclear",
+   "evidence": "Nominee services and annual renewals implied; no accounting/compliance services evidenced.",
+   "sources": [
+    "https://www.feefo.com/reviews/sfm-offshore"
+   ]
+  },
+  "decision_makers": [],
+  "decision_makers_note": "not found",
+  "scores": {
+   "profile_fit": {
+    "score": 8,
+    "why": "Offshore/nominee retail formation agent; weak match to onshore long-term corporate services."
+   },
+   "recurring_client_potential": {
+    "score": 8,
+    "why": "Clients are offshore-structure buyers; little evidence of recurring onshore needs."
+   },
+   "local_legal_partner_cooperation": {
+    "score": 4,
+    "why": "No cooperation model found."
+   },
+   "moldova_commercial_interest": {
+    "score": 3,
+    "why": "No Moldova signal."
+   },
+   "decision_maker_accessibility": {
+    "score": 2,
+    "why": "No verified contacts or names."
+   }
+  },
+  "exclude": {
+   "value": true,
+   "reason": "Inactive/unverified: own site not verifiable, no 2026 activity, contacts only from third-party directories; offshore/nominee one-off orientation; no clear mutual model."
+  },
+  "audit": [
+   {
+    "claim": "HQ Switzerland, offices Dubai/Seychelles/HK",
+    "status": "unconfirmed",
+    "note": "Only Feefo self-description (third-party host).",
+    "source": "https://www.feefo.com/reviews/sfm-offshore"
+   },
+   {
+    "claim": "~50 jurisdictions",
+    "status": "unconfirmed",
+    "note": "Directory figure only.",
+    "source": "https://www.jasminedirectory.com/business-marketing/detail,1856595773,sfm.html"
+   },
+   {
+    "claim": "Moldova unclear",
+    "status": "confirmed",
+    "note": "Still not found.",
+    "source": "WebSearch 2026-10-08"
+   },
+   {
+    "claim": "Dubai address Capricorn Tower",
+    "status": "confirmed",
+    "note": "Third-party (Feefo) only - Low.",
+    "source": "https://feefo.com/fr-CA/reviews/sfm-offshore"
+   },
+   {
+    "claim": "Active Feefo profile = operating evidence",
+    "status": "outdated",
+    "note": "Most reviews 2014-2017; latest 2025; none 2026.",
+    "source": "https://www.feefo.com/reviews/sfm-offshore"
+   },
+   {
+    "claim": "scores client_relevance 3 / moldova 3",
+    "status": "needs_check",
+    "note": "Over-scored given zero verified contacts and no Moldova signal.",
+    "source": ""
+   }
+  ],
+  "dossier": {
+   "main_services": "Offshore formation, nominee, bank accounts, UAE residency",
+   "geography": "Switzerland, UAE, Seychelles, Hong Kong (claimed)",
+   "moldova_status": "Not found",
+   "local_partner_need": "Low",
+   "long_term_legal_potential": "Low",
+   "why_legitimus_interesting": "Marginal",
+   "what_to_offer": "n/a",
+   "preferred_format": "referral",
+   "objections": [
+    "Unverifiable entity",
+    "Offshore/nominee focus",
+    "No Moldova interest"
+   ],
+   "first_step": "None - excluded"
+  },
+  "check_date": "2026-10-08",
+  "total_score": 25
+ },
+ {
+  "name": "Sleek (Sleek Tech Pte Ltd)",
+  "website": "https://sleek.com",
+  "hq": "Singapore",
+  "exists": {
+   "value": "yes - active 2025-2026",
+   "confidence": "High",
+   "sources": [
+    "https://sleek.com/uk/resources/sleek-vs-osome/",
+    "https://sleek.com/hk/resources/sleek-hong-kong-incorporation-overview/"
+   ],
+   "note": "2026-dated content; USD 23m Series B June 2025 (Ellerston Capital, Money Forward); Jan 2026 job post cites ~15,000 customers."
+  },
+  "specialization": "Digital incorporation, corporate secretary, accounting/bookkeeping, tax, payroll, business account for SMEs/startups.",
+  "multi_country": {
+   "value": "yes - 4 markets",
+   "evidence": "Singapore, Hong Kong, Australia, UK (UK via acquisitions of Ltd Companies and Accounts Lab).",
+   "confidence": "High",
+   "sources": [
+    "https://sleek.com/sg/about/",
+    "https://techround.co.uk/news/incorporation-service-for-smes-sleek-launches-in-uk-with-10-million-investment/"
+   ]
+  },
+  "moldova": {
+   "value": "not found",
+   "delivery": "n/a",
+   "evidence": "No Moldova or CEE presence/pages found.",
+   "confidence": "Medium",
+   "sources": [
+    "https://sleek.com/sg/about/"
+   ]
+  },
+  "law_firm_cooperation": {
+   "value": "not found (inbound affiliate only)",
+   "evidence": "Affiliate programme pays referrers SGD 300 per conversion (+SGD 1,000 per 10) for new clients sent TO Sleek; HK version applies only to new registrations. 'Partner perks' = vendor discounts. No outbound local-counsel network found.",
+   "confidence": "High",
+   "sources": [
+    "https://sleek.com/sg/affiliates/",
+    "https://sleek.com/hk/affiliates/",
+    "https://sleek.com/hk/our-trusted-partners/"
+   ]
+  },
+  "contacts": {
+   "email": "affiliates@sleek.com (affiliate programme)",
+   "phone": "+65 6929 8273",
+   "contact_page": "https://sleek.com/sg/",
+   "current": "yes",
+   "confidence": "Medium",
+   "sources": [
+    "https://sleek.com/sg/affiliates/"
+   ]
+  },
+  "one_off_signals": "Moderate: UK arm (ex Ltd Companies) is a high-volume incorporation seller; mitigated by subscription accounting/secretary bundles.",
+  "long_term_services": {
+   "value": "yes",
+   "evidence": "Subscription corporate secretary, bookkeeping, tax, payroll.",
+   "sources": [
+    "https://sleek.com/sg/accounting-services-singapore/",
+    "https://sleek.com/uk/pricing/"
+   ]
+  },
+  "decision_makers": [
+   {
+    "name": "Julien Labruyere",
+    "title": "Co-founder & CEO (title per 2021 announcement / undated Preqin profile - currency unverified)",
+    "source": "https://fintechnews.sg/58109/funding/sleek-extends-series-a-funding-round-to-us25-million/",
+    "confidence": "Low"
+   },
+   {
+    "name": "Adrien Barthel",
+    "title": "Co-founder",
+    "source": "https://techcrunch.com/2019/06/03/sleek/",
+    "confidence": "Low"
+   }
+  ],
+  "scores": {
+   "profile_fit": {
+    "score": 11,
+    "why": "Real recurring corporate services, but domestic-market SME platform in 4 non-European markets, not a cross-border formation house."
+   },
+   "recurring_client_potential": {
+    "score": 8,
+    "why": "Clients are local SMEs in SG/HK/AU/UK; few would need Moldova."
+   },
+   "local_legal_partner_cooperation": {
+    "score": 4,
+    "why": "Affiliate scheme is inbound referral only; no local-counsel model."
+   },
+   "moldova_commercial_interest": {
+    "score": 1,
+    "why": "No Moldova or CEE signal."
+   },
+   "decision_maker_accessibility": {
+    "score": 7,
+    "why": "Founders are public; partnerships email exists; scale-up likely unresponsive to small foreign law firm."
+   }
+  },
+  "exclude": {
+   "value": true,
+   "reason": "No clear mutual model: no Eastern Europe/Moldova relevance; only an inbound affiliate scheme for referrals to Sleek's 4 home markets."
+  },
+  "audit": [
+   {
+    "claim": "4 markets SG/HK/AU/UK",
+    "status": "confirmed",
+    "note": "Jan 2026 job post and multiple sources.",
+    "source": "https://sleek.com/sg/about/"
+   },
+   {
+    "claim": "Moldova not offered",
+    "status": "confirmed",
+    "note": "Not found.",
+    "source": "WebSearch 2026-10-08"
+   },
+   {
+    "claim": "Affiliate programme SGD 300 + SGD 1,000 per 10; new countries on request via affiliates@sleek.com",
+    "status": "confirmed",
+    "note": "Also SGD 10,000 for 100 conversions/month; min payout SGD 1,500. 'New countries on request' not re-seen - needs_check.",
+    "source": "https://sleek.com/sg/affiliates/"
+   },
+   {
+    "claim": "Phone +65 6929 8273",
+    "status": "unconfirmed",
+    "note": "Not re-seen in this pass.",
+    "source": "https://sleek.com/sg/affiliates/"
+   },
+   {
+    "claim": "Low fit",
+    "status": "confirmed",
+    "note": "Agree.",
+    "source": ""
+   },
+   {
+    "claim": "No decision maker",
+    "status": "needs_check",
+    "note": "Co-founder/CEO Julien Labruyere publicly known; current title unverified for 2026.",
+    "source": "https://www.preqin.com/data/profile/asset/sleek-tech-pte--ltd-/358489"
+   }
+  ],
+  "dossier": {
+   "main_services": "Incorporation, corporate secretary, accounting, tax, payroll",
+   "geography": "Singapore, Hong Kong, Australia, UK",
+   "moldova_status": "Not found",
+   "local_partner_need": "Low",
+   "long_term_legal_potential": "Low",
+   "why_legitimus_interesting": "Marginal; possible UK founders expanding to Moldova",
+   "what_to_offer": "n/a",
+   "preferred_format": "referral",
+   "objections": [
+    "No CEE demand",
+    "Inbound-only affiliate model",
+    "Scale-up platform unlikely to engage"
+   ],
+   "first_step": "None - excluded"
+  },
+  "check_date": "2026-10-08",
+  "total_score": 31
+ }
+]

@@ -1,0 +1,828 @@
+[
+ {
+  "name": "Eurofast",
+  "website": "https://eurofast.eu",
+  "hq": "Nicosia, Cyprus (group); large Athens operation (Kallithea, Athens phone +30 210 82 57 720 per third-party profile)",
+  "exists": {
+   "value": "yes - ACTIVE in 2024-2026",
+   "confidence": "Medium-High",
+   "evidence": "(1) 'Eurofast-Company-Profile_2026-1.pdf' hosted on eurofast.eu under /wp-content/uploads/2026/05/ (May 2026); (2) own-domain profile: Antonis Gavrielides 'named Managing Director in June 2025'; (3) own-domain press release on new offices in Thessaloniki, Plovdiv and Nis (Irena Damianou quoted as Managing Director; '24 offices in 24 cities across 20 countries'; date not shown in snippet); (4) March 2024 rebrand (new logo + website) reported by PrimeGlobal and BKR; (5) Eurofast International Ltd Tax Advisor job posting (ergodotisi.com) reported dated 31 July 2026; (6) live Tax & Legal Advisor posting in Nis, Serbia (infostud). Direct fetch of eurofast.eu failed (DNS ENOTFOUND in this environment) - not evidence of site being down.",
+   "sources": [
+    "https://eurofast.eu/wp-content/uploads/2026/05/Eurofast-Company-Profile_2026-1.pdf",
+    "https://eurofast.eu/member/gavrielides-antonis/",
+    "https://eurofast.eu/eurofast-expands-regional-presence-with-new-offices-in-southeast-europe/",
+    "https://www.primeglobal.net/news/new-brand-identity-eurofast",
+    "https://bkr.com/cyrpus-member-eurofast-introduces-refreshed-brand-identity/",
+    "https://ergodotisi.com/jobs/6999150/Eurofast+International+Ltd/Tax+Advisor",
+    "https://poslovi.infostud.com/posao/tax-legal-advisor/eurofast-international-doo/727867"
+   ]
+  },
+  "specialization": "Regional business advisory: payroll & employment / EOR, tax & transfer pricing, accounting & compliance, advisory & corporate (incl. trustee) services, tax & legal, global mobility, citizenship & residency, M&A/corporate finance. In-house local advisers incl. lawyers.",
+  "multi_country": {
+   "value": "yes - ~20 countries, 24-25 cities",
+   "evidence": "Meet Eurofast page: presence in over 25 cities; fully-fledged offices Athens, Thessaloniki, Nicosia, Sofia, Plovdiv, Bucharest, Belgrade, Nis, Targoviste, Podgorica, Tirana, Skopje, Zagreb, Ljubljana, Pristina, Banja Luka, Sarajevo, Cairo, Tbilisi, Kyiv, Vilnius, Tallinn, Dubai; associate offices Beirut, Erbil. Press release: 24 offices / 24 cities / 20 countries.",
+   "confidence": "Medium",
+   "sources": [
+    "https://eurofast.eu/meet-eurofast/",
+    "https://eurofast.eu/eurofast-expands-regional-presence-with-new-offices-in-southeast-europe/"
+   ]
+  },
+  "moldova": {
+   "value": "not found",
+   "delivery": "n/a",
+   "evidence": "Office list on own domain contains no Moldovan city; nearest offices Bucharest, Targoviste (RO) and Kyiv (UA). Searches 'Eurofast Moldova/Chisinau' returned no Eurofast Moldova service. Whether they serve Moldova via Bucharest/Kyiv or a correspondent: not found.",
+   "confidence": "Medium",
+   "sources": [
+    "https://eurofast.eu/meet-eurofast/"
+   ]
+  },
+  "law_firm_cooperation": {
+   "value": "unclear - network membership only; legal delivered in-house",
+   "evidence": "Member of BKR International and PrimeGlobal (accounting/advisory associations), historically Taxand Cyprus member. Meet Eurofast page describes a 'Dream Team' of local advisors 'comprising lawyers, accountants', i.e. legal work done by own staff. No 'local counsel' / law-firm partner page found. ASSUMPTION: for jurisdictions without an office (e.g. Moldova) they would need an external correspondent.",
+   "confidence": "Medium",
+   "sources": [
+    "https://eurofast.eu/meet-eurofast/",
+    "https://www.primeglobal.net/firms/eurofast",
+    "https://bkr.com/cyrpus-member-eurofast-introduces-refreshed-brand-identity/"
+   ]
+  },
+  "contacts": {
+   "email": "info@eurofast.eu",
+   "phone": "+30 210 82 57 720 (Athens, per career.auth.gr); +357 22 699 000 (Nicosia, per BKR directory per agent 01 - not re-confirmed)",
+   "contact_page": "not verified (eurofast.eu not fetchable)",
+   "current": "unclear",
+   "confidence": "Low",
+   "sources": [
+    "https://career.auth.gr/companies/eurofast/",
+    "https://bkr.com/firm/eurofast-ltd/"
+   ]
+  },
+  "one_off_signals": "None found. Positioning is ongoing advisory (payroll, accounting, tax, EOR), not registration packages.",
+  "long_term_services": {
+   "value": "yes",
+   "evidence": "Payroll & Employment, Tax & Transfer Pricing, Accounting & Compliance, Advisory & Corporate Services (rebrand 2024); payroll, accounting, tax, global mobility, EOR, corporate services (expansion release).",
+   "sources": [
+    "https://www.primeglobal.net/news/new-brand-identity-eurofast",
+    "https://eurofast.eu/eurofast-expands-regional-presence-with-new-offices-in-southeast-europe/"
+   ]
+  },
+  "decision_makers": [
+   {
+    "name": "Antonis Gavrielides",
+    "title": "Managing Director (since June 2025; formerly Group CEO from Nov 2022)",
+    "source": "https://eurofast.eu/member/gavrielides-antonis/",
+    "confidence": "Medium"
+   },
+   {
+    "name": "Irena Damianou",
+    "title": "Managing Director (Nicosia); formerly Chief Marketing Officer / Board member",
+    "source": "https://eurofast.eu/member/damianou-irena/ ; https://eurofast.eu/eurofast-expands-regional-presence-with-new-offices-in-southeast-europe/",
+    "confidence": "Medium"
+   },
+   {
+    "name": "Christodoulos (Chris) Damianou",
+    "title": "Non-Executive Chairman (as of Gavrielides CEO appointment, 2022) - current role not re-confirmed",
+    "source": "https://eurofast.eu/antonis-gavrielides-appointed-new-eurofast-group-ceo/",
+    "confidence": "Low"
+   }
+  ],
+  "scores": {
+   "profile_fit": {
+    "score": 17,
+    "why": "Multi-country SEE/Black Sea advisory firm with recurring accounting/payroll/tax/legal services - very close to Legitimus' target profile."
+   },
+   "recurring_client_potential": {
+    "score": 24,
+    "why": "Its clients need ongoing payroll, accounting and compliance; a Moldova entity for a regional client would generate recurring legal/corporate work. Volume of Moldova demand unproven."
+   },
+   "local_legal_partner_cooperation": {
+    "score": 12,
+    "why": "Belongs to BKR and PrimeGlobal networks, which suggests it is used to cross-referrals, but its legal work is done in-house and no law-firm partner page was found."
+   },
+   "moldova_commercial_interest": {
+    "score": 12,
+    "why": "Moldova is a clear gap between its Bucharest/Targoviste and Kyiv offices, and it keeps expanding (3 new SEE offices). No stated interest in Moldova found."
+   },
+   "decision_maker_accessibility": {
+    "score": 11,
+    "why": "Two Managing Directors are named on the company's own domain; a direct email or phone line was not verified."
+   }
+  },
+  "exclude": {
+   "value": false,
+   "reason": "Active, real ongoing services, clear geographic gap in Moldova."
+  },
+  "audit": [
+   {
+    "claim": "Operating status: latest dated news 2022; no 2025-2026 news",
+    "status": "erroneous",
+    "note": "Found March 2024 rebrand, June 2025 MD appointment, May 2026 company-profile PDF, July 2026 job posting, new-office release.",
+    "source": "https://eurofast.eu/member/gavrielides-antonis/ ; https://eurofast.eu/wp-content/uploads/2026/05/Eurofast-Company-Profile_2026-1.pdf"
+   },
+   {
+    "claim": "Presence in 21+ cities (~19 countries)",
+    "status": "outdated",
+    "note": "Own site now says 25+ cities; press release says 24 offices / 24 cities / 20 countries (added Thessaloniki, Plovdiv, Nis; Targoviste also listed).",
+    "source": "https://eurofast.eu/meet-eurofast/"
+   },
+   {
+    "claim": "Office list incl. Bucharest, Kyiv, Tbilisi, Vilnius, Tallinn, Dubai, Cairo",
+    "status": "confirmed",
+    "note": "Matches own Meet Eurofast page, which also lists the new offices.",
+    "source": "https://eurofast.eu/meet-eurofast/"
+   },
+   {
+    "claim": "HQ Cyprus (Nicosia)",
+    "status": "confirmed",
+    "note": "Nicosia listed; but a large operation is in Athens (third-party contact data points to Athens).",
+    "source": "https://career.auth.gr/companies/eurofast/"
+   },
+   {
+    "claim": "Moldova not offered",
+    "status": "confirmed",
+    "note": "Wording should be 'not found': no Chisinau office in the official list.",
+    "source": "https://eurofast.eu/meet-eurofast/"
+   },
+   {
+    "claim": "Member of BKR International, listed on PrimeGlobal, historic Taxand member",
+    "status": "confirmed",
+    "note": "BKR and PrimeGlobal both published the 2024 rebrand news; Taxand membership is historic only (older profiles).",
+    "source": "https://bkr.com/cyrpus-member-eurofast-introduces-refreshed-brand-identity/ ; https://www.primeglobal.net/news/new-brand-identity-eurofast"
+   },
+   {
+    "claim": "Email info@eurofast.eu (not verified on site)",
+    "status": "unconfirmed",
+    "note": "Still from a third-party career profile only, though it matches the domain.",
+    "source": "https://career.auth.gr/companies/eurofast/"
+   },
+   {
+    "claim": "Phone +357 22 699 000; address Cypress Centre, 5 Chytron St, Nicosia",
+    "status": "needs_check",
+    "note": "Not re-found in this check; the third-party profile gives an Athens number, 210 82 57 720.",
+    "source": "https://career.auth.gr/companies/eurofast/"
+   },
+   {
+    "claim": "No public partner programme",
+    "status": "confirmed",
+    "note": "Wording should be 'not found'.",
+    "source": "searches 2026-10-08"
+   },
+   {
+    "claim": "Decision makers",
+    "status": "needs_check",
+    "note": "Agent 01 named none. Two MDs (Gavrielides, I. Damianou) were found on the own domain.",
+    "source": "https://eurofast.eu/member/gavrielides-antonis/"
+   }
+  ],
+  "dossier": {
+   "main_services": "Payroll/EOR, accounting & compliance, tax & transfer pricing, corporate & trustee services, tax & legal advisory, global mobility, M&A",
+   "geography": "SE Europe (GR, CY, BG, RO, RS, ME, AL, MK, HR, SI, XK, BA), Georgia, Ukraine, Lithuania, Estonia, Egypt, UAE; associates Lebanon, Iraq (Erbil)",
+   "moldova_status": "No office or declared partner found; the nearest offices are Bucharest/Targoviste and Kyiv",
+   "local_partner_need": "High (ASSUMPTION): Moldova is a gap in a contiguous regional footprint; regional clients (RO/UA-linked) may need MD entities, payroll and legal support",
+   "long_term_legal_potential": "High: recurring corporate secretarial, employment/payroll legal, compliance and tax-legal opinions for client entities",
+   "why_legitimus_interesting": "Lets them offer Moldova to regional clients without opening an office; same advisory culture (BKR/PrimeGlobal)",
+   "what_to_offer": "Moldova local counsel: company formation, corporate maintenance, employment law, contract review, regulatory opinions; a combined offer with a Moldovan accounting partner if needed",
+   "preferred_format": "local counsel / two-way referral (white-label subcontracting possible for corporate admin)",
+   "objections": [
+    "They may prefer to open their own office or acquire locally (expansion pattern)",
+    "They may already have an informal Moldova correspondent (not found)",
+    "Accounting-led firm may want an accounting partner rather than a law firm",
+    "Limited Moldova deal flow"
+   ],
+   "first_step": "Introductory email to Irena Damianou / Antonis Gavrielides via info@eurofast.eu proposing Moldova correspondent coverage, with a short Moldova capability note; ask whether they get Moldova requests from the Bucharest/Kyiv offices"
+  },
+  "check_date": "2026-10-08",
+  "total_score": 76
+ },
+ {
+  "name": "Virtuzone",
+  "website": "https://virtuzone.com",
+  "hq": "Dubai, UAE (owned by Ascentium, Singapore, since Jan 2025)",
+  "exists": {
+   "value": "yes - active",
+   "confidence": "High",
+   "evidence": "Acquisition by Ascentium reported 22 Jan 2025 (Enterprise AM, Gulf Business); referral platform live; agent 01 found 2025 regulatory content on site.",
+   "sources": [
+    "https://enterpriseam.com/uae/2025/01/22/singapores-ascentium-is-the-new-owner-of-dubai-based-virtuzone/",
+    "https://gulfbusiness.com/en/2025/dubai/virtuzone-has-been-acquired-by-singapore-based-ascentium/",
+    "https://referral.virtuzone.com/"
+   ]
+  },
+  "specialization": "UAE company formation (mainland/free zone), corporate services, tax & accounting, Golden Visa, banking, compliance & legal, trademarks; sister brands Taxready, Next Generation Equity, Maktabi",
+  "multi_country": {
+   "value": "UAE-centred; parent Ascentium in 27 markets (after April 2026 Dezan Shira acquisition, incl. Poland, Germany, Italy)",
+   "evidence": "Virtuzone's offshore page lists 5 jurisdictions (per agent 01); Ascentium acquired Dezan Shira in April 2026 -> 27 markets; earlier 23 markets/45 cities (Dec 2025); also acquired Clara (ADGM, Feb 2026), ZICO (Aug 2025).",
+   "confidence": "Medium",
+   "sources": [
+    "https://www.china-briefing.com/news/ascentium-acquires-dezan-shira-associates-expanding-its-footprint-to-27-markets-and-strengthening-corporate-services-capabilities/",
+    "https://www.aap.com.au/aapreleases/cision20251210ae41303"
+   ]
+  },
+  "moldova": {
+   "value": "not found",
+   "delivery": "n/a",
+   "evidence": "No Moldova formation service found. A CIS-focused JV (Virtuzone CIS with Seven Pillars Law, AIFC Astana) covered CIS/Central Asia c.2020; its current status was not found.",
+   "confidence": "Medium",
+   "sources": [
+    "https://virtuzone.com/press-release/virtuzone-and-seven-pillars-law-create-joint-venture-virtuzone-cis/"
+   ]
+  },
+  "law_firm_cooperation": {
+   "value": "yes (historic) - JV with law firm Seven Pillars Law",
+   "evidence": "Virtuzone CIS JV with Seven Pillars (Central Asian law firm founded by Mark Beer) for formation + legal across CIS/Central Asia; chairman Neil Petch quoted on need for local partners. Public referral platform pays a fixed fee per referred client (AED 3,000 setup / AED 1,500 corporate services, 'estimates may vary') - this is inbound referral to UAE, not a law-firm partnership.",
+   "confidence": "Medium",
+   "sources": [
+    "https://virtuzone.com/press-release/virtuzone-and-seven-pillars-law-create-joint-venture-virtuzone-cis/",
+    "https://referral.virtuzone.com/"
+   ]
+  },
+  "contacts": {
+   "email": "info@virtuzone.com",
+   "phone": "+971 4 457 8200",
+   "contact_page": "https://virtuzone.com/contactus",
+   "current": "unclear",
+   "confidence": "Medium",
+   "sources": [
+    "https://virtuzone.com/contactus"
+   ]
+  },
+  "one_off_signals": "Strong formation/package orientation (UAE setup), but complemented by tax, accounting, compliance and visa renewals.",
+  "long_term_services": {
+   "value": "yes",
+   "evidence": "Tax and accounting, compliance and legal services, bank account opening, IT & mail management, Golden Visa listed on referral platform; Taxready.ae sister brand.",
+   "sources": [
+    "https://referral.virtuzone.com/"
+   ]
+  },
+  "decision_makers": [
+   {
+    "name": "George Hojeige",
+    "title": "CEO / Group CEO, Virtuzone (as quoted in Jan 2025 acquisition coverage)",
+    "source": "https://gulfbusiness.com/en/2025/dubai/virtuzone-has-been-acquired-by-singapore-based-ascentium/",
+    "confidence": "Medium"
+   },
+   {
+    "name": "Neil Petch",
+    "title": "Co-founder and Chairman, Virtuzone (Jan 2025)",
+    "source": "https://mena.entrepreneur.com/finance/virtuzone-taken-over-by-singapores-ascentium/485837",
+    "confidence": "Medium"
+   },
+   {
+    "name": "Lennard Yong",
+    "title": "CEO, Ascentium (parent)",
+    "source": "https://mena.entrepreneur.com/finance/virtuzone-taken-over-by-singapores-ascentium/485837",
+    "confidence": "Medium"
+   },
+   {
+    "name": "Paul Bryson",
+    "title": "Managing Director (appointed June 2023; current status not confirmed)",
+    "source": "https://gulfnews.com/business/corporate-news/virtuzone-names-paul-bryson-as-managing-director-as-part-of-growth-push-1.1687348960666",
+    "confidence": "Low"
+   }
+  ],
+  "scores": {
+   "profile_fit": {
+    "score": 13,
+    "why": "Large corporate service provider with recurring services, but its core is UAE inbound formation, not CEE coverage."
+   },
+   "recurring_client_potential": {
+    "score": 20,
+    "why": "Big client base (75-80k entrepreneurs claimed). Some are CIS/Moldovan founders who may need home-country legal work. The flow towards Moldova is speculative."
+   },
+   "local_legal_partner_cooperation": {
+    "score": 11,
+    "why": "It has a track record of a JV with a law firm (Seven Pillars), but the current public scheme is a generic paid-referral programme."
+   },
+   "moldova_commercial_interest": {
+    "score": 7,
+    "why": "No Moldova service; the CIS JV status is unknown. Ascentium is now entering Europe (PL/DE/IT), which is a weak, indirect signal."
+   },
+   "decision_maker_accessibility": {
+    "score": 8,
+    "why": "Senior names are known from press, but it is a large corporate under new PE-backed ownership, with no partnerships head identified."
+   }
+  },
+  "exclude": {
+   "value": false,
+   "reason": "Real, active provider; a two-way referral model is plausible (UAE for Moldovan founders, Moldova for their clients). Priority is lower."
+  },
+  "audit": [
+   {
+    "claim": "virtuzone.com correct domain; vzone.ae unrelated",
+    "status": "confirmed",
+    "note": "Own press releases are on virtuzone.com; note vz.ae also hosts Virtuzone press releases (older domain).",
+    "source": "https://www.vz.ae/press-release/virtuzone-and-seven-pillars-law-create-joint-venture-virtuzone-cis"
+   },
+   {
+    "claim": "Part of Ascentium since 2025",
+    "status": "confirmed",
+    "note": "Announced 22 Jan 2025, value undisclosed, includes Taxready, NGE, Maktabi.",
+    "source": "https://enterpriseam.com/uae/2025/01/22/singapores-ascentium-is-the-new-owner-of-dubai-based-virtuzone/"
+   },
+   {
+    "claim": "Ascentium 27 markets / 58 cities",
+    "status": "unconfirmed",
+    "note": "27 markets confirmed (April 2026, Dezan Shira deal); 58 cities was not found (Dec 2025: 45 cities).",
+    "source": "https://www.china-briefing.com/news/ascentium-acquires-dezan-shira-associates-expanding-its-footprint-to-27-markets-and-strengthening-corporate-services-capabilities/"
+   },
+   {
+    "claim": "Referral platform: AED 3,000 / AED 1,500, no cap",
+    "status": "confirmed",
+    "note": "The page says these are estimates that may vary.",
+    "source": "https://referral.virtuzone.com/"
+   },
+   {
+    "claim": "Virtuzone CIS JV with Seven Pillars Law, status unclear",
+    "status": "confirmed",
+    "note": "JV confirmed; current status still not found.",
+    "source": "https://virtuzone.com/press-release/virtuzone-and-seven-pillars-law-create-joint-venture-virtuzone-cis/"
+   },
+   {
+    "claim": "Moldova not offered",
+    "status": "confirmed",
+    "note": "Should read 'not found'.",
+    "source": "agent 01 site searches; re-search 2026-10-08"
+   },
+   {
+    "claim": "Contacts info@virtuzone.com, +971 4 457 8200, Souk Al Bahar address",
+    "status": "needs_check",
+    "note": "Not re-verified (site not fetchable); possible office changes after the acquisition.",
+    "source": "https://virtuzone.com/contactus"
+   },
+   {
+    "claim": "Decision makers",
+    "status": "needs_check",
+    "note": "Agent 01 named none. Hojeige (CEO) and Petch (Chairman) found in 2025 press; the Bryson MD role (2023) may be outdated.",
+    "source": "https://gulfbusiness.com/en/2025/dubai/virtuzone-has-been-acquired-by-singapore-based-ascentium/"
+   },
+   {
+    "claim": "Score 4.1 (highest in set)",
+    "status": "needs_check",
+    "note": "Overstated relative to Moldova relevance; Eurofast is a better fit.",
+    "source": "analysis"
+   }
+  ],
+  "dossier": {
+   "main_services": "UAE company formation, tax & accounting, visas, banking, compliance/legal, trademarks",
+   "geography": "UAE (all free zones/mainland); offshore BVI/Cayman/SG/HK/KSA; parent Ascentium in 27 markets (APAC, GCC, now PL/DE/IT)",
+   "moldova_status": "Not found; historic CIS JV via Kazakhstan",
+   "local_partner_need": "Medium-low (ASSUMPTION): only for CIS/Moldovan-founder clients needing home-country structuring",
+   "long_term_legal_potential": "Medium: substance, tax-residency and corporate maintenance for Moldovan founders with UAE holdcos",
+   "why_legitimus_interesting": "Moldova-side counsel for UAE-structured groups with Moldovan operations; reverse flow of Moldovan founders to UAE",
+   "what_to_offer": "Two-way referral; Moldova legal (subsidiary/branch setup, contracts, employment, tax-residency support) for Virtuzone clients",
+   "preferred_format": "two-way referral",
+   "objections": [
+    "Large organisation; partnerships likely handled centrally by Ascentium",
+    "Referral programme is designed for inbound UAE leads, not outbound counsel",
+    "Low Moldova demand",
+    "No stated CEE strategy at Virtuzone level"
+   ],
+   "first_step": "Register interest via the Virtuzone partners/referral channel and send a short note to Virtuzone management (via info@virtuzone.com) proposing reciprocal Moldova<->UAE referrals"
+  },
+  "check_date": "2026-10-08",
+  "total_score": 59
+ },
+ {
+  "name": "Riz & Mona Consultancy",
+  "website": "https://www.rizmona.com",
+  "hq": "Business Bay, Dubai, UAE",
+  "exists": {
+   "value": "yes - active",
+   "confidence": "Medium",
+   "evidence": "Own domain has an Aug 2025 news item on UAE-Moldova visa-free travel (per agent 01) and a media page listing a 2025 'IBGME acquisition' and a KSA expansion; 2024 ProPakistani article.",
+   "sources": [
+    "https://www.rizmona.com/media/",
+    "https://www.rizmona.com/news/uae-moldova-sign-mutual-visa-free-travel-agreement-in-abu-dhabi/",
+    "https://propakistani.pk/2024/09/10/how-businesses-can-save-on-high-taxes-this-company-is-helping-pakistanis-set-up-their-business-in-dubai/amp/"
+   ]
+  },
+  "specialization": "Dubai business setup: company registration, licences, visas, bank accounts, PRO, trademark/product registration, accounting/bookkeeping, VAT and corporate tax compliance",
+  "multi_country": {
+   "value": "limited - UAE plus associate-firm network (SG, MY, MU, KSA named)",
+   "evidence": "Who We Are page: services worldwide through a network of associate firms.",
+   "confidence": "Medium",
+   "sources": [
+    "https://www.rizmona.com/who-we-are/"
+   ]
+  },
+  "moldova": {
+   "value": "not found",
+   "delivery": "n/a",
+   "evidence": "Only a visa-free news item mentions Moldova.",
+   "confidence": "Medium",
+   "sources": [
+    "https://www.rizmona.com/news/uae-moldova-sign-mutual-visa-free-travel-agreement-in-abu-dhabi/"
+   ]
+  },
+  "law_firm_cooperation": {
+   "value": "unclear",
+   "evidence": "'Network of associate firms' abroad, type not specified; no law-firm partner page found.",
+   "confidence": "Low",
+   "sources": [
+    "https://www.rizmona.com/who-we-are/"
+   ]
+  },
+  "contacts": {
+   "email": "info@rizmona.com",
+   "phone": "+971 4 558 6339; WhatsApp +971 54 582 1012",
+   "contact_page": "https://www.rizmona.com/contact-us/",
+   "current": "unclear",
+   "confidence": "Medium",
+   "sources": [
+    "https://www.rizmona.com/contact-us/"
+   ]
+  },
+  "one_off_signals": "Strong: setup-package marketing ('offers' landing pages), visa/licence focus; many clients are one-time setups.",
+  "long_term_services": {
+   "value": "partial",
+   "evidence": "Accounting/bookkeeping, VAT and corporate tax compliance and post-licence support are claimed on its own site.",
+   "sources": [
+    "https://www.rizmona.com/who-we-are/",
+    "https://rizmona.com/offers/business-setup-consultants"
+   ]
+  },
+  "decision_makers": [
+   {
+    "name": "Rizwan Chaudhary",
+    "title": "CEO & Founder (co-founded with wife Mona)",
+    "source": "https://www.rizmona.com/assets/docs/rizmona.pdf",
+    "confidence": "Medium"
+   }
+  ],
+  "scores": {
+   "profile_fit": {
+    "score": 10,
+    "why": "A small UAE-only setup consultancy with a mainly one-off service mix; it is international only through associates."
+   },
+   "recurring_client_potential": {
+    "score": 13,
+    "why": "Some recurring accounting/VAT work, but the flow of clients towards Moldova is unproven."
+   },
+   "local_legal_partner_cooperation": {
+    "score": 11,
+    "why": "It explicitly works through associate firms abroad, so adding a Moldova associate is conceivable."
+   },
+   "moldova_commercial_interest": {
+    "score": 6,
+    "why": "It only wrote about the UAE-Moldova visa deal; no service or demand signal."
+   },
+   "decision_maker_accessibility": {
+    "score": 12,
+    "why": "A founder-led firm with the CEO named in its own brochure; direct contacts are published."
+   }
+  },
+  "exclude": {
+   "value": false,
+   "reason": "Borderline (largely one-off seller), but it has an associate-network model and some ongoing services. Low priority."
+  },
+  "audit": [
+   {
+    "claim": "Since 2009",
+    "status": "needs_check",
+    "note": "The own site says founded 'over 15 years ago'; a directory says established 2014.",
+    "source": "https://rizmona.com/who-we-are ; https://www.softwaresuggest.com/services/riz-mona-consultancy"
+   },
+   {
+    "claim": "Associate firm network abroad",
+    "status": "confirmed",
+    "note": "Per own Who We Are page.",
+    "source": "https://www.rizmona.com/who-we-are/"
+   },
+   {
+    "claim": "Moldova not offered",
+    "status": "confirmed",
+    "note": "'Not found'.",
+    "source": "https://www.rizmona.com/news/uae-moldova-sign-mutual-visa-free-travel-agreement-in-abu-dhabi/"
+   },
+   {
+    "claim": "Two addresses (Exchange Tower 2401 / Single Business Tower 1006)",
+    "status": "needs_check",
+    "note": "Both appear in sources; current address unclear.",
+    "source": "https://www.leadstal.com/sb/riz-and-mona-consultancy-business-setup-consultants-in-dubai-uae"
+   },
+   {
+    "claim": "Contacts email/phone",
+    "status": "confirmed",
+    "note": "Matches third-party listings too.",
+    "source": "https://www.rizmona.com/contact-us/"
+   },
+   {
+    "claim": "Decision makers",
+    "status": "needs_check",
+    "note": "Agent 01 named none. CEO & Founder Rizwan Chaudhary found in own brochure.",
+    "source": "https://www.rizmona.com/assets/docs/rizmona.pdf"
+   },
+   {
+    "claim": "Not mentioned by agent 01: 2025 IBGME acquisition / KSA expansion",
+    "status": "unconfirmed",
+    "note": "Only on own media page snippet; no independent press found.",
+    "source": "https://www.rizmona.com/media/"
+   }
+  ],
+  "dossier": {
+   "main_services": "Dubai company setup, visas, PRO, banking, trademarks, accounting/VAT/corporate tax",
+   "geography": "UAE; associates in SG, MY, MU, KSA",
+   "moldova_status": "Not found",
+   "local_partner_need": "Low-medium (ASSUMPTION): only if Moldovan clients use them for UAE setup",
+   "long_term_legal_potential": "Low",
+   "why_legitimus_interesting": "A Moldova associate for its network; a source of Moldovan founders after the visa-free deal",
+   "what_to_offer": "Two-way referral; Moldova associate listing",
+   "preferred_format": "two-way referral",
+   "objections": [
+    "Mostly one-off setup clients",
+    "Small scale",
+    "No Moldova demand evidence"
+   ],
+   "first_step": "Short email to info@rizmona.com addressed to Rizwan Chaudhary proposing a reciprocal referral link UAE<->Moldova"
+  },
+  "check_date": "2026-10-08",
+  "total_score": 52
+ },
+ {
+  "name": "Creation Business Consultants",
+  "website": "https://www.creationbc.com",
+  "hq": "Dubai, UAE (offices DIFC, ADGM licence, Riyadh, Hong Kong, Melbourne)",
+  "exists": {
+   "value": "yes - active",
+   "confidence": "Medium",
+   "evidence": "ADGM CSP licence (Gulf News / Zawya); 2025 DIFC expansion release; 2024 tax structuring award; 2026 Monash alumni profile of founder.",
+   "sources": [
+    "https://gulfnews.com/business/corporate-news/creation-business-consultants-expands-uae-corporate-service-capabilities-with-adgm-licence-1.500682234",
+    "https://www.creationbc.com/news/creation-bc-wins-best-corporate-tax-structuring-experts-2024-middle-east-award/",
+    "https://www.monash.edu/business/alumni/alumni-community/alumni-stories/scott-cairns"
+   ]
+  },
+  "specialization": "GCC market entry, company formation, restructuring, tax planning/corporate tax, accounting, corporate services, ADGM/DIFC CSP",
+  "multi_country": {
+   "value": "yes - GCC + offshore + HK",
+   "evidence": "Locations page 'over 10 countries'; GCC, Egypt, HK, BVI, Cayman etc.",
+   "confidence": "Medium",
+   "sources": [
+    "https://www.creationbc.com/locations/"
+   ]
+  },
+  "moldova": {
+   "value": "not found",
+   "delivery": "n/a",
+   "evidence": "No Moldova or CEE coverage found.",
+   "confidence": "Medium",
+   "sources": [
+    "https://www.creationbc.com/locations/"
+   ]
+  },
+  "law_firm_cooperation": {
+   "value": "not found",
+   "evidence": "No law-firm partner/local counsel programme found.",
+   "confidence": "Low",
+   "sources": []
+  },
+  "contacts": {
+   "email": "info@creationbc.com",
+   "phone": "+971 4 878 6240; +966 11 434 3300",
+   "contact_page": "https://www.creationbc.com/contact-us/",
+   "current": "unclear",
+   "confidence": "Medium",
+   "sources": [
+    "https://www.creationbc.com/contact-us/"
+   ]
+  },
+  "one_off_signals": "Moderate: formation-led, but restructuring/tax/CSP services are ongoing.",
+  "long_term_services": {
+   "value": "yes",
+   "evidence": "ADGM CSP: registered office and ongoing filings; corporate tax filing; accounting.",
+   "sources": [
+    "https://gulfnews.com/business/corporate-news/creation-business-consultants-expands-uae-corporate-service-capabilities-with-adgm-licence-1.500682234",
+    "https://uae-corporate-tax.creationbc.com/"
+   ]
+  },
+  "decision_makers": [
+   {
+    "name": "Scott Cairns",
+    "title": "Founder & Managing Director",
+    "source": "https://www.monash.edu/business/alumni/alumni-community/alumni-stories/scott-cairns",
+    "confidence": "Medium"
+   }
+  ],
+  "scores": {
+   "profile_fit": {
+    "score": 11,
+    "why": "A solid corporate-services firm, but GCC/Asia-focused with no European footprint."
+   },
+   "recurring_client_potential": {
+    "score": 15,
+    "why": "Recurring CSP/tax work exists, but it is inside the GCC; little flow towards Moldova."
+   },
+   "local_legal_partner_cooperation": {
+    "score": 5,
+    "why": "No evidence of cooperation with foreign law firms."
+   },
+   "moldova_commercial_interest": {
+    "score": 3,
+    "why": "No signal at all."
+   },
+   "decision_maker_accessibility": {
+    "score": 11,
+    "why": "Founder-MD publicly named; a mid-size firm."
+   }
+  },
+  "exclude": {
+   "value": true,
+   "reason": "No clear mutual model: GCC/Asia-only focus, no CEE or law-firm cooperation signals."
+  },
+  "audit": [
+   {
+    "claim": "Offices Dubai, DIFC, Riyadh, Hong Kong",
+    "status": "confirmed",
+    "note": "Also an ADGM CSP licence and Melbourne staff (Monash profile).",
+    "source": "https://gulfnews.com/business/corporate-news/creation-business-consultants-expands-uae-corporate-service-capabilities-with-adgm-licence-1.500682234"
+   },
+   {
+    "claim": "Over 10 countries",
+    "status": "confirmed",
+    "note": "Per locations page (agent 01); not re-fetched.",
+    "source": "https://www.creationbc.com/locations/"
+   },
+   {
+    "claim": "Moldova not offered",
+    "status": "confirmed",
+    "note": "'Not found'.",
+    "source": "https://www.creationbc.com/locations/"
+   },
+   {
+    "claim": "No partner programme",
+    "status": "confirmed",
+    "note": "'Not found'.",
+    "source": "searches 2026-10-08"
+   },
+   {
+    "claim": "Two Dubai addresses (O-14 Tower / Prism Tower)",
+    "status": "needs_check",
+    "note": "Current address unclear.",
+    "source": "https://www.creationbc.com/contact-us/"
+   },
+   {
+    "claim": "Decision makers",
+    "status": "needs_check",
+    "note": "Agent 01 named none. Scott Cairns, Founder & MD, found.",
+    "source": "https://www.monash.edu/business/alumni/alumni-community/alumni-stories/scott-cairns"
+   }
+  ],
+  "dossier": {
+   "main_services": "GCC formation, restructuring, corporate tax, accounting, ADGM/DIFC CSP",
+   "geography": "UAE, KSA, GCC, Egypt, HK, offshore",
+   "moldova_status": "Not found",
+   "local_partner_need": "Low",
+   "long_term_legal_potential": "Low",
+   "why_legitimus_interesting": "Only as an outbound partner for Moldovan clients entering the GCC",
+   "what_to_offer": "Outbound referral relationship",
+   "preferred_format": "referral",
+   "objections": [
+    "No CEE interest",
+    "No Moldova demand"
+   ],
+   "first_step": "None now; revisit only if Legitimus has Moldovan clients going to the GCC"
+  },
+  "check_date": "2026-10-08",
+  "total_score": 45
+ },
+ {
+  "name": "IQ-EQ",
+  "website": "https://iqeq.com",
+  "hq": "Luxembourg",
+  "exists": {
+   "value": "yes - active",
+   "confidence": "Medium",
+   "evidence": "Own-domain news (2024); active careers; 6,500+ staff in 25 jurisdictions per newer materials.",
+   "sources": [
+    "https://iqeq.com/be/news/iq-eqs-group-ceo-named-in-eprivateclients-50-most-influential-for-2024/",
+    "https://iqeq.foleon.com/brochure/esg/about-iq-eq"
+   ]
+  },
+  "specialization": "Fund administration, corporate (incorporation, domiciliation, directors, secretarial, accounting & tax compliance), trust & private client - institutional focus",
+  "multi_country": {
+   "value": "yes - 25 jurisdictions",
+   "evidence": "European offices (Apr 2024): BE, CY, FR, GG, IE, IM, JE, LU, CH, NL, UK - no CEE.",
+   "confidence": "Medium",
+   "sources": [
+    "https://iqeq.foleon.com/brochure/esg/about-iq-eq"
+   ]
+  },
+  "moldova": {
+   "value": "not found",
+   "delivery": "n/a",
+   "evidence": "No CEE/Moldova presence found.",
+   "confidence": "Medium",
+   "sources": [
+    "https://iqeq.foleon.com/brochure/esg/about-iq-eq"
+   ]
+  },
+  "law_firm_cooperation": {
+   "value": "not found",
+   "evidence": "No public law-firm partner programme found. ASSUMPTION: works with major international law firms on fund work.",
+   "confidence": "Low",
+   "sources": []
+  },
+  "contacts": {
+   "email": "not found",
+   "phone": "+352 466 1111",
+   "contact_page": "https://iqeq.com/lu/locations/luxembourg/",
+   "current": "unclear",
+   "confidence": "Low",
+   "sources": [
+    "https://iqeq.com/lu/locations/luxembourg/"
+   ]
+  },
+  "one_off_signals": "None; fully recurring model.",
+  "long_term_services": {
+   "value": "yes",
+   "evidence": "Corporate secretarial, domiciliation, directors, accounting & tax compliance, fund admin.",
+   "sources": [
+    "https://iqeq.foleon.com/brochure/esg/about-iq-eq"
+   ]
+  },
+  "decision_makers": [
+   {
+    "name": "Mark Pesco",
+    "title": "Group CEO (latest confirmation Jan 2024)",
+    "source": "https://iqeq.com/be/news/iq-eqs-group-ceo-named-in-eprivateclients-50-most-influential-for-2024/",
+    "confidence": "Medium"
+   }
+  ],
+  "scores": {
+   "profile_fit": {
+    "score": 8,
+    "why": "An institutional fund/trust administrator in major financial centres, not a cross-border SME formation provider."
+   },
+   "recurring_client_potential": {
+    "score": 14,
+    "why": "Recurring by nature, but its clients (funds, HNWIs) rarely need Moldova."
+   },
+   "local_legal_partner_cooperation": {
+    "score": 4,
+    "why": "No evidence of small-jurisdiction local-counsel networks."
+   },
+   "moldova_commercial_interest": {
+    "score": 2,
+    "why": "No CEE footprint or signal."
+   },
+   "decision_maker_accessibility": {
+    "score": 4,
+    "why": "A large PE-owned group; only the Group CEO is identifiable."
+   }
+  },
+  "exclude": {
+   "value": true,
+   "reason": "No clear mutual model: institutional fund-admin focus, no CEE/Moldova relevance."
+  },
+  "audit": [
+   {
+    "claim": "25 jurisdictions",
+    "status": "confirmed",
+    "note": "Per brochure.",
+    "source": "https://iqeq.foleon.com/brochure/esg/about-iq-eq"
+   },
+   {
+    "claim": "5,800+ staff",
+    "status": "outdated",
+    "note": "Newer materials say 6,500+.",
+    "source": "https://iqeq.foleon.com/brochure/esg/about-iq-eq"
+   },
+   {
+    "claim": "No Moldova/Romania/Ukraine presence",
+    "status": "confirmed",
+    "note": "European office list contains no CEE country ('not found').",
+    "source": "https://iqeq.foleon.com/brochure/esg/about-iq-eq"
+   },
+   {
+    "claim": "Phone +352 466 1111, route d'Esch address",
+    "status": "needs_check",
+    "note": "Not re-verified.",
+    "source": "https://iqeq.com/lu/locations/luxembourg/"
+   },
+   {
+    "claim": "Decision makers",
+    "status": "needs_check",
+    "note": "Agent 01 named none. Group CEO Mark Pesco (2024). A third-party aggregator naming a different 'CEO' was judged unreliable and not used.",
+    "source": "https://iqeq.com/be/news/iq-eqs-group-ceo-named-in-eprivateclients-50-most-influential-for-2024/"
+   }
+  ],
+  "dossier": {
+   "main_services": "Fund admin, corporate secretarial, trust & private client",
+   "geography": "25 jurisdictions; Western Europe, Americas, APAC, Middle East, Africa",
+   "moldova_status": "Not found",
+   "local_partner_need": "Very low",
+   "long_term_legal_potential": "Low",
+   "why_legitimus_interesting": "Marginal",
+   "what_to_offer": "n/a",
+   "preferred_format": "referral",
+   "objections": [
+    "Institutional client base",
+    "No CEE presence",
+    "Hard to reach decision makers"
+   ],
+   "first_step": "None"
+  },
+  "check_date": "2026-10-08",
+  "total_score": 32
+ }
+]

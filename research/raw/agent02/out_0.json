@@ -1,0 +1,797 @@
+[
+ {
+  "name": "Accace",
+  "website": "https://accace.com",
+  "hq": "Bratislava, Slovakia",
+  "exists": {
+   "value": "yes - active; indexed live pages incl. Moldova service pages and Accace Circle site; leadership page live",
+   "confidence": "Medium",
+   "sources": [
+    "https://www.accace.com/locations/moldova/corporate-and-secretarial-services/",
+    "https://circle.accace.com/",
+    "https://www.accace.com/about-us/meet-our-key-people/"
+   ]
+  },
+  "specialization": "CEE-rooted BPO/outsourcing: corporate & secretarial, accounting & reporting, payroll/HR, tax, market entry; tax and legal experts engaged across network",
+  "multi_country": {
+   "value": "yes",
+   "evidence": "Accace Circle states coverage of 60+ jurisdictions / 7,000+ professionals (search summary of circle.accace.com); older Accace pages say ~40 (2020) and AmCham RO profile says 50+. Own offices only in a subset (CZ, HU, PL, RO, SK, ZA, UA, UK per theorg.com); other locations 'covered via Accace's trusted network of partners'.",
+   "confidence": "Medium",
+   "sources": [
+    "https://circle.accace.com/",
+    "https://accace.com/accace-circle-new-markets-within-your-reach-press-release/",
+    "https://www.amcham.ro/company/accace-outsourcing",
+    "https://theorg.com/org/accace"
+   ]
+  },
+  "moldova": {
+   "value": "offered",
+   "delivery": "unclear",
+   "evidence": "Dedicated page 'Corporate and secretarial services in Moldova' indexed on accace.com (company setup, tax registration, permits). No Chisinau office address found; Moldova not in the own-office list (theorg.com). ASSUMPTION: Moldova is likely delivered through a Circle/partner provider, not an own entity.",
+   "confidence": "Medium",
+   "sources": [
+    "https://www.accace.com/locations/moldova/corporate-and-secretarial-services/",
+    "https://theorg.com/org/accace"
+   ]
+  },
+  "law_firm_cooperation": {
+   "value": "partial - network of BPO providers and advisors (Accace Circle), not a law-firm network",
+   "evidence": "Accace Circle = 'co-created business community of like-minded BPO providers and advisors' under one account management; Business Development & Community Lead named. Legal experts referenced but law firms are not explicitly the core membership.",
+   "confidence": "Medium",
+   "sources": [
+    "https://circle.accace.com/",
+    "https://circle.accace.com/?p=205",
+    "https://accace.com/accace-circle-new-markets-within-your-reach-press-release/"
+   ]
+  },
+  "contacts": {
+   "email": "not verified on own domain (agent 01 directory emails slovakia@accace.com / czechrepublic@accace.com remain unverified)",
+   "phone": "not verified on own domain",
+   "contact_page": "not verified (accace.com unreachable: ENOTFOUND)",
+   "current": "unclear",
+   "confidence": "Low",
+   "sources": [
+    "https://www.accace.com/locations/moldova/corporate-and-secretarial-services/"
+   ]
+  },
+  "one_off_signals": "None found - positioning is ongoing outsourcing (accounting, payroll, secretarial).",
+  "long_term_services": {
+   "value": "yes",
+   "evidence": "Accounting & reporting, payroll/HR, corporate secretarial, tax; Moldova accounting page indexed (per agent 01; not re-surfaced this run).",
+   "sources": [
+    "https://www.accace.com/locations/moldova/corporate-and-secretarial-services/",
+    "https://accace.com/accace-circle-new-markets-within-your-reach-press-release/"
+   ]
+  },
+  "decision_makers": [
+   {
+    "name": "Mihaela Pašek-Virlan",
+    "title": "Partner and CEO (since early 2020)",
+    "source": "https://www.accace.com/about-us/meet-our-key-people/",
+    "confidence": "Medium (own-domain snippet; page undated)"
+   },
+   {
+    "name": "Alžbeta Košinár",
+    "title": "Business Development & Community Lead, Accace Circle",
+    "source": "https://circle.accace.com/ (interview indexed on circle.accace.com)",
+    "confidence": "Medium"
+   }
+  ],
+  "scores": {
+   "profile_fit": {
+    "score": 18,
+    "why": "Multi-country corporate/accounting/payroll provider with CEE focus and an operating partner network - closest profile to Legitimus's target."
+   },
+   "recurring_client_potential": {
+    "score": 26,
+    "why": "Recurring outsourcing clients (mid-size and Fortune 500) entering CEE generate ongoing legal needs (corporate changes, employment, contracts)."
+   },
+   "local_legal_partner_cooperation": {
+    "score": 16,
+    "why": "Explicit partner network (Accace Circle) covers non-office jurisdictions; but it is BPO/advisor-oriented, legal partner role not explicitly advertised."
+   },
+   "moldova_commercial_interest": {
+    "score": 12,
+    "why": "Already markets Moldova services with no visible own office - a real delivery-partner need, though an incumbent Moldovan provider may exist."
+   },
+   "decision_maker_accessibility": {
+    "score": 10,
+    "why": "Named CEO and named Circle BD & Community Lead on own domain; no direct verified email/phone."
+   }
+  },
+  "exclude": {
+   "value": false,
+   "reason": "Not excluded - real corporate services, active, clear mutual model (Moldova legal partner / local counsel within Circle)."
+  },
+  "audit": [
+   {
+    "claim": "60+ jurisdictions",
+    "status": "confirmed",
+    "note": "Circle site summary states 60+ jurisdictions/7,000+ professionals; older figures 40/50+ are outdated.",
+    "source": "https://circle.accace.com/"
+   },
+   {
+    "claim": "Moldova offered (corporate/secretarial and accounting pages)",
+    "status": "confirmed",
+    "note": "Corporate & secretarial Moldova page re-found; accounting page not re-surfaced this run but plausible.",
+    "source": "https://www.accace.com/locations/moldova/corporate-and-secretarial-services/"
+   },
+   {
+    "claim": "Moldova own office vs partner unclear",
+    "status": "confirmed",
+    "note": "No Chisinau address found; Moldova absent from own-office list -> likely partner-delivered (ASSUMPTION).",
+    "source": "https://theorg.com/org/accace"
+   },
+   {
+    "claim": "Accace Circle partner network; BD & Community Lead named",
+    "status": "confirmed",
+    "note": "Name now identified: Alžbeta Košinár. Network is BPO/advisors, not law-firm-specific - agent 01's 'partner_openness 5' slightly overstated for legal partnering.",
+    "source": "https://circle.accace.com/"
+   },
+   {
+    "claim": "Emails slovakia@ / czechrepublic@accace.com and phones",
+    "status": "unconfirmed",
+    "note": "From third-party directories only; own domain not reachable.",
+    "source": "agent 01 contact_source"
+   },
+   {
+    "claim": "HQ address Twin City C vs Pribinova 40",
+    "status": "needs_check",
+    "note": "Conflict noted by agent 01 not resolved; FinStat registry change Oct 2024 suggests Twin City address may be outdated.",
+    "source": "https://finstat.sk/35873639/obchodny_register"
+   },
+   {
+    "claim": "Jurisdiction example list includes Serbia, Moldova",
+    "status": "needs_check",
+    "note": "Serbia/Moldova may be partner-covered rather than own offices; agent 01 did not distinguish.",
+    "source": "https://theorg.com/org/accace"
+   }
+  ],
+  "dossier": {
+   "main_services": "Corporate & secretarial, accounting & reporting, payroll & HR, tax, market entry/BPO",
+   "geography": "CEE core (SK, CZ, HU, PL, RO, UA) + UK, ZA; 60+ jurisdictions via Accace Circle partners",
+   "moldova_status": "Offered on website; delivery model unclear (no own office found)",
+   "local_partner_need": "High if Moldova is partner-delivered: needs local legal input for formation, corporate changes, permits, employment",
+   "long_term_legal_potential": "High - outsourcing clients are recurring; corporate housekeeping, labour law, contracts, regulatory",
+   "why_legitimus_interesting": "Chisinau law office can act as legal arm for Accace's Moldova offer (corporate secretarial changes, permits, legal opinions, disputes)",
+   "what_to_offer": "Moldovan local counsel for Accace clients; legal component of company setup/changes; work/residence permit legal support; Romanian/Russian/English-language service",
+   "preferred_format": "network membership (Accace Circle) + local counsel / two-way referral",
+   "objections": [
+    "May already have a Moldovan Circle member/provider",
+    "Prefers BPO firms over law firms for Circle",
+    "Centralised account management may require pricing/SLA alignment",
+    "Volume of Moldova work may be small"
+   ],
+   "first_step": "Identify via a written enquiry to Accace Circle (Business Development & Community Lead) who delivers Moldova today and whether a legal partner slot exists."
+  },
+  "check_date": "2026-10-08",
+  "total_score": 82
+ },
+ {
+  "name": "Uniwide",
+  "website": "https://www.uniwide.com",
+  "hq": "Dubai, UAE (group main office since 2023); EU office Riga, Latvia",
+  "exists": {
+   "value": "yes - own-domain pages indexed (about, team, Seychelles agent article, UAE recognition news)",
+   "confidence": "Medium",
+   "sources": [
+    "https://www.uniwide.com/about/",
+    "https://www.uniwide.com/about/our-team/",
+    "https://www.uniwide.com/uniwide-advisors-recognised-as-one-of-the-most-promising-company-registration-consultants-in-the-uae/"
+   ]
+  },
+  "specialization": "International company formation (incl. offshore), bank account support, registered office/agent, post-incorporation compliance, accounting",
+  "multi_country": {
+   "value": "yes",
+   "evidence": "Offices Riga (2014), Seychelles (2015, licensed registered agent 2016), London (2019), Dubai (2023); 30+ jurisdictions per directory and agent 01 snippets.",
+   "confidence": "Medium",
+   "sources": [
+    "https://www.uniwide.com/about/",
+    "https://www.uniwide.com/which-is-the-best-registered-agent-for-an-offshore-company-in-seychelles/",
+    "https://directory.partner.io/uniwide-biz"
+   ]
+  },
+  "moldova": {
+   "value": "not found",
+   "delivery": "n/a",
+   "evidence": "No uniwide.com page mentioning Moldova surfaced in searches.",
+   "confidence": "Low",
+   "sources": [
+    "WebSearch 'Uniwide company formation Moldova' 2026-10-08 (no uniwide.com result)"
+   ]
+  },
+  "law_firm_cooperation": {
+   "value": "reported (partner programme for law firms) - not re-confirmed this run",
+   "evidence": "Agent 01 cites uniwide.com/partner-programme (referral and subcontractor models, aimed at law firms, banks, PSPs, tax advisers) and 'partnerships with local registration agents'. Re-check searches returned no uniwide.com partner page.",
+   "confidence": "Low",
+   "sources": [
+    "https://www.uniwide.com/partner-programme/ (per agent 01; not re-surfaced)",
+    "https://www.uniwide.com/about/"
+   ]
+  },
+  "contacts": {
+   "email": "not found",
+   "phone": "+371 6611 8787 (Riga); +44 (0)20 4501 0600 (London) - per agent 01, not re-checked",
+   "contact_page": "https://www.uniwide.com/contact/",
+   "current": "unclear",
+   "confidence": "Low",
+   "sources": [
+    "https://www.uniwide.com/contact/"
+   ]
+  },
+  "one_off_signals": "Strong formation/offshore orientation (Seychelles, offshore centres, bank account opening) - partly one-off registration selling; compliance/accounting offered as add-ons.",
+  "long_term_services": {
+   "value": "partial",
+   "evidence": "Registered office/agent, post-incorporation compliance and accounting listed (directory description).",
+   "sources": [
+    "https://directory.partner.io/uniwide-biz"
+   ]
+  },
+  "decision_makers": [
+   {
+    "name": "Jurgis Naunikas",
+    "title": "Head of Office, Latvia",
+    "source": "https://www.uniwide.com/about/our-team/",
+    "confidence": "Medium"
+   },
+   {
+    "name": "Alexei Kariakin",
+    "title": "General Manager, Uniwide Advisors (per Siliconindia interview, search summary)",
+    "source": "Siliconindia interview (URL not shown in snippet); see https://www.uniwide.com/uniwide-advisors-recognised-as-one-of-the-most-promising-company-registration-consultants-in-the-uae/",
+    "confidence": "Low"
+   }
+  ],
+  "scores": {
+   "profile_fit": {
+    "score": 12,
+    "why": "Multi-jurisdiction formation provider with Baltic/Russian-speaking base, but offshore-heavy and formation-led."
+   },
+   "recurring_client_potential": {
+    "score": 16,
+    "why": "Some recurring compliance/accounting, but much of the flow is one-off formation and bank introductions."
+   },
+   "local_legal_partner_cooperation": {
+    "score": 14,
+    "why": "Reported partner programme with referral/subcontractor models and reliance on local agents; not re-verified this run."
+   },
+   "moldova_commercial_interest": {
+    "score": 8,
+    "why": "No Moldova offer found; ASSUMPTION: Russian-speaking/Baltic client base could generate Moldova demand."
+   },
+   "decision_maker_accessibility": {
+    "score": 10,
+    "why": "Named Latvia head on own domain; contact page exists; no general email found."
+   }
+  },
+  "exclude": {
+   "value": false,
+   "reason": "Not excluded - active, offers some ongoing services, plausible referral/subcontracting model; but offshore orientation requires AML caution."
+  },
+  "audit": [
+   {
+    "claim": "HQ moved Riga -> Dubai (2023), Riga office remains",
+    "status": "confirmed",
+    "note": "About page: Dubai office opened 2023, now main office.",
+    "source": "https://www.uniwide.com/about/"
+   },
+   {
+    "claim": "Partner Programme for law firms (referral + subcontractor)",
+    "status": "needs_check",
+    "note": "Not re-surfaced by three targeted searches; page may exist but unverified this run.",
+    "source": "https://www.uniwide.com/partner-programme/"
+   },
+   {
+    "claim": "30+ jurisdictions via own offices and local registration agents",
+    "status": "confirmed",
+    "note": "30+ confirmed by third-party directory (Low); 'registration agents' wording not re-found.",
+    "source": "https://directory.partner.io/uniwide-biz"
+   },
+   {
+    "claim": "Moldova unclear",
+    "status": "confirmed",
+    "note": "Better phrased 'not found'.",
+    "source": "WebSearch 2026-10-08"
+   },
+   {
+    "claim": "Phones Riga/London/Seychelles",
+    "status": "unconfirmed",
+    "note": "Not re-checked; contact page not fetchable.",
+    "source": "https://www.uniwide.com/contact/"
+   },
+   {
+    "claim": "Uniwide Formations (uniwide.co.uk) is its London arm",
+    "status": "needs_check",
+    "note": "About page mentions London formation office 2019; link to uniwide.co.uk not verified.",
+    "source": "https://www.uniwide.com/about/"
+   },
+   {
+    "claim": "Scale score 2",
+    "status": "needs_check",
+    "note": "Directory lists ~1,900 employees (implausible; Low confidence) - scale unclear.",
+    "source": "https://directory.partner.io/uniwide-biz"
+   }
+  ],
+  "dossier": {
+   "main_services": "Company formation (onshore/offshore), registered agent/office, bank account support, compliance, accounting",
+   "geography": "Latvia, UK, Seychelles, UAE + 30+ jurisdictions via local agents",
+   "moldova_status": "Not found",
+   "local_partner_need": "Medium - would need a local agent/law firm to add Moldova",
+   "long_term_legal_potential": "Medium-low - formation-led, some ongoing compliance",
+   "why_legitimus_interesting": "Could add Moldova to its menu with Legitimus as subcontractor; Russian-speaking client overlap (ASSUMPTION)",
+   "what_to_offer": "Moldova SRL formation legal work, registered office via partner, legal opinions, corporate changes as subcontractor",
+   "preferred_format": "white-label subcontracting / two-way referral",
+   "objections": [
+    "Moldova not in current offer - demand unproven",
+    "Offshore/high-risk client profile (AML/KYC burden)",
+    "Partner programme unverified",
+    "Price sensitivity of formation clients"
+   ],
+   "first_step": "Confirm the partner programme page and terms; propose Moldova as a new jurisdiction via the contact page."
+  },
+  "check_date": "2026-10-08",
+  "total_score": 60
+ },
+ {
+  "name": "TMF Group",
+  "website": "https://www.tmf-group.com",
+  "hq": "Amsterdam, Netherlands",
+  "exists": {
+   "value": "yes - very active; Nordgain acquisition effective 3 Oct 2025, Estonia office Mar 2026, Vilnius client event May 2026",
+   "confidence": "High",
+   "sources": [
+    "https://www.tmf-group.com/en/news-insights/press-releases/tmf-group-acquires-nordgain/",
+    "https://www.baltictimes.com/tmf_group_expands_into_estonia_following_its_acquisition_of_nordgain",
+    "https://www.tmf-group.com/en/news-insights/events-webinars/tmf-group-nordgain-client-reception-celebrating-new-chapter-baltics/"
+   ]
+  },
+  "specialization": "Enterprise corporate secretarial, entity management, accounting & tax, HR/payroll, fund/capital markets administration",
+  "multi_country": {
+   "value": "yes",
+   "evidence": "125+ offices in 87 jurisdictions (own locations and regulatory status pages).",
+   "confidence": "High",
+   "sources": [
+    "https://www.tmf-group.com/en/locations/",
+    "https://www.tmf-group.com/en/legal/regulatory-status"
+   ]
+  },
+  "moldova": {
+   "value": "not found",
+   "delivery": "n/a",
+   "evidence": "No Moldova page or office in results; nearest office Bucharest, Romania (America House, Country Manager Gabriel Sincu).",
+   "confidence": "Medium",
+   "sources": [
+    "https://www.tmf-group.com/en/locations/emea/romania",
+    "https://mediafax.ro/comunicate/tmf-group-a-leading-provider-of-compliance-and-administrative-services-22555939/amp"
+   ]
+  },
+  "law_firm_cooperation": {
+   "value": "limited evidence",
+   "evidence": "2025 partnership agreement with LAWorld (network of independent law firms) making TMF available to LAWorld members and clients - TMF sells to law-firm networks rather than sourcing local counsel; no partner programme for non-office jurisdictions found.",
+   "confidence": "Low",
+   "sources": [
+    "WebSearch summary 'TMF Group partner network' 2026-10-08 (LAWorld announcement; URL not shown)",
+    "https://www.tmf-group.com/en/locations/"
+   ]
+  },
+  "contacts": {
+   "email": "not found",
+   "phone": "+31 20 575 5600 (third-party only)",
+   "contact_page": "not verified",
+   "current": "unclear",
+   "confidence": "Low",
+   "sources": [
+    "https://www.tmf-group.com/en/locations/emea/netherlands"
+   ]
+  },
+  "one_off_signals": "None - recurring entity management model.",
+  "long_term_services": {
+   "value": "yes",
+   "evidence": "Accounting, legal/secretarial, tax, payroll, HR in Romania and group-wide.",
+   "sources": [
+    "https://www.tmf-group.com/en/locations/emea/romania"
+   ]
+  },
+  "decision_makers": [
+   {
+    "name": "Gabriel Sincu",
+    "title": "Country Manager Romania (Nov 2024 press release)",
+    "source": "https://mediafax.ro/comunicate/tmf-group-a-leading-provider-of-compliance-and-administrative-services-22555939/amp",
+    "confidence": "Medium (may be outdated)"
+   },
+   {
+    "name": "Jan Willem van Drimmelen",
+    "title": "Head of Europe",
+    "source": "https://www.tmf-group.com/en/news-insights/press-releases/tmf-group-acquires-nordgain/",
+    "confidence": "Medium"
+   },
+   {
+    "name": "Agnė Jasinskaitė",
+    "title": "Country Head of the Baltics",
+    "source": "https://www.baltictimes.com/tmf_group_expands_into_estonia_following_its_acquisition_of_nordgain",
+    "confidence": "Medium"
+   }
+  ],
+  "scores": {
+   "profile_fit": {
+    "score": 17,
+    "why": "Global entity-management/corporate secretarial leader - ideal client type, but enterprise-scale and own-entity model."
+   },
+   "recurring_client_potential": {
+    "score": 26,
+    "why": "Multinational clients with recurring compliance needs; any Moldova entity for them would generate ongoing legal work."
+   },
+   "local_legal_partner_cooperation": {
+    "score": 8,
+    "why": "Operates own entities; no public local-partner programme; only LAWorld distribution-type tie found."
+   },
+   "moldova_commercial_interest": {
+    "score": 9,
+    "why": "Genuine gap next to Romania/Ukraine, but no sign TMF plans Moldova coverage; ASSUMPTION: ad-hoc client requests exist."
+   },
+   "decision_maker_accessibility": {
+    "score": 7,
+    "why": "Regional heads named in press, but large corporate; access likely only via Romania office/procurement."
+   }
+  },
+  "exclude": {
+   "value": false,
+   "reason": "Not excluded - strong recurring profile and Moldova gap; but mutual model is weak (ad-hoc referral only)."
+  },
+  "audit": [
+   {
+    "claim": "87 jurisdictions, 125+ offices",
+    "status": "confirmed",
+    "note": "Own locations page.",
+    "source": "https://www.tmf-group.com/en/locations/"
+   },
+   {
+    "claim": "Moldova offered: 'no'",
+    "status": "erroneous",
+    "note": "Wording: evidence supports only 'not found', not 'no'.",
+    "source": "https://www.tmf-group.com/en/locations/emea/romania"
+   },
+   {
+    "claim": "Nordgain acquisition Oct 2025; Estonia Mar 2026",
+    "status": "confirmed",
+    "note": "Effective 3 Oct 2025; Estonia office Mar 2026.",
+    "source": "https://www.baltictimes.com/tmf_group_expands_into_estonia_following_its_acquisition_of_nordgain"
+   },
+   {
+    "claim": "No public partner programme",
+    "status": "needs_check",
+    "note": "LAWorld partnership (2025) with independent law firms found - partial counter-evidence.",
+    "source": "WebSearch 2026-10-08 (LAWorld announcement)"
+   },
+   {
+    "claim": "Phone +31 20 575 5600",
+    "status": "unconfirmed",
+    "note": "ZoomInfo only.",
+    "source": "agent 01"
+   },
+   {
+    "claim": "Approach via CEE regional management (Romania office)",
+    "status": "confirmed",
+    "note": "Romania Country Manager Gabriel Sincu named (Nov 2024 - may be outdated).",
+    "source": "https://mediafax.ro/comunicate/tmf-group-a-leading-provider-of-compliance-and-administrative-services-22555939/amp"
+   }
+  ],
+  "dossier": {
+   "main_services": "Corporate secretarial, entity management, accounting & tax, payroll & HR, fund administration",
+   "geography": "87 jurisdictions; EMEA incl. Romania, Ukraine, Baltics; no Moldova found",
+   "moldova_status": "Not found",
+   "local_partner_need": "Medium - client requests for Moldova cannot be served in-house",
+   "long_term_legal_potential": "High per client, low frequency",
+   "why_legitimus_interesting": "Fills a geographic gap between TMF Romania and TMF Ukraine for multinational clients",
+   "what_to_offer": "Moldova local counsel / referral partner for TMF clients: entity setup, corporate housekeeping, employment law, legal opinions",
+   "preferred_format": "referral / local counsel",
+   "objections": [
+    "Strict vendor onboarding and compliance",
+    "Prefers own entities or global alliances",
+    "Low Moldova volume",
+    "Contact through procurement rather than BD"
+   ],
+   "first_step": "Written introduction to TMF Romania country management offering a Moldova local-counsel capability statement."
+  },
+  "check_date": "2026-10-08",
+  "total_score": 67
+ },
+ {
+  "name": "Tetra Consultants",
+  "website": "https://www.tetraconsultants.com",
+  "hq": "Singapore (67 Ubi Crescent, per agent 01)",
+  "exists": {
+   "value": "yes - active indexed pages (jurisdictions, licences, blog, Georgia case study)",
+   "confidence": "Medium",
+   "sources": [
+    "https://www.tetraconsultants.com/jurisdictions/register-company-in-singapore/",
+    "https://www.tetraconsultants.com/jurisdictions/register-company-in-georgia/case-study"
+   ]
+  },
+  "specialization": "Company registration worldwide, financial/gaming licences (Labuan, Isle of Man, EMI Malaysia), bank account opening, nominee services, accounting & tax",
+  "multi_country": {
+   "value": "yes",
+   "evidence": "Register-company pages for Singapore, Georgia, Latvia, Cayman, USA, Canada, Bermuda, Dominica; licence pages Labuan/Isle of Man/Malaysia.",
+   "confidence": "Medium",
+   "sources": [
+    "https://www.tetraconsultants.com/video/register-company-in-latvia/",
+    "https://www.tetraconsultants.com/jurisdictions/register-company-in-georgia/case-study",
+    "https://www.tetraconsultants.com/video/isle-of-man-gaming-license/"
+   ]
+  },
+  "moldova": {
+   "value": "not found",
+   "delivery": "n/a",
+   "evidence": "No tetraconsultants.com Moldova/Romania/Ukraine pages surfaced.",
+   "confidence": "Low",
+   "sources": [
+    "WebSearch site:tetraconsultants.com 2026-10-08"
+   ]
+  },
+  "law_firm_cooperation": {
+   "value": "not found",
+   "evidence": "No partner/referral page found. Georgia case study mentions offering 'legal advisory services' (delivery model unclear). ASSUMPTION: smaller jurisdictions served via local agents.",
+   "confidence": "Low",
+   "sources": [
+    "https://www.tetraconsultants.com/jurisdictions/register-company-in-georgia/case-study"
+   ]
+  },
+  "contacts": {
+   "email": "enquiry@tetraconsultants.com",
+   "phone": "not found",
+   "contact_page": "not verified",
+   "current": "yes",
+   "confidence": "Medium",
+   "sources": [
+    "https://www.tetraconsultants.com/video/register-company-in-gerogia/"
+   ]
+  },
+  "one_off_signals": "Strong - formation/licence packages, nominee directors, 'reply within 24 hours' free consultation, offshore set-ups.",
+  "long_term_services": {
+   "value": "partial",
+   "evidence": "Bookkeeping, tax compliance, Singapore compliance officer, ongoing tax/accounting/legal advisory (Georgia case).",
+   "sources": [
+    "https://www.tetraconsultants.com/jurisdictions/register-company-in-singapore/company-incorporation/",
+    "https://www.tetraconsultants.com/jurisdictions/register-company-in-georgia/case-study"
+   ]
+  },
+  "decision_makers": [],
+  "scores": {
+   "profile_fit": {
+    "score": 10,
+    "why": "Global formation/licensing shop, Asia-centred; corporate services exist but are formation-led."
+   },
+   "recurring_client_potential": {
+    "score": 13,
+    "why": "Some recurring accounting/compliance, mostly in Singapore; foreign formations look largely one-off."
+   },
+   "local_legal_partner_cooperation": {
+    "score": 6,
+    "why": "No partner programme found; reliance on local agents is only assumed."
+   },
+   "moldova_commercial_interest": {
+    "score": 6,
+    "why": "No Moldova or nearby (RO/UA) pages; Georgia/Latvia presence shows some Eastern Europe interest."
+   },
+   "decision_maker_accessibility": {
+    "score": 4,
+    "why": "No named decision makers found; generic enquiry email only."
+   }
+  },
+  "exclude": {
+   "value": false,
+   "reason": "Borderline - not excluded since it offers some ongoing services, but low priority (mostly one-off sales, no partner model found)."
+  },
+  "audit": [
+   {
+    "claim": "HQ Singapore",
+    "status": "confirmed",
+    "note": "Own pages describe Singapore-based firm.",
+    "source": "https://www.tetraconsultants.com/jurisdictions/register-company-in-singapore/"
+   },
+   {
+    "claim": "Moldova unclear",
+    "status": "confirmed",
+    "note": "Should read 'not found'.",
+    "source": "WebSearch 2026-10-08"
+   },
+   {
+    "claim": "No public partner programme",
+    "status": "confirmed",
+    "note": "Still not found.",
+    "source": "WebSearch 2026-10-08"
+   },
+   {
+    "claim": "Jurisdiction examples Dominica, Cayman, USA, Canada, Bermuda",
+    "status": "confirmed",
+    "note": "Incomplete - Georgia and Latvia (Eastern Europe) pages also exist, relevant to Legitimus.",
+    "source": "https://www.tetraconsultants.com/video/register-company-in-latvia/"
+   },
+   {
+    "claim": "email enquiry@tetraconsultants.com",
+    "status": "confirmed",
+    "note": "Shown on own pages.",
+    "source": "https://www.tetraconsultants.com/video/register-company-in-gerogia/"
+   },
+   {
+    "claim": "Address 67 Ubi Crescent",
+    "status": "unconfirmed",
+    "note": "Not re-found this run.",
+    "source": "agent 01"
+   },
+   {
+    "claim": "partner_openness 2 / client_relevance 4",
+    "status": "needs_check",
+    "note": "client_relevance 4 seems high given one-off orientation.",
+    "source": "analysis"
+   }
+  ],
+  "dossier": {
+   "main_services": "Company registration, licences, bank accounts, nominee services, accounting/tax",
+   "geography": "Asia (Singapore, Malaysia/Labuan), offshore, Americas, some Europe (Latvia, Georgia, Isle of Man)",
+   "moldova_status": "Not found",
+   "local_partner_need": "Medium if they add Moldova; unknown",
+   "long_term_legal_potential": "Low-medium",
+   "why_legitimus_interesting": "Already covers Georgia/Latvia - Moldova could be added as a low-tax Eastern Europe option",
+   "what_to_offer": "Moldova formation legal work and IT Park/ licensing advice as subcontractor",
+   "preferred_format": "white-label subcontracting / referral",
+   "objections": [
+    "No Moldova demand evident",
+    "One-off, price-driven sales",
+    "Offshore client profile (AML)",
+    "No named contact"
+   ],
+   "first_step": "Low priority - email enquiry@ with a short Moldova jurisdiction note only if capacity allows."
+  },
+  "check_date": "2026-10-08",
+  "total_score": 39
+ },
+ {
+  "name": "Avyanco",
+  "website": "https://avyanco.com",
+  "hq": "Dubai, UAE",
+  "exists": {
+   "value": "yes - active (team/author pages, 2024 Gulf press, 11,500+ businesses served claim)",
+   "confidence": "Medium",
+   "sources": [
+    "https://avyanco.com/author/jashvantkumar-prajapati/",
+    "https://avyanco.com/meet-our-team/",
+    "https://gulftoday.ae/business/2024/10/02/avyanco-pioneering-business-set-up-and-tax-consultancy-in-the-uae-with-over-two-decades-of-expertise"
+   ]
+  },
+  "specialization": "UAE business set-up (mainland/free zones), tax consultancy, accounting, audit, compliance, immigration; minor UK/KSA set-up",
+  "multi_country": {
+   "value": "limited",
+   "evidence": "UAE core; UK Ltd and Saudi MISA set-up pages and BVI guide (agent 01); site self-describes as UAE-focused.",
+   "confidence": "Medium",
+   "sources": [
+    "https://avyanco.com/business-setup-in-saudi-arabia/",
+    "https://avyanco.com/bvi-company-formation-guide/"
+   ]
+  },
+  "moldova": {
+   "value": "not found",
+   "delivery": "n/a",
+   "evidence": "No avyanco.com Europe/Moldova pages surfaced.",
+   "confidence": "Low",
+   "sources": [
+    "WebSearch site:avyanco.com 2026-10-08"
+   ]
+  },
+  "law_firm_cooperation": {
+   "value": "not found",
+   "evidence": "No partner/referral programme found.",
+   "confidence": "Low",
+   "sources": [
+    "WebSearch 2026-10-08"
+   ]
+  },
+  "contacts": {
+   "email": "info@avyanco.com",
+   "phone": "+971 50 398 9000; +44 7404 022740 (per agent 01)",
+   "contact_page": "https://avyanco.com/contact-us/",
+   "current": "unclear",
+   "confidence": "Medium",
+   "sources": [
+    "https://avyanco.com/contact-us/"
+   ]
+  },
+  "one_off_signals": "Setup packages typical of UAE free-zone sellers, but also recurring tax/accounting/audit.",
+  "long_term_services": {
+   "value": "yes (UAE only)",
+   "evidence": "Tax consultancy, accounting, auditing, compliance.",
+   "sources": [
+    "https://gulftoday.ae/business/2024/10/02/avyanco-pioneering-business-set-up-and-tax-consultancy-in-the-uae-with-over-two-decades-of-expertise"
+   ]
+  },
+  "decision_makers": [
+   {
+    "name": "Jashvantkumar Prajapati",
+    "title": "Founder & CEO",
+    "source": "https://avyanco.com/author/jashvantkumar-prajapati/",
+    "confidence": "Medium"
+   }
+  ],
+  "scores": {
+   "profile_fit": {
+    "score": 7,
+    "why": "Real corporate services but UAE-focused; not a multi-country formation network."
+   },
+   "recurring_client_potential": {
+    "score": 10,
+    "why": "Recurring UAE accounting/tax clients; little evidence of outbound flows to Eastern Europe."
+   },
+   "local_legal_partner_cooperation": {
+    "score": 3,
+    "why": "No partner/local counsel model found."
+   },
+   "moldova_commercial_interest": {
+    "score": 3,
+    "why": "No Moldova or European interest found beyond UK."
+   },
+   "decision_maker_accessibility": {
+    "score": 11,
+    "why": "Founder/CEO named on own site; email and phone published."
+   }
+  },
+  "exclude": {
+   "value": true,
+   "reason": "No clear mutual model - UAE-focused provider with no CEE/Moldova activity or partner programme."
+  },
+  "audit": [
+   {
+    "claim": "Moldova offered: 'no'",
+    "status": "erroneous",
+    "note": "Only 'not found' is supported.",
+    "source": "WebSearch site:avyanco.com 2026-10-08"
+   },
+   {
+    "claim": "No public partner programme",
+    "status": "confirmed",
+    "note": "Still not found.",
+    "source": "WebSearch 2026-10-08"
+   },
+   {
+    "claim": "UK/KSA/BVI offers; UAE-focused",
+    "status": "confirmed",
+    "note": "Per agent 01 own-domain URLs; not contradicted.",
+    "source": "https://avyanco.com/business-setup-in-saudi-arabia/"
+   },
+   {
+    "claim": "Contacts info@avyanco.com, phones",
+    "status": "unconfirmed",
+    "note": "Contact page exists; values not re-shown in snippets this run.",
+    "source": "https://avyanco.com/contact-us/"
+   },
+   {
+    "claim": "Decision maker not identified by agent 01",
+    "status": "needs_check",
+    "note": "Founder & CEO Jashvantkumar Prajapati found on own domain - agent 01 missed it.",
+    "source": "https://avyanco.com/author/jashvantkumar-prajapati/"
+   },
+   {
+    "claim": "Substitute for Emirabiz",
+    "status": "needs_check",
+    "note": "Substitute is itself a weak fit; selection logic questionable.",
+    "source": "analysis"
+   }
+  ],
+  "dossier": {
+   "main_services": "UAE setup, tax, accounting, audit, compliance, immigration",
+   "geography": "UAE; minor UK, KSA, BVI",
+   "moldova_status": "Not found",
+   "local_partner_need": "Low",
+   "long_term_legal_potential": "Low",
+   "why_legitimus_interesting": "Only as ad-hoc inbound referrals of Moldovan entrepreneurs moving to UAE (ASSUMPTION)",
+   "what_to_offer": "Two-way ad-hoc referral",
+   "preferred_format": "two-way referral",
+   "objections": [
+    "No CEE focus",
+    "No partner programme",
+    "Low Moldova relevance"
+   ],
+   "first_step": "None (excluded)."
+  },
+  "check_date": "2026-10-08",
+  "total_score": 34
+ }
+]
